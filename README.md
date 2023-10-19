@@ -7,8 +7,27 @@ We've used a lightweight, human-centered data management system to compile and m
 
 We are now trying to test whether this approach can be scaled up from a relatively contained setting to a more typical data management situation. The Yukon Chinook data compilation was part of high-priority project with clear terms of reference for the project, a large technical working group, and dedicated resources.  More typically, data management systems 
 
-
 The [worked example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-System) explains the structure of the data management system and how the components fit together. It also has tips on getting started with git/github and for setting up automated reports using markdown.  
+
+
+## Scope
+
+* useable annual time series (quality controlled estimates, not raw data)
+* meta-data for time series or individual records
+* inventory of projects where each series was used, documenting where the covariate improved the model.
+
+
+
+
+
+
+## Repository structure
+
+* each data set  = 1 folder
+* Readme file in markdown (standard section) -> pulled into automated report 
+* individual csv files for each series
+
+
 
 
 ## Feedback on OSEC-PS
