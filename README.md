@@ -45,7 +45,7 @@ You have three options for browsing through this repository:
 
 * If you want a local copy of the key files, click on the green *"<> Code"* button near the top of this page, and select *"Download Zip"*.
 
-* If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *UltraLite-Fisheries-Data-System.Rproj*
+* If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *Open-Source-Env-Cov-PacSalmon.Rproj* and start looking through the code scripts.
 
 
 ## Repository structure
@@ -53,15 +53,39 @@ You have three options for browsing through this repository:
 
 ### DATA Folder
 
-* All the contributed source data lives here
-* each data set  = 1 folder withitopicn the data folder. A data set is a group of time series from a common sources, related to a common topic, or covering a shared spatial extent (e.g., same watershed).
-* For each data set, there are 2 main files:
-    *README.md* file in [github markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), summarizing the source of the data, why it is included here, where it has been used for Pacific salmon models, and any notable points to consider before using that data. The intent is that the *README* will evolve into a set of standard sections, which can then be pulled "as-is" into an automated report.
-   * *InfoFile_DataSetName.csv*: data file with standard columns, listing each time series in the data set and some information about each series. Parts of this will be pulled into automated summaries and summary tables for the automated report.
-* For each time series, there are:
+All the contributed source data lives here. Each data set is contained in 1 folder within the data folder. A data set is a group of time series from a common source, related to a common topic, or covering a shared spatial extent (e.g., same watershed).
+
+For each data set, there are 2 main files:
+
+*README.md* file in [github markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), summarizing the source of the data, why it is included here, where it has been used for Pacific salmon models, and any notable points to consider before using that data. The intent is that the *README* will evolve into a set of standard sections, which can then be pulled "as-is" into an automated report.
+* *InfoFile_DataSetName.csv*: data file with standard columns, listing each time series in the data set and some information about each series. Parts of this will be pulled into automated summaries and summary tables for the automated report.
+
+For each time series, there are up to 3 csv files: 
+
+* *SeriesLabel_Data* (required): lists annual estimates, with error bounds where available, and includes a header with some clarification information. Header lines start with *#*. In *R*, the header information is stripped out by using the argument ```comment.char = "#"``` when reading in the files with ```read.csv()```. See  *LINK TO EXAMPLE*
+* *SeriesLabel_DataConcerns* (optional): lists any potential data issues, in 2 columns (*Years_Affected*, *Potential_Issue*). See See  *LINK TO EXAMPLE*
+* *SeriesLabel_OperationalChanges* (optional): lists any major modifications to the data collection program or data processing steps, in 3 columns (*Years*, *Component*, *Change_Event*). See *LINK TO EXAMPLE*
+
+Compiling short notes on data concerns and operational changes in *csv* format makes it possible to generate compact summary tables in an automated report (see examples in the appendices of [Pestal et al. 2022](https://www.psc.org/download/33/psc-technical-reports/14359/psc-technical-report-no-48.pdf)).
 
 
 
+### CODE
+
+Given this file structure, the R code to merge, cross-check, and summarize the data across projects is relatively simple.
+
+* functions vs. scripts
+
+*INCLUDE SUMMARY*
+
+
+
+### OUTPUT
+
+* csv files merging from the individual source data files
+* csv summary files 
+* summary plots
+* automated report
 
 
 
