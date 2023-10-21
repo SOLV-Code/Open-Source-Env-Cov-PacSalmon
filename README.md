@@ -57,7 +57,7 @@ All the contributed source data lives here. Each data set is contained in 1 fold
 
 For each data set, there are 2 main files:
 
-*README.md* file in [github markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), summarizing the source of the data, why it is included here, where it has been used for Pacific salmon models, and any notable points to consider before using that data. The intent is that the *README* will evolve into a set of standard sections, which can then be pulled "as-is" into an automated report.
+* *README.md* file in [github markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), summarizing the source of the data, why it is included here, where it has been used for Pacific salmon models, and any notable points to consider before using that data. The intent is that the *README* will evolve into a set of standard sections, which can then be pulled "as-is" into an automated report.
 * *InfoFile_DataSetName.csv*: data file with standard columns, listing each time series in the data set and some information about each series. Parts of this will be pulled into automated summaries and summary tables for the automated report.
 
 For each time series, there are up to 3 csv files: 
@@ -70,7 +70,7 @@ Compiling short notes on data concerns and operational changes in *csv* format m
 
 
 
-### CODE
+### CODE Folder
 
 Given this file structure, the R code to merge, cross-check, and summarize the data across projects is relatively simple.
 
@@ -80,7 +80,7 @@ Given this file structure, the R code to merge, cross-check, and summarize the d
 
 
 
-### OUTPUT
+### OUTPUT Folder
 
 * csv files merging from the individual source data files
 * csv summary files 
