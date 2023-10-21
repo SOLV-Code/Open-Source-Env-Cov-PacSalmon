@@ -1,5 +1,8 @@
 # OSEC-PS: Open-Source Environmental Covariates - Pacific Salmon
 
+
+*STATUS: This repo is taking shape as we are discussing ideas with participants at the PICES Annual Meeting. Check back frequently and leave [some feedback](#feedback-on-osec-ps).*
+
 ## Purpose
 
 We've used a lightweight, human-centered data management system to compile and manage source data for  Yukon River Chinook Salmon run reconstruction 
@@ -16,9 +19,11 @@ The [worked example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-Syste
 * meta-data for time series or individual records
 * inventory of projects where each series was used, documenting where the covariate improved the model.
 
+focus on annual time series, but compiling information on sources for raw data etc as well.
 
+open data
 
-
+Fraser Env watch
 
 
 ## Repository structure
@@ -30,7 +35,7 @@ The [worked example](https://github.com/SOLV-Code/UltraLite-Fisheries-Data-Syste
 
 
 
-## Feedback on OSEC-PS
+## Feedback on OSEC-PS  
 
 If you have any questions, comments, or ideas for extensions, you can leave a note on the
 [issues page](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues) by clicking
