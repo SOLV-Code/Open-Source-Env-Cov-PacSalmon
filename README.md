@@ -18,28 +18,14 @@ An open-source data resource is a good test for this idea, because individual co
 
 ## Scope
 
+Data management systems are easier to design and maintain if their scope is clearly bounded. For this project, we are considering the following bounds:
+
+* potential environmental covariates for Pacific salmon models
 * useable annual time series (quality controlled estimates, not raw data)
 * meta-data for time series or individual records
 * inventory of projects where each series was used, documenting where the covariate improved the model.
 
-focus on annual time series, but compiling information on sources for raw data etc as well.
-
-open data
-
-Fraser Env watch
-
-
-## Repository structure
-
-
-### DATA Folder
-
-* All the contributed source data lives here
-* each data set  = 1 folder
-* Readme file in markdown (standard section) -> pulled into automated report 
-* individual csv files for each series
-
-
+Along the way, we will also compile an inventory of any interesting sources of environmental information that come up, but are out of scope (e.g., [weekly reports from Fraser River Environmental Watch](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html), [short-term smoke forecasts for Canada and U.S.](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html)). Once the wiki pages take shape, these links will move there somewhere.
 
 
 ## Feedback on OSEC-PS  
@@ -62,11 +48,19 @@ You have three options for browsing through this repository:
 * If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *UltraLite-Fisheries-Data-System.Rproj*
 
 
-## Structure
+## Repository structure
 
-Each folder has a *README.md* file that explains the files. Github displays the README contents below the list of files. If there are a lot of files, you may have to scroll to the bottom to see the README.
 
-The key folders are:
+### DATA Folder
+
+* All the contributed source data lives here
+* each data set  = 1 folder withitopicn the data folder. A data set is a group of time series from a common sources, related to a common topic, or covering a shared spatial extent (e.g., same watershed).
+* For each data set, there are 2 main files:
+    *README.md* file in [github markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), summarizing the source of the data, why it is included here, where it has been used for Pacific salmon models, and any notable points to consider before using that data. The intent is that the *README* will evolve into a set of standard sections, which can then be pulled "as-is" into an automated report.
+   * *InfoFile_DataSetName.csv*: data file with standard columns, listing each time series in the data set and some information about each series. Parts of this will be pulled into automated summaries and summary tables for the automated report.
+* For each time series, there are:
+
+
 
 
 
