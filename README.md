@@ -23,8 +23,11 @@ Data management systems are easier to design and maintain if their scope is clea
 * meta-data for time series or individual records
 * inventory of projects where each series was used, documenting where the covariate improved the model.
 
-Along the way, we will also compile an inventory of any interesting sources of environmental information that come up, but are out of scope (e.g., [weekly reports from Fraser River Environmental Watch](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html), [short-term smoke forecasts for Canada and U.S.](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html)). Once the wiki pages take shape, these links will move there somewhere.
+Along the way, we will also compile an inventory of any interesting sources of environmental information that come up, but are out of scope for this project. Once the wiki pages take shape, these links will move there somewhere, but for now we are compiling the here:
 
+* [weekly reports from Fraser River Environmental Watch](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html)
+* [IYS Ocean Observing System](https://iys.hakai.org/dataset)
+* [short-term smoke forecasts for Canada and U.S.](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html) 
 
 ## Feedback on OSEC-PS  
 
