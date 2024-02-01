@@ -3,6 +3,18 @@
 
 **STATUS: This repo is taking shape as we are discussing ideas with participants at the PICES Annual Meeting. Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!**
 
+## Current Coverage
+
+Variable | Context | Data Set | STATUS
+-- | -- | -- | --
+Pacific Decadal Oscillation | TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | TEXT
+Fraser River Discharge | TEXT | TEXT | TEXT
+
+
+
+
+
+
 ## Purpose
 
 We've used a lightweight, human-centered data management system to compile and manage source data for  Yukon River Chinook Salmon run reconstruction 
