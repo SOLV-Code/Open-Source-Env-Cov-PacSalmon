@@ -1,9 +1,29 @@
 ## DFO Fraser Sockeye Forecast
 
+### Introduction
+
+Run size forecasts for stocks of Fraser River sockeye are developed annually, using a comprehensive suite of candidate models and extensive retrospective evaluation. Environmental covariates considered include river conditions during juvenile outmigration, local conditions during ocean entry, and large-scale ocean conditions during the first winter at sea.
+
+Candidate models and forecast evaluation methods have evolved over more than 20 years through an intensive annual peer-review process. A key milestone in the evolution of forecasting methods was the [2010 Forecast] (https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/341025.pdf), which expanded the analyses and communication of uncertainty in the forecasts.
+
+As the forecast methods have matured and stabilized, the peer-review process has changed as well. From 2000 to 2012, the annual forecasts were published as DFO Research Documents, which undergo a full peer-review coordinated by [DFO's Canadian Science Advisory Secretariat](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm). From 2014 to 2021, a more streamlined [Science Response](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm) process was used. The full set of reports is available through the [References](#References) below.
+
+
+
 ### Status
 
 Looking for publicly available data set, either as a data file or report with table of annual values
 
+
+
+
+
+
+### Questions
+
+* 2013, 2022, 2023 forecast papers not published?
+* Other than the big 2010 overhaul, any years with substantial changes to the methods?
+* 
 
 
 ### TEXT
@@ -41,6 +61,16 @@ https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf
 
 
 ### References
+
+**Annual Forecast Reports**
+
+* 2000 Forecast: [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/249501.pdf)
+* 2001 Forecast: [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/256496.pdf)
+* 2002 Forecast: [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/270590.pdf)
+* 2003 Forecast:
+
+* 2021 Forecast: [Science Response](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)
+
 
 
 https://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2012/2012_145-eng.html
