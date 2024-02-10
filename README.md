@@ -14,7 +14,7 @@ Entrance Island Sea Surface Temperature Apr-Jun | TEXT | [Fraser Sockeye Forecas
 Pine Island Sea Surface Temperature Apr-Jun | TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | TEXT
 
 
-
+July-August SSS
 
 ## Purpose
 
