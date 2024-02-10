@@ -1,7 +1,7 @@
 # OSEC-PS: Open-Source Environmental Covariates - Pacific Salmon
 
 
-**STATUS: This repo is taking shape as we are discussing ideas with participants at the PICES Annual Meeting. Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!**
+**STATUS: This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!**
 
 ## Current Coverage
 
@@ -35,11 +35,32 @@ Data management systems are easier to design and maintain if their scope is clea
 * meta-data for time series or individual records
 * inventory of projects where each series was used, documenting where the covariate improved the model.
 
-Along the way, we will also compile an inventory of any interesting sources of environmental information that come up, but are out of scope for this project. Once the wiki pages take shape, these links will move there somewhere, but for now we are compiling the here:
+Along the way, we are also compiling an inventory of any interesting sources of environmental information that come up, but are out of scope for this project. These are stored on a [wiki page].
 
-* [weekly reports from Fraser River Environmental Watch](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html)
-* [IYS Ocean Observing System](https://iys.hakai.org/dataset)
-* [short-term smoke forecasts for Canada and U.S.](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html) 
+
+## Repository structure
+
+
+* [DATA Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA): Includes all the contributed data with detailed descriptions of what they are and how they have been used.
+
+* [CODE Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/CODE): includes all the functions an code needed to process the contributed data into a single consistent data set and generate various summaries.
+
+* [OUTPUT Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/OUTPUT): includes the merged data set and summaries.
+
+
+
+## Get Started
+
+You have four options for browsing through this repository:
+
+* If you are mainly interested in getting the data, browse through the descriptions of each data set in the [DATA](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA), then download either an individual data file or the full merged data set in the [OUTPUT](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/OUTPUT) folder. To download a data set, click through until you see the contents of the csv file displayed, then click on the icon for "download raw file" in the top right corner.
+
+* If you just want to have a quick look at the data structure and code, follow the links above for specific examples of file structure and code.
+
+* If you want a local copy of all the key files, click on the green *"<> Code"* button near the top of this page, and select *"Download Zip"*.
+
+* If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *Open-Source-Env-Cov-PacSalmon.Rproj* and start looking through the code scripts.
+
 
 ## Feedback on OSEC-PS  
 
@@ -47,58 +68,7 @@ If you have any questions, comments, or ideas for extensions, you can leave a no
 [issues page](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues) by clicking
 on *New Issue*. Make sure to give it an informative title.
 
-You can also scroll through the other open issues to follow the discussion and contribute ideas.
-
-
-## Get Started
-
-You have three options for browsing through this repository:
-
-* If you just want to have a quick look, keep reading and follow the links below for specific examples of file structure and code.
-
-* If you want a local copy of the key files, click on the green *"<> Code"* button near the top of this page, and select *"Download Zip"*.
-
-* If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *Open-Source-Env-Cov-PacSalmon.Rproj* and start looking through the code scripts.
-
-
-## Repository structure
-
-
-### DATA Folder
-
-All the contributed source data lives here. Each data set is contained in 1 folder within the data folder. A data set is a group of time series from a common source, related to a common topic, or covering a shared spatial extent (e.g., same watershed).
-
-For each data set, there are 2 main files:
-
-* *README.md* file in [github markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), summarizing the source of the data, why it is included here, where it has been used for Pacific salmon models, and any notable points to consider before using that data. The intent is that the *README* will evolve into a set of standard sections, which can then be pulled "as-is" into an automated report.
-* *InfoFile_DataSetName.csv*: data file with standard columns, listing each time series in the data set and some information about each series. Parts of this will be pulled into automated summaries and summary tables for the automated report.
-
-For each time series, there are up to 3 csv files: 
-
-* *SeriesLabel_Data* (required): lists annual estimates, with error bounds where available, and includes a header with some clarification information. Header lines start with *#*. In *R*, the header information is stripped out by using the argument ```comment.char = "#"``` when reading in the files with ```read.csv()```. See  *LINK TO EXAMPLE*
-* *SeriesLabel_DataConcerns* (optional): lists any potential data issues, in 2 columns (*Years_Affected*, *Potential_Issue*). See See  *LINK TO EXAMPLE*
-* *SeriesLabel_OperationalChanges* (optional): lists any major modifications to the data collection program or data processing steps, in 3 columns (*Years*, *Component*, *Change_Event*). See *LINK TO EXAMPLE*
-
-Compiling short notes on data concerns and operational changes in *csv* format makes it possible to generate compact summary tables in an automated report (see examples in the appendices of [Pestal et al. 2022](https://www.psc.org/download/33/psc-technical-reports/14359/psc-technical-report-no-48.pdf)).
-
-
-
-### CODE Folder
-
-Given this file structure, the R code to merge, cross-check, and summarize the data across projects is relatively simple.
-
-* functions vs. scripts
-
-*INCLUDE SUMMARY*
-
-
-
-### OUTPUT Folder
-
-* csv files merging from the individual source data files
-* csv summary files 
-* summary plots
-* automated report
+You can also scroll through any other open issues to follow the discussion and contribute ideas.
 
 
 
