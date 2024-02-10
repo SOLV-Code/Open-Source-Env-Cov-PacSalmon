@@ -7,10 +7,11 @@
 
 Variable | Context | Data Set | STATUS
 -- | -- | -- | --
-Pacific Decadal Oscillation | TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | TEXT
-Fraser River Discharge | TEXT | TEXT | TEXT
-
-
+Pacific Decadal Oscillation Mean Nov-Mar | TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | TEXT
+Fraser River Discharge Peak April-June| TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)| TEXT
+Fraser River Discharge Mean April-June| TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)| TEXT
+Entrance Island Sea Surface Temperature Apr-Jun | TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | TEXT
+Pine Island Sea Surface Temperature Apr-Jun | TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | TEXT
 
 
 
@@ -35,7 +36,7 @@ Data management systems are easier to design and maintain if their scope is clea
 * meta-data for time series or individual records
 * inventory of projects where each series was used, documenting where the covariate improved the model.
 
-Along the way, we are also compiling an inventory of any interesting sources of environmental information that come up, but are out of scope for this project. These are stored on a [wiki page].
+Along the way, we are also compiling an inventory of any interesting sources of environmental information that come up, but are out of scope for this project. These are stored on a [wiki page](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/wiki/Other-Sources).
 
 
 ## Repository structure
