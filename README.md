@@ -5,7 +5,7 @@ This repo is taking shape based on discussions at the [2023 PICES Annual Meeting
 
 See the [summary of current coverage](#Current-Coverage) below for a list of data sets and the environmental variables they include.
 
-
+**Important Warning**: Environmental covariates in this repository are mapped onto the year of measurement. Before use, they need to be lined up properly for each specific salmon spawner and recruit data set based on the assumed mechanism of interaction and the life history of the stock. For example, sea surface temperature in the Strait of Georgia in 2022 is potentially informative for early ocean survival of Fraser 4_2_ Chinook from the 2020 brood year and river-type Sockeye from the 2021 brood year. This also means that direct comparisons between diverse environmental indicators need to be approached with caution (e.g., pair-wise correlation).
 
 
 ## Purpose
