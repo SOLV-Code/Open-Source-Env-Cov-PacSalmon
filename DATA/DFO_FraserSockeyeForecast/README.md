@@ -1,5 +1,9 @@
 ## DFO Fraser Sockeye and Pink Salmon Adult Run Size Forecast
 
+**Status**: In progress
+**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code). Official version of the data set maintained by DFO Stock Assessment - Lower Fraser.
+
+
 ### Introduction
 
 Run size forecasts for stocks of Fraser River sockeye are developed annually, using a comprehensive suite of candidate models and extensive retrospective evaluation. Environmental covariates considered include local river conditions during juvenile outmigration, regional conditions during ocean entry, and large-scale climate conditions during the winter preceding outmigration.
@@ -59,7 +63,8 @@ TBI
 * 2016 Forecast [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/365999.pdf) and [Supplement](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4062254x.pdf)
 * 2017 Forecast [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40624808.pdf),
 * 2018 Forecast [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40715607.pdf)
-* 2021 Forecast [SciResp] (https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)
+* 2021 Forecast
+[SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)
 
 
 **Other Analyses**
@@ -68,12 +73,17 @@ TBI
 
 
 
-
-
-
-
-
 ### Details
+
+**PDO Pacific Decadal Oscillation**
+
+
+
+
+
+
+**Sea Surface Temperature and Salinity**
+
 
 
 British Columbia Lightstation Sea-Surface Temperature and Salinity Data (Pacific), 1914-present
