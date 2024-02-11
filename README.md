@@ -6,11 +6,33 @@
 ## Current Coverage
 
 
-Data Set | Large-Scale  | Regional | Local
--- | -- | -- | --
-[DFO Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | **PDO**: Pacific Decadal Oscillation Mean Nov-Mar | **Sea Surface Temperature**: Entrance Island (Strait of Georgia) Mean Apr-Jun, Pine Island (NE Vancouver Island) Mean Apr-Jun; **Sea Surface Salinity**: Amphitrite Point (WCVI) and Race Rocks (Strait of Juan de Fuca) Mean Jul-Aug/Sep | **Fraser River Discharge**: Peak and Mean April-June
-[NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) | **PDO** Pacific Decadal Oscillation: Sum Dec-March, Sum May-Sep, **ONI** Oceanic Nino Index: Avg Jan-Jun   |
-**Sea Surface Temperature**: Anomalies in Mean May-Sep Across 7 bouys off coastasl Washington and Oregon; **Upper 20m Temperature**: Mean Nov-Mar, Mean May-Sep (?Same buoys?); **Deep Temperature**: Mean May-Sep (?Same buoys?); **Deep Salinity**:Mean May-Sep (?Same buoys?) |  None
+### [DFO Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)
+
+**Large Scale**
+
+* *PDO Pacific Decadal Oscillation*: Mean Nov-Mar
+
+**Regional**
+
+* *Sea Surface Temperature*: Entrance Island (Strait of Georgia) Mean Apr-Jun, Pine Island (NE Vancouver Island) Mean Apr-Jun
+* *Sea Surface Salinity*: Amphitrite Point (WCVI) and Race Rocks (Strait of Juan de Fuca) Mean Jul-Aug/Sep
+
+**Local**
+* *Fraser River Discharge*: Peak and Mean April-June
+
+### [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) 
+
+**Large Scale**
+
+* *PDO Pacific Decadal Oscillation*: Sum Dec-March, Sum May-Sep
+* *ONI Oceanic Nino Index*: Avg Jan-Jun  
+
+**Regional** 
+
+* *Sea Surface Temperature*: Anomalies in Mean May-Sep Across 7 bouys off coastal Washington and Oregon
+* *Upper 20m Temperature*: Mean Nov-Mar, Mean May-Sep (?Same 7 buoys?)
+* *Deep Temperature*: Mean May-Sep (?Same 7 buoys?
+* *Deep Salinity*:Mean May-Sep (?Same 7 buoys?)
 
 
 
