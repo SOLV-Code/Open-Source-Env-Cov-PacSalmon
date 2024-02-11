@@ -1,38 +1,9 @@
 # OSEC-PS: Open-Source Environmental Covariates - Pacific Salmon
 
 
-**STATUS: This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!**
+**STATUS**: This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!
 
-## Current Coverage
-
-
-### [DFO Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)
-
-**Large Scale**
-
-* *PDO Pacific Decadal Oscillation*: Mean Nov-Mar
-
-**Regional**
-
-* *Sea Surface Temperature*: Entrance Island (Strait of Georgia) Mean Apr-Jun, Pine Island (NE Vancouver Island) Mean Apr-Jun
-* *Sea Surface Salinity*: Amphitrite Point (WCVI) and Race Rocks (Strait of Juan de Fuca) Mean Jul-Aug/Sep
-
-**Local**
-* *Fraser River Discharge*: Peak and Mean April-June
-
-### [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) 
-
-**Large Scale**
-
-* *PDO Pacific Decadal Oscillation*: Sum Dec-March, Sum May-Sep
-* *ONI Oceanic Nino Index*: Avg Jan-Jun  
-
-**Regional** 
-
-* *Sea Surface Temperature*: Anomalies in Mean May-Sep Across 7 bouys off coastal Washington and Oregon
-* *Upper 20m Temperature*: Mean Nov-Mar, Mean May-Sep (?Same 7 buoys?)
-* *Deep Temperature*: Mean May-Sep (?Same 7 buoys?
-* *Deep Salinity*:Mean May-Sep (?Same 7 buoys?)
+See the [summary of current coverage](#Current-Coverage) below for a list of data sets and the environmental variables they include.
 
 
 
@@ -95,6 +66,37 @@ on *New Issue*. Make sure to give it an informative title.
 You can also scroll through any other open issues to follow the discussion and contribute ideas.
 
 
+
+## Current Coverage
+
+
+### [DFO Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)
+
+**Large Scale**
+
+* *PDO Pacific Decadal Oscillation*: Mean Nov-Mar
+
+**Regional**
+
+* *Sea Surface Temperature*: Entrance Island (Strait of Georgia) Mean Apr-Jun, Pine Island (NE Vancouver Island) Mean Apr-Jun
+* *Sea Surface Salinity*: Amphitrite Point (WCVI) and Race Rocks (Strait of Juan de Fuca) Mean Jul-Aug/Sep
+
+**Local**
+* *Fraser River Discharge*: Peak and Mean April-June
+
+### [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) 
+
+**Large Scale**
+
+* *PDO Pacific Decadal Oscillation*: Sum Dec-March, Sum May-Sep
+* *ONI Oceanic Nino Index*: Avg Jan-Jun  
+
+**Regional** 
+
+* *Sea Surface Temperature*: Anomalies in Mean May-Sep Across 7 bouys off coastal Washington and Oregon
+* *Upper 20m Temperature*: Mean Nov-Mar, Mean May-Sep (?Same 7 buoys?)
+* *Deep Temperature*: Mean May-Sep (?Same 7 buoys?
+* *Deep Salinity*:Mean May-Sep (?Same 7 buoys?)
 
 
 
