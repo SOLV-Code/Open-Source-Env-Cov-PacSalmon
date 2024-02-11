@@ -8,8 +8,9 @@
 
 Data Set | Large-Scale  | Regional | Local
 -- | -- | -- | --
-[DFO Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | Pacific Decadal Oscillation Mean Nov-Mar |  Entrance Island (Strait of Georgia) Sea Surface Temperature Mean Apr-Jun, Pine Island (NE Vancouver Island) Sea Surface Temperature Mean Apr-Jun, Amphitrite Point and Race Rocks (WHERE) Sea Surface Salinity Mean Jul-Aug/Sep | Fraser River Discharge Peak and Mean April-June
-[NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) |   |   |
+[DFO Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | **PDO**: Pacific Decadal Oscillation Mean Nov-Mar | **Sea Surface Temperature**: Entrance Island (Strait of Georgia) Mean Apr-Jun, Pine Island (NE Vancouver Island) Mean Apr-Jun; **Sea Surface Salinity**: Amphitrite Point (WCVI) and Race Rocks (Strait of Juan de Fuca) Mean Jul-Aug/Sep | **Fraser River Discharge**: Peak and Mean April-June
+[NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) | **PDO** Pacific Decadal Oscillation: Sum Dec-March, Sum May-Sep, **ONI** Oceanic Nino Index: Avg Jan-Jun   |
+**Sea Surface Temperature**: Anomalies in Mean May-Sep Across 7 bouys off coastasl Washington and Oregon; **Upper 20m Temperature**: Mean Nov-Mar, Mean May-Sep (?Same buoys?); **Deep Temperature**: Mean May-Sep (?Same buoys?); **Deep Salinity**:Mean May-Sep (?Same buoys?) |  None
 
 
 
@@ -33,6 +34,8 @@ Data management systems are easier to design and maintain if their scope is clea
 * useable annual time series (quality controlled estimates, not raw data)
 * meta-data for time series or individual records
 * inventory of projects where each series was used, documenting where the covariate improved the model.
+
+For now, we are excluding biological covariates, such as copepod diversity, winter ichthyoplankton biomass, or catch/abundance of other salmon species (e.g., using pink salmon abundance as a covariate in sockeye salmon models). In cases where biological variables are part of a multi-variable index, such as the [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex), we include the overall index, and the individual environmental components of index.
 
 Along the way, we are also compiling an inventory of any interesting sources of environmental information that come up, but are out of scope for this project. These are stored on a [wiki page](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/wiki/Other-Sources).
 
