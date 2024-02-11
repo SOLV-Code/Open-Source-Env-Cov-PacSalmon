@@ -1,7 +1,7 @@
 #  PDO Index,,,,,,,,,,,,
-"# Updated standardized values for the PDO index, derived as the leading PC of monthly SST anomalies in the North Pacific Ocean,  ",,,,,,,,,,,,
+# Updated standardized values for the PDO index. Derived as the leading PC of monthly SST anomalies in the North Pacific Ocean ,,,,,,,,,,,,
 # poleward of 20N. The monthly mean global average SST anomalies are removed to separate this pattern of variability from any ,,,,,,,,,,,,
-"# ""global warming"" signal that may be present in the data.",,,,,,,,,,,,
+# global warming signal that may be present in the data.,,,,,,,,,,,,
 # Values extracted on 2024-02-11 from https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data,,,,,,,,,,,,
 # Data description and references at  http://research.jisao.washington.edu/pdo/PDO.latest.txt,,,,,,,,,,,,
 Year,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec
