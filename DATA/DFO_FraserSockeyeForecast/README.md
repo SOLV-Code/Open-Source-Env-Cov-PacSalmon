@@ -1,8 +1,10 @@
 ## DFO Fraser Sockeye and Pink Salmon Adult Run Size Forecast
 
 **Status**: In progress
+
 **Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code). Official version of the data set maintained by DFO Stock Assessment - Lower Fraser.
 
+**Last Update**: 2014-02-12
 
 ### Introduction
 
@@ -35,6 +37,7 @@ For this repository, we are trying to replicate the data treatment steps to gene
 
 * 2019, 2020, 2022, 2023 forecast papers not published?
 * Other than the 2010 and 2016 milestones listed above, any years with substantial changes to the methods that should be highlighted?
+* Why does the PDO source data [here](http://research.jisao.washington.edu/pdo/PDO.latest) end in Sep 2018? Another source [here](https://www.ncei.noaa.gov/pub/data/cmb/ersst/v5/index/ersst.v5.pdo.dat) goes to Jan 2024, but has different values than the source provided in the 2021 FC paper.
 
 
 
@@ -77,8 +80,14 @@ TBI
 
 **PDO Pacific Decadal Oscillation**
 
+The latest forecast report provides [this link] (http://research.jisao.washington.edu/pdo/PDO.latest) for the PDO index. The source file includes brief notes on the data and citations with more detail. 
 
+The source file describes the data set as *"Updated standardized values for the PDO index, derived as the leading PC of monthly SST anomalies in the North Pacific Ocean,  poleward of 20N. The monthly mean global average SST anomalies
+are removed to separate this pattern of variability from any "global warming" signal that may be present in the data."* 
 
+*Note*: This source file ends in 2018. Another version that goes up to 2022 with matching values is available [here](https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data), but does not include the context and definitions. Up-to-date versions are available online, but numbers don't match (e.g., [here](https://www.ncei.noaa.gov/pub/data/cmb/ersst/v5/index/ersst.v5.pdo.dat)).
+
+The online source file is in text format with text and annotations, so values can't be extracted easily. We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA) from the notes [here](http://research.jisao.washington.edu/pdo/PDO.latest)  and the values [here](https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data)
 
 
 
@@ -96,28 +105,7 @@ https://hub.arcgis.com/datasets/6140178915024068ac498da4225a2e6b
 https://catalogue.data.gov.bc.ca/dataset/ad95a5c1-5e3e-4571-99a8-1090282a9757
 
 
-
-2010 paper links: no longer active
-
-https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/341025.pdf
-
-1. Pacific Decadal Oscillation (PDO): a broad index of sea surface temperature (SST) in the
-North Pacific (Mantua et al. 1997); http://jisao.washington.edu/pdo/PDO.latest
-2. Sea-Surface-Temperature (SST): data were sampled at lighthouse locations that are
-thought to best represent conditions experienced by juveniles during their initial stages of
-migration in the marine environment in the juvenile ocean entry year. The two locations are
-Entrance Island (Strait of Georgia, proximate to Nanaimo) and Pine Island (NE corner of
-Vancouver Island).
-
-A. Entrance Island: average SST data (April to June) in the Strait of Georgia where
-juvenile Fraser Sockeye first enter the marine environment.
-http://www.pac.dfo-mpo.gc.ca/sci/OSAP/data/SearchTools/Searchlighthouse_e.htm   ## NOT ACTIVE
-B. Sea-Surface-Temperature (SST) Pine Island: average SST data (April to July) on
-the northern tip of Vancouver Island (see previous web link).
-4. Fraser discharge (peak and average April to June mean discharge):
-http://www.wsc.ec.gc.ca/hydat/H2O/
+**Fraser River Discharge**
 
 
-LATEST (LINKS WORK)
-https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf
 
