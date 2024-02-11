@@ -38,7 +38,7 @@ For this repository, we are trying to replicate the data treatment steps to gene
 * 2019, 2020, 2022, 2023 forecast papers not published?
 * Other than the 2010 and 2016 milestones listed above, any years with substantial changes to the methods that should be highlighted?
 * Why does the PDO source data [here](http://research.jisao.washington.edu/pdo/PDO.latest) end in Sep 2018? Another source [here](https://www.ncei.noaa.gov/pub/data/cmb/ersst/v5/index/ersst.v5.pdo.dat) goes to Jan 2024, but has different values than the source provided in the 2021 FC paper.
-
+* The PDO index [source file](http://research.jisao.washington.edu/pdo/PDO.latest) states that the underlying warming trend has been removed from the index to focus on anomalies. For the purpose of salmon forecasting, should the isolated warming index be included as a stand-alone environmental covariate? 
 
 
 ### Highlights from Published Analyses
@@ -80,14 +80,14 @@ TBI
 
 **PDO Pacific Decadal Oscillation**
 
-The latest forecast report provides [this link] (http://research.jisao.washington.edu/pdo/PDO.latest) for the PDO index. The source file includes brief notes on the data and citations with more detail. 
+The latest forecast report provides 
+[this link](http://research.jisao.washington.edu/pdo/PDO.latest) for the PDO index. The source file includes brief notes on the data and citations with more detail. 
 
-The source file describes the data set as *"Updated standardized values for the PDO index, derived as the leading PC of monthly SST anomalies in the North Pacific Ocean,  poleward of 20N. The monthly mean global average SST anomalies
-are removed to separate this pattern of variability from any "global warming" signal that may be present in the data."* 
+The source file describes the data set as *"Updated standardized values for the PDO index, derived as the leading PC of monthly SST anomalies in the North Pacific Ocean,  poleward of 20N. The monthly mean global average SST anomalies are removed to separate this pattern of variability from any "global warming" signal that may be present in the data."* 
 
 *Note*: This source file ends in 2018. Another version that goes up to 2022 with matching values is available [here](https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data), but does not include the context and definitions. Up-to-date versions are available online, but numbers don't match (e.g., [here](https://www.ncei.noaa.gov/pub/data/cmb/ersst/v5/index/ersst.v5.pdo.dat)).
 
-The online source file is in text format with text and annotations, so values can't be extracted easily. We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA) from the notes [here](http://research.jisao.washington.edu/pdo/PDO.latest)  and the values [here](https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data)
+The online source file is in text format with text and annotations, so values can't be extracted easily. We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA) from the notes [here](http://research.jisao.washington.edu/pdo/PDO.latest)  and the values [here](https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data). To get the values, copy just the tab-separated values into a text file, add column headers, import into Excel, and then copy values into the csv.
 
 
 
