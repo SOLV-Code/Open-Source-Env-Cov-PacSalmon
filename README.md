@@ -5,16 +5,14 @@
 
 ## Current Coverage
 
-Variable | Context | Data Set | STATUS
+
+Data Set | Large-Scale  | Regional | Local
 -- | -- | -- | --
-Pacific Decadal Oscillation Mean Nov-Mar | TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | TEXT
-Fraser River Discharge Peak April-June| TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)| TEXT
-Fraser River Discharge Mean April-June| TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)| TEXT
-Entrance Island Sea Surface Temperature Apr-Jun | TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | TEXT
-Pine Island Sea Surface Temperature Apr-Jun | TEXT | [Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | TEXT
+[DFO Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | Pacific Decadal Oscillation Mean Nov-Mar |  Entrance Island (Strait of Georgia) Sea Surface Temperature Mean Apr-Jun, Pine Island (NE Vancouver Island) Sea Surface Temperature Mean Apr-Jun, Amphitrite Point and Race Rocks (WHERE) Sea Surface Salinity Mean Jul-Aug/Sep | Fraser River Discharge Peak and Mean April-June
+[NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) |   |   |
 
 
-July-August SSS
+
 
 ## Purpose
 

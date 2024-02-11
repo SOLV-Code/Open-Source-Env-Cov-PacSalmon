@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Run size forecasts for stocks of Fraser River sockeye are developed annually, using a comprehensive suite of candidate models and extensive retrospective evaluation. Environmental covariates considered include river conditions during juvenile outmigration, local conditions during ocean entry, and large-scale ocean conditions during the first winter at sea.
+Run size forecasts for stocks of Fraser River sockeye are developed annually, using a comprehensive suite of candidate models and extensive retrospective evaluation. Environmental covariates considered include river conditions during juvenile outmigration, local conditions during ocean entry, and large-scale ocean conditions during the winter preceding outmigration.
 
 Candidate models and forecast evaluation methods have evolved over more than 20 years through an intensive annual peer-review process. A key milestone in the evolution of forecasting methods was the 
 [2010 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/341025.pdf), which expanded the analyses and communication of uncertainty in the forecasts and formalized the consideration and testing of environmental covariates.
@@ -11,7 +11,7 @@ As the forecast methods have matured and stabilized, the peer-review process has
 
 
 
-### Status
+### Status of Data Set
 
 The source data used to generate the specific environmental covariate time series described in detail in the reports, and the most recent report includes
 
@@ -33,7 +33,7 @@ For this repository, we are trying to replicate the data treatment steps to gene
 * 
 
 
-### TEXT
+### Highlights from Published Analyses
 
 
 https://catalogue.data.gov.bc.ca/dataset/ad95a5c1-5e3e-4571-99a8-1090282a9757
@@ -71,12 +71,10 @@ https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf
 
 **Annual Forecast Reports**
 
-* 2000 Forecast: [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/249501.pdf)
-* 2001 Forecast: [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/256496.pdf)
-* 2002 Forecast: [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/270590.pdf)
-* 2003 Forecast:
+2000 Forecast [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/249501.pdf), 
+2001 Forecast [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/256496.pdf), 2002 Forecast [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/270590.pdf), 2003 Forecast 
 
-* 2021 Forecast: [Science Response](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)
+2021 Forecast [Science Response] (https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)
 
 
 
@@ -98,3 +96,8 @@ https://www.env.gov.bc.ca/soe/indicators/climate-change/sea-surface-temperature.
 
 
 https://hub.arcgis.com/datasets/6140178915024068ac498da4225a2e6b
+
+
+
+
+### Details
