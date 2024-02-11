@@ -12,7 +12,7 @@ For each data set, there are 2 main files:
 
 For each time series, there are up to 3 csv files: 
 
-* *SeriesLabel_Data* (required): lists annual estimates, with error bounds where available, and includes a header with some clarification information. Header lines start with *#*. In *R*, the header information is stripped out by using the argument ```comment.char = "#"``` when reading in the files with ```read.csv()```. See  *LINK TO EXAMPLE*
+* *SeriesLabel_Data* (required): lists annual estimates, with error bounds where available, and includes a header with some clarification information. Header lines start with *#*. In *R*, the header information is stripped out by using the argument ```comment.char = "#"``` when reading in the files with ```read.csv()```.  **IMPORTANT: Do not use any ```,``` in the notes, they will mess up the import. **See  *LINK TO EXAMPLE*
 * *SeriesLabel_DataConcerns* (optional): lists any potential data issues, in 2 columns (*Years_Affected*, *Potential_Issue*). See See  *LINK TO EXAMPLE*
 * *SeriesLabel_OperationalChanges* (optional): lists any major modifications to the data collection program or data processing steps, in 3 columns (*Years*, *Component*, *Change_Event*). See *LINK TO EXAMPLE*
 
