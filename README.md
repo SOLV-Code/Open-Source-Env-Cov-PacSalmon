@@ -1,7 +1,7 @@
 # OSEC-PS: Open-Source Environmental Covariates - Pacific Salmon
 
 
-**STATUS**: This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!
+This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!
 
 See the [summary of current coverage](#Current-Coverage) below for a list of data sets and the environmental variables they include.
 
@@ -96,7 +96,7 @@ You can also scroll through any other open issues to follow the discussion and c
 * *Sea Surface Temperature*: Anomalies in Mean May-Sep Across 7 bouys off coastal Washington and Oregon
 * *Upper 20m Temperature*: Mean Nov-Mar, Mean May-Sep (?Same 7 buoys?)
 * *Deep Temperature*: Mean May-Sep (?Same 7 buoys?)
-* *Deep Salinity*:Mean May-Sep (?Same 7 buoys?)
+* *Deep Salinity*: Mean May-Sep (?Same 7 buoys?)
 
 
 
