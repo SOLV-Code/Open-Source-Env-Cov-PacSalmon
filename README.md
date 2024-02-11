@@ -21,14 +21,14 @@ An open-source data resource is a good test for this idea, because individual co
 
 ## Scope
 
-Data management systems are easier to design and maintain if their scope is clearly bounded. For this project, we are considering the following bounds:
+Data management systems are easier to design and maintain if their scope is clearly bounded. For this project, we are currently working with the following bounds:
 
 * potential environmental covariates for Pacific salmon models
 * useable annual time series (quality controlled estimates, not raw data)
 * meta-data for time series or individual records
 * inventory of projects where each series was used, documenting where the covariate improved the model.
 
-For now, we are excluding biological covariates, such as copepod diversity, winter ichthyoplankton biomass, or catch/abundance of other salmon species (e.g., using pink salmon abundance as a covariate in sockeye salmon models). In cases where biological variables are part of a multi-variable index, such as the [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex), we include the overall index, and the individual environmental components of index.
+For now, we are excluding biological covariates, such as copepod diversity, winter ichthyoplankton biomass, or catch/abundance of other salmon species (e.g., using pink salmon abundance as a covariate in sockeye salmon models). In cases where biological variables are part of a multi-variable index, such as the [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex), we include the overall index, and the individual environmental components of the index.
 
 Along the way, we are also compiling an inventory of any interesting sources of environmental information that come up, but are out of scope for this project. These are stored on a [wiki page](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/wiki/Other-Sources).
 
@@ -70,7 +70,7 @@ You can also scroll through any other open issues to follow the discussion and c
 ## Current Coverage
 
 
-### [DFO Fraser Sockeye Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)
+### [DFO Fraser Sockeye  and Pink Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)
 
 **Large Scale**
 
@@ -95,7 +95,7 @@ You can also scroll through any other open issues to follow the discussion and c
 
 * *Sea Surface Temperature*: Anomalies in Mean May-Sep Across 7 bouys off coastal Washington and Oregon
 * *Upper 20m Temperature*: Mean Nov-Mar, Mean May-Sep (?Same 7 buoys?)
-* *Deep Temperature*: Mean May-Sep (?Same 7 buoys?
+* *Deep Temperature*: Mean May-Sep (?Same 7 buoys?)
 * *Deep Salinity*:Mean May-Sep (?Same 7 buoys?)
 
 
