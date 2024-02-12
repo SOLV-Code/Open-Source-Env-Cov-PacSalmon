@@ -15,9 +15,9 @@ Candidate models and forecast evaluation methods have evolved over more than 20 
 Key milestones in the evolution of forecasting methods were: 
 
 * [2010 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/341025.pdf), which expanded the analyses and communication of uncertainty in the forecasts and formalized the consideration and testing of environmental covariates
-* [2016 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/365999.pdf), which first included a detailed discussion of environmental and other considerations by life history stage, packaged as a stand-alone [supplement document](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4062254x.pdf). The supplement covered topics like adult migration conditions, spawner condition, spawner success, egg-to-fry survival, freshwater rearing conditions, juvenile migration timing, and juvenile diets at ocean entry. This supplemental information was included as an appendix in the main forecast report in subesequent years.
+* [2016 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/365999.pdf), which first included a detailed discussion of environmental and other considerations by life history stage, packaged as a stand-alone [supplement document](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4062254x.pdf). The supplement are developed by an expert working group and cover topics like adult migration conditions, spawner condition, spawner success, egg-to-fry survival, freshwater rearing conditions, juvenile migration timing, and juvenile diets at ocean entry. This supplemental information was later published as a stand-alone technical report (2018-2020), and then included as an appendix in the main forecast report in the most recent years.
 
-As the forecast methods have matured and stabilized, the peer-review process has changed as well. For 2000-2013, the annual forecasts were published as DFO Research Documents, which undergo a full peer-review coordinated by [DFO's Canadian Science Advisory Secretariat](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm). From 2014 to 2021, a more streamlined [Science Response](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm) process was used. The full set of reports is available through the [References](#References) below.
+As the forecast methods have matured and stabilized, the peer-review process has changed as well. For 2000-2013, the annual forecasts were published as DFO Research Documents, which undergo a full peer-review coordinated by [DFO's Canadian Science Advisory Secretariat](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm). From 2014 to 2021, a more streamlined [Science Response](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm) process was used. Forecast reports and environmental condition supplements are available through the [References](#References) below.
 
 
 
@@ -28,7 +28,7 @@ It is, however, available upon request from the [DFO Lower Fraser Office](https:
 
 The source data used to generate the specific environmental covariate time series are described in detail in the reports. The most recent report includes active links to online source data for the PDO variable as well as the raw sea surface temperature and salinity data. For the Fraser River discharge data, an agency contact is provided.  
 
-The reports include plots of the environmental covariate time series (e.g., Figures 3-5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)), but do not include a table with the actual annual values. Recent forecast reports also include detailed discussion of environmental conditions in a supplemental appendix (e.g., Appendix A5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)).
+The reports include plots of the environmental covariate time series (e.g., Figures 3-5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)), but do not include a table with the actual annual values. Recent forecast reports also include detailed discussion of environmental conditions in a supplemental document or appendix (e.g., Appendix A5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)).
 
 For this repository, we are trying to replicate the data treatment steps to generate an [up-to-date downloadable covariate time series](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFraserRiverForecasts.csv) directly from the publicly available source data. *This is still a work in progress, as we are checking the generated file against the official data set*.
 
@@ -45,13 +45,20 @@ Follow the links to see the discussion thread and leave comments.
 
 ### Highlights from Published Analyses
 
+Candidate models with environmental covariates generally haven't been the best performing models acording to statistical criteria in retrospective tests, but have become the focus of pre-season advice due to extreme conditions observed in many recent years. Specifically, the [2021 Forecast Report](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf) states (pg.7): 
 
-TBI
+* *"For 19 major stocks, forecasts are based on a model selected from a shortlist of top-ranked models, by consensus of a group of experts."* 
+
+* "Model performance, ranking, and the primary model selection process for Fraser Sockeye Salmon are based on the jack-knife retrospective analyses conducted in 2012 (MacDonald and Grant 2012). Given the environmental conditions and poor productivity observed in recent years, an additional criterion was added during the 2017 model selection process where under certain conditions, environmental covariate models would be favoured over biological models (i.e., stock-recruit models) without environmental covariates (DFO 2017). Further attempts in recent years to capture historically poor productivity have led model selection to become more of an expert-driven process, that hasn’t fit neatly into the model selection criteria laid out in previous years. In an attempt for improved transparency, model selection criteria were revisited this year, and the conventions re-written to reflect this expert-driven process. Appendix 1 outlines the approach taken for model selection for 2021."*
+
+* "For many stocks, top-ranked models without climate-driven covariates, tended to provide forecast estimates at productivity levels far higher than those observed recently (Table 2). In many cases, the only models that provided forecast values near recently observed productivity levels were either forecast models with climate-driven covariates, or naïve models based on recent recruit-per-spawner (RS) estimates (such as RS4yr and RS8yr)."*
+
+
 
 
 ### References
 
-**Annual Forecast Reports**
+**Annual Forecast Reports and Environmental Conditions Supplements**
 
 * 2000 Forecast [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/249501.pdf)
 * 2001 Forecast [Res Doc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/256496.pdf)
@@ -67,7 +74,9 @@ TBI
 * 2015 Forecast [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/363748.pdf)
 * 2016 Forecast [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/365999.pdf) and [Supplement](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4062254x.pdf)
 * 2017 Forecast [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40624808.pdf),
-* 2018 Forecast [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40715607.pdf)
+* 2018 Forecast [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40715607.pdf), and [Supplement](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4072511x.pdf)
+* 2019 Forecast [Supplement](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40819103.pdf)
+* 2020 Forecast [Supplement](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4088546x.pdf)
 * 2021 Forecast
 [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)
 
@@ -110,3 +119,12 @@ The actual data set is available online as a single [zip file (3MB)](https://ope
 
 
 *Still trying to figure out a source and workflow for this one*
+
+Online sources of raw data: 
+
+* Water Survey of Canada: can get Fraser discharge at Hope in a csv file via download button [here](https://wateroffice.ec.gc.ca/report/data_availability_e.html?type=historical&station=08MF005&parameter_type=Flow+and+Level)
+
+
+* Fraser River conditions from DFO Environmental Watch (EWatch) Program: [Detailed weekly summaries ](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html), but no digital source file available.
+
+
