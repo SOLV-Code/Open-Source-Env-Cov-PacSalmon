@@ -2,7 +2,7 @@
 
 **Status**: In progress
 
-**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG and KD (**Use github ID,Check with them**). Official version of the data set maintained by DFO Stock Assessment - Lower Fraser.
+**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG and KD (**Use github ID,Check with them**). Official version of the data set maintained by [DFO Stock Assessment - Lower Fraser](https://www.dfo-mpo.gc.ca/contact/regions/pacific-pacifique-eng.html#Delta).
 
 **Last Update**: 2014-02-12
 
@@ -15,7 +15,7 @@ Candidate models and forecast evaluation methods have evolved over more than 20 
 Key milestones in the evolution of forecasting methods were: 
 
 * [2010 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/341025.pdf), which expanded the analyses and communication of uncertainty in the forecasts and formalized the consideration and testing of environmental covariates
-* [2016 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/365999.pdf) which first included a detailed discussion of environmental and other considerations by life history stage, packaged as a stand-alone [supplement document](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4062254x.pdf). The supplement covered topics like adult migration conditions, spawner condition, spawner success, egg-to-fry survival, freshwater rearing conditions, juvenile migration timing, and juvenile diets at ocean entry. This supplemental information was included as an appendix in the main forecast report in subesequent years.
+* [2016 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/365999.pdf), which first included a detailed discussion of environmental and other considerations by life history stage, packaged as a stand-alone [supplement document](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4062254x.pdf). The supplement covered topics like adult migration conditions, spawner condition, spawner success, egg-to-fry survival, freshwater rearing conditions, juvenile migration timing, and juvenile diets at ocean entry. This supplemental information was included as an appendix in the main forecast report in subesequent years.
 
 As the forecast methods have matured and stabilized, the peer-review process has changed as well. For 2000-2013, the annual forecasts were published as DFO Research Documents, which undergo a full peer-review coordinated by [DFO's Canadian Science Advisory Secretariat](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm). From 2014 to 2021, a more streamlined [Science Response](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm) process was used. The full set of reports is available through the [References](#References) below.
 
@@ -26,11 +26,11 @@ As the forecast methods have matured and stabilized, the peer-review process has
 Most of the source data can be accessed through links in the latest report, but the final time series actually being used is not currently available online. 
 It is, however, available upon request from the [DFO Lower Fraser Office](https://www.dfo-mpo.gc.ca/contact/regions/pacific-pacifique-eng.html#Delta). 
 
-The source data used to generate the specific environmental covariate time series described in detail in the reports. The most recent report includes active links to online source data for the PDO variable as well as the raw sea surface temperature and salinity data. For the Fraser River discharge data, an agency contact is provided.  
+The source data used to generate the specific environmental covariate time series are described in detail in the reports. The most recent report includes active links to online source data for the PDO variable as well as the raw sea surface temperature and salinity data. For the Fraser River discharge data, an agency contact is provided.  
 
 The reports include plots of the environmental covariate time series (e.g., Figures 3-5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)), but do not include a table with the actual annual values. Recent forecast reports also include detailed discussion of environmental conditions in a supplemental appendix (e.g., Appendix A5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)).
 
-For this repository, we are trying to replicate the data treatment steps to generate [up-to-date covariate time series](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFraserRiverForecasts.csv) directly from the publicly available source data. *This is still a work in progress, as we are checking the generated file against to official data set*.
+For this repository, we are trying to replicate the data treatment steps to generate an [up-to-date downloadable covariate time series](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFraserRiverForecasts.csv) directly from the publicly available source data. *This is still a work in progress, as we are checking the generated file against the official data set*.
 
 
 ### Open Questions 
@@ -74,7 +74,7 @@ TBI
 
 **Other Analyses**
 
-*Still looking for other reports/papers that use the same data set.
+*Still looking for other reports/papers that use the same data set.*
 
 
 
@@ -109,4 +109,4 @@ The actual data set is available online as a single [zip file (3MB)](https://ope
 **Fraser River Discharge**
 
 
-Still trying to figure out a source and workflow for this one
+*Still trying to figure out a source and workflow for this one*
