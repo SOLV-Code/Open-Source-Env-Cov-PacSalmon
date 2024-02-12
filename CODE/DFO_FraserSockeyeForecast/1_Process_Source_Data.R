@@ -24,9 +24,9 @@ pdo.long <- pdo.src %>% pivot_longer(Jan:Dec,names_to = "Month") %>%
 adj.yr.idx <- pdo.long$Month %in% c("Jan","Feb","Mar")
 pdo.long$Year[adj.yr.idx] <- pdo.long$Year[adj.yr.idx] -1
 
-pdo.winter.mean <- pdo.long %>% dplyr::filter(Year >=1900) %>% # remove partial data for first winter
+covar.pdo.winter.mean <- pdo.long %>% dplyr::filter(Year >=1900) %>% # remove partial data for first winter
 										group_by(Year) %>% summarize(PDOMeanNovToMar = mean(value))
-pdo.winter.mean
+covar.pdo.winter.mean
 
 # https://stackoverflow.com/questions/72304594/added-commented-section-to-output-csv-with-write-csv
 
@@ -62,7 +62,7 @@ entrance.island.sst.src[entrance.island.sst.src == 999.99] <- NA
 head(entrance.island.sst.src)
 
 entrance.island.sst.long  <- entrance.island.sst.src %>%
-	pivot_longer(JAN:DEC,names_to = "Month",values_to = "EntrIslSSTMeanAprToJun") %>%
+	pivot_longer(JAN:DEC,names_to = "Month",values_to = "EntrIslSST") %>%
 	dplyr::filter(Month %in% c("APR","MAY","JUN"))  # keep only the month used for mean
 
 entrance.island.sst.long
@@ -83,7 +83,7 @@ pine.island.sst.src[pine.island.sst.src == 999.99] <- NA
 head(pine.island.sst.src)
 
 pine.island.sst.long  <- pine.island.sst.src %>%
-	pivot_longer(JAN:DEC,names_to = "Month",values_to = "PineIslSSTMeanAprToJun") %>%
+	pivot_longer(JAN:DEC,names_to = "Month",values_to = "PineIslSST") %>%
 	dplyr::filter(Month %in% c("APR","MAY","JUN"))  # keep only the month used for mean
 
 pine.island.sst.long
@@ -104,9 +104,60 @@ dep.bay.sst.src[dep.bay.sst.src == 999.99] <- NA
 head(dep.bay.sst.src)
 
 dep.bay.sst.long  <- dep.bay.sst.src %>%
-	pivot_longer(JAN:DEC,names_to = "Month",values_to = "DeptBaySSTMeanAprToJun") %>%
+	pivot_longer(JAN:DEC,names_to = "Month",values_to = "DeptBaySST") %>%
 	dplyr::filter(Month %in% c("APR","MAY","JUN"))  # keep only the month used for mean
 
 dep.bay.sst.long
+
+
+
+sst.merged.long <- entrance.island.sst.long %>%
+									 full_join(pine.island.sst.long,by=c("YEAR","Month")) %>%
+									 full_join(dep.bay.sst.long,by=c("YEAR","Month")) %>%
+									# fill in missing Entrance Island records from Dept Bay records (as per pg6 of 2021 forecast report)
+	                mutate(EntrIslSST = coalesce(EntrIslSST,DeptBaySST)) %>%
+									arrange(YEAR)
+
+head(sst.merged.long)
+
+
+write_csv(sst.merged.long,"DATA/DFO_FraserSockeyeForecast/RawFiles/GENERATED_Merged_SST_Long.csv")
+
+
+
+
+
+covar.sst <- sst.merged.long %>% group_by(YEAR) %>% summarize(EntrIslSSTMeanAprToJun = mean(EntrIslSST),
+																								 PineIslSSTMeanAprToJun = mean(PineIslSST)) %>%
+							dplyr::rename(Year = YEAR)
+covar.sst
+
+
+
+
+
+#-------------------------------------------------------
+# Fraser Ricer Discharge
+#-------------------------------------------------------
+
+
+# STILL TRACKING THIS ONE DOWN
+
+
+
+
+
+#-------------------------------------------------------
+# MERGE SERIES
+#-------------------------------------------------------
+
+fraser.fc.covars <- covar.pdo.winter.mean %>%
+										full_join(covar.sst, by="Year")
+
+head(fraser.fc.covars)
+
+write_csv(fraser.fc.covars,"DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFraserRiverForecasts.csv")
+
+
 
 
