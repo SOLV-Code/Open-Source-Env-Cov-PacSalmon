@@ -25,7 +25,7 @@ adj.yr.idx <- pdo.long$Month %in% c("Jan","Feb","Mar")
 pdo.long$Year[adj.yr.idx] <- pdo.long$Year[adj.yr.idx] -1
 
 covar.pdo.winter.mean <- pdo.long %>% dplyr::filter(Year >=1900) %>% # remove partial data for first winter
-										group_by(Year) %>% summarize(PDOMeanNovToMar = mean(value))
+										group_by(Year) %>% summarize(PDOMeanNovToMar = round(mean(value),3))
 covar.pdo.winter.mean
 
 # https://stackoverflow.com/questions/72304594/added-commented-section-to-output-csv-with-write-csv
@@ -34,7 +34,7 @@ covar.pdo.winter.mean
 
 
 #-------------------------------------------------------
-# Lightstation Sea Surface Temperature and Salinity
+# Lightstation Sea Surface Temperature
 #-------------------------------------------------------
 
 
@@ -109,8 +109,6 @@ dep.bay.sst.long  <- dep.bay.sst.src %>%
 
 dep.bay.sst.long
 
-
-
 sst.merged.long <- entrance.island.sst.long %>%
 									 full_join(pine.island.sst.long,by=c("YEAR","Month")) %>%
 									 full_join(dep.bay.sst.long,by=c("YEAR","Month")) %>%
@@ -120,18 +118,104 @@ sst.merged.long <- entrance.island.sst.long %>%
 
 head(sst.merged.long)
 
-
 write_csv(sst.merged.long,"DATA/DFO_FraserSockeyeForecast/RawFiles/GENERATED_Merged_SST_Long.csv")
 
-
-
-
-
-covar.sst <- sst.merged.long %>% group_by(YEAR) %>% summarize(EntrIslSSTMeanAprToJun = mean(EntrIslSST),
-																								 PineIslSSTMeanAprToJun = mean(PineIslSST)) %>%
+covar.sst <- sst.merged.long %>% group_by(YEAR) %>% summarize(EntrIslSSTMeanAprToJun = round(mean(EntrIslSST),3),
+																								 PineIslSSTMeanAprToJun = round(mean(PineIslSST),3)) %>%
 							dplyr::rename(Year = YEAR)
 covar.sst
 
+
+
+#-------------------------------------------------------
+# Lightstation Sea Surface Salinity
+#-------------------------------------------------------
+
+# use the file list from previous section
+lightstation.files.list
+
+
+
+amphi.point.sss.idx <- grepl("Amphitrite_Point",lightstation.files.list) & grepl("Salinities",lightstation.files.list)
+amphi.point.sss.src <- read.csv(lightstation.files.list[amphi.point.sss.idx],
+																		comment.char = "#" ,
+																		skip = 1, # skip the first line text (need this, because doesn't have a "#" to mark comment)
+																		header=TRUE,
+																		stringsAsFactors = FALSE,
+																		blank.lines.skip=TRUE)
+
+amphi.point.sss.src[amphi.point.sss.src == 999.99] <- NA
+
+head(amphi.point.sss.src)
+
+amphi.point.sss.src.long  <- amphi.point.sss.src %>%
+	pivot_longer(JAN:DEC,names_to = "Month",values_to = "AmphiPtSSS")
+
+amphi.point.sss.src.long
+
+
+
+race.rocks.sss.idx <- grepl("Race_Rocks",lightstation.files.list) & grepl("Salinities",lightstation.files.list)
+race.rocks.sss.src <- read.csv(lightstation.files.list[race.rocks.sss.idx],
+																comment.char = "#" ,
+																skip = 1, # skip the first line text (need this, because doesn't have a "#" to mark comment)
+																header=TRUE,
+																stringsAsFactors = FALSE,
+																blank.lines.skip=TRUE)
+
+race.rocks.sss.src[race.rocks.sss.src == 999.99] <- NA
+
+head(race.rocks.sss.src)
+
+race.rocks.sss.src.long  <- race.rocks.sss.src %>%
+	pivot_longer(JAN:DEC,names_to = "Month",values_to = "RaceRocksSSS")
+
+race.rocks.sss.src.long
+
+
+
+
+sss.merged.long <- amphi.point.sss.src.long %>%
+	full_join(race.rocks.sss.src.long,by=c("YEAR","Month")) %>%
+	arrange(YEAR)
+
+head(sss.merged.long)
+
+write_csv(sss.merged.long,"DATA/DFO_FraserSockeyeForecast/RawFiles/GENERATED_Merged_SSS_Long.csv")
+
+
+sss.JulToAug <- sss.merged.long %>% dplyr::filter(Month %in% c("JUL","AUG")) %>%
+								group_by(YEAR) %>%
+								summarize(AmphiPtSSSMeanJulToAug = round(mean(AmphiPtSSS,na.rm=TRUE),3) ,
+													RaceRocksSSSMeanJulToAug = round(mean(RaceRocksSSS,na.rm=TRUE),3) ) %>%
+								mutate_all(~ifelse(is.nan(.), NA, .)) %>%
+								arrange(YEAR)
+
+sss.JulToAug <- sss.JulToAug%>%		mutate(SSSIndexJulToAug = round(rowMeans(select(sss.JulToAug,contains("SSSMean")), na.rm = TRUE),3)) %>%
+	mutate_all(~ifelse(is.nan(.), NA, .))
+
+sss.JulToAug
+
+
+sss.JulToSep <- sss.merged.long %>% dplyr::filter(Month %in% c("JUL","AUG","SEP")) %>%
+	group_by(YEAR) %>%
+	summarize(AmphiPtSSSMeanJulToSep = round(mean(AmphiPtSSS,na.rm=TRUE),3) ,
+						RaceRocksSSSMeanJulToSep = round(mean(RaceRocksSSS,na.rm=TRUE),3) ) %>%
+	mutate_all(~ifelse(is.nan(.), NA, .)) %>%
+	arrange(YEAR)
+
+sss.JulToSep <- sss.JulToSep%>%		mutate(SSSIndexJulToSep = round(rowMeans(select(sss.JulToSep,contains("SSSMean")), na.rm = TRUE),3)) %>%
+	mutate_all(~ifelse(is.nan(.), NA, .))
+
+sss.JulToSep
+
+
+
+covar.sss <- sss.JulToAug %>% select(YEAR, SSSIndexJulToAug) %>%
+							full_join(sss.JulToSep%>% select(YEAR, SSSIndexJulToSep),
+												by="YEAR") %>%
+	dplyr::rename(Year = YEAR)
+covar.sss
 
 
 
@@ -152,7 +236,8 @@ covar.sst
 #-------------------------------------------------------
 
 fraser.fc.covars <- covar.pdo.winter.mean %>%
-										full_join(covar.sst, by="Year")
+										full_join(covar.sst, by="Year") %>%
+										full_join(covar.sss, by="Year")
 
 head(fraser.fc.covars)
 
