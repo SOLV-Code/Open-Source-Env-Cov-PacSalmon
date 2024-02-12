@@ -33,12 +33,13 @@ The reports include plots of the environmental covariate time series (e.g., Figu
 For this repository, we are trying to replicate the data treatment steps to generate up-to-date covariate time series directly from the publicly available source data. *This is still a work in progress*.
 
 
-### Questions to Resolve
+### Open Questions 
 
-* 2019, 2020, 2022, 2023 forecast papers not published?
-* Other than the 2010 and 2016 milestones listed above, any years with substantial changes to the methods that should be highlighted?
-* Why does the PDO source data [here](http://research.jisao.washington.edu/pdo/PDO.latest) end in Sep 2018? Another source [here](https://www.ncei.noaa.gov/pub/data/cmb/ersst/v5/index/ersst.v5.pdo.dat) goes to Jan 2024, but has different values than the source provided in the 2021 FC paper.
-* The PDO index [source file](http://research.jisao.washington.edu/pdo/PDO.latest) states that the underlying warming trend has been removed from the index to focus on anomalies. For the purpose of salmon forecasting, should the isolated warming index be included as a stand-alone environmental covariate? 
+Follow the links to see the discussion thread and leave comments.
+
+* [Missing forecast reports?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/24)
+* [Other milestones in evolution of methods?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/25)
+* [PDO Index Details](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/26)
 
 
 ### Highlights from Published Analyses
@@ -87,22 +88,26 @@ The source file describes the data set as *"Updated standardized values for the 
 
 *Note*: This source file ends in 2018. Another version that goes up to 2022 with matching values is available [here](https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data), but does not include the context and definitions. Up-to-date versions are available online, but numbers don't match (e.g., [here](https://www.ncei.noaa.gov/pub/data/cmb/ersst/v5/index/ersst.v5.pdo.dat)).
 
-The online source file is in text format with text and annotations, so values can't be extracted easily. We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA) from the notes [here](http://research.jisao.washington.edu/pdo/PDO.latest)  and the values [here](https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data). To get the values, copy just the tab-separated values into a text file, add column headers, import into Excel, and then copy values into the csv.
+The online source file is in text format with text and annotations, so values can't be extracted easily. We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA) from the notes [here](http://research.jisao.washington.edu/pdo/PDO.latest)  and the values [here](https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data). To get the values, copy just the tab-separated values into a text file and add column headers (like like [this](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/DFO_FraserSockeyeForecast/RawFiles/PDOIdxSource_DataRaw.txt)), import into Excel, and then copy values into the [csv](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/DFO_FraserSockeyeForecast/PDOIdxSource_Data.csv).
 
+[This R script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/DFO_FraserSockeyeForecast/1_Process_Source_Data.R) then reorganizes the raw data and calculates Nov-Mar means.
 
 
 **Sea Surface Temperature and Salinity**
 
+The latest forecast report provides 
+[this link](https://open.canada.ca/data/en/dataset/719955f2-bf8e-44f7-bc26-6bd623e82884) to a complete set of sea surface temperature and salinity measurements at BC lightstation starting in 1914. There is also an [interactive map](https://hub.arcgis.com/datasets/6140178915024068ac498da4225a2e6b) for exploring lightstation locations and associated data.
+
+The actual data set is available online as a single [zip file (3MB)](https://open.canada.ca/data/en/dataset/719955f2-bf8e-44f7-bc26-6bd623e82884/resource/472ebc80-bcc4-4926-8aad-7b0662532b84) with all the data, organized into subfolders. To get the values, manually extract the monthly average sea surface temperature and salinity files for Entrance Island, Pine Island, Amphitrite Point, Race Rocks, and Departure Bay. Departure Bay measurements are used to fill in missing values in the Entrance Island data (p.6 of [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)).
+
+[This R script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/DFO_FraserSockeyeForecast/1_Process_Source_Data.R) extracts and merges the raw data, then calculates Apr-Jun mean for SST, Jul-Aug and Jul-Sep mean for SSS).
 
 
-British Columbia Lightstation Sea-Surface Temperature and Salinity Data (Pacific), 1914-present
-
-https://open.canada.ca/data/en/dataset/719955f2-bf8e-44f7-bc26-6bd623e82884
-
-https://hub.arcgis.com/datasets/6140178915024068ac498da4225a2e6b
 
 
-https://catalogue.data.gov.bc.ca/dataset/ad95a5c1-5e3e-4571-99a8-1090282a9757
+
+
+
 
 
 **Fraser River Discharge**
