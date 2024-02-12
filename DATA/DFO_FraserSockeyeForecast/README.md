@@ -2,7 +2,7 @@
 
 **Status**: In progress
 
-**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code). Official version of the data set maintained by DFO Stock Assessment - Lower Fraser.
+**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG and KD (**Use github ID,Check with them**). Official version of the data set maintained by DFO Stock Assessment - Lower Fraser.
 
 **Last Update**: 2014-02-12
 
@@ -106,12 +106,7 @@ The actual data set is available online as a single [zip file (3MB)](https://ope
 
 
 
-
-
-
-
-
 **Fraser River Discharge**
 
 
-
+Still trying to figure out a source and workflow for this one
