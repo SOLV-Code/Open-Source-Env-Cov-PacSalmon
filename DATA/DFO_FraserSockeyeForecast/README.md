@@ -30,7 +30,7 @@ The source data used to generate the specific environmental covariate time serie
 
 The reports include plots of the environmental covariate time series (e.g., Figures 3-5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)), but do not include a table with the actual annual values. Recent forecast reports also include detailed discussion of environmental conditions in a supplemental appendix (e.g., Appendix A5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)).
 
-For this repository, we are trying to replicate the data treatment steps to generate up-to-date covariate time series directly from the publicly available source data. *This is still a work in progress*.
+For this repository, we are trying to replicate the data treatment steps to generate [up-to-date covariate time series](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFraserRiverForecasts.csv) directly from the publicly available source data. *This is still a work in progress, as we are checking the generated file against to official data set*.
 
 
 ### Open Questions 
@@ -40,7 +40,8 @@ Follow the links to see the discussion thread and leave comments.
 * [Missing forecast reports?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/24)
 * [Other milestones in evolution of methods?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/25)
 * [PDO Index Details](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/26)
-
+* [Lighthouse SST and SSS Details](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/28)
+* [Values vs. Deviations from mean?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/30)
 
 ### Highlights from Published Analyses
 
