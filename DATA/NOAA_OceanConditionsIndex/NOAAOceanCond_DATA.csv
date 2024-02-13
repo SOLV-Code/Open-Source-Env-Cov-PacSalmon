@@ -2,7 +2,7 @@
 # Large-scale climate indicators and regional physical indicators,,,,,,,,
 # Values extracted on 2024-02-12 from the xls available at https://www.fisheries.noaa.gov/west-coast/science-data/ocean-conditions-indicators-trends,,,,,,,,
 # Data description and references  available via the same link.,,,,,,,,
-Year,PDOSumDecToMarch,PDOSumMayToSep,ONIAvgJanToJun,SST7Buoys,Upper20mTempAvgNovToMar,Upper20mTempAvgMayToSep,DeepTempAvgMayToSep,DeepSalinityAvgMayToSept
+Year,PDOSumDecToMarch,PDOSumMayToSep,ONIAvgJanToJun,SST7BuoysMeanMayToSep,Upper20mTempAvgNovToMar,Upper20mTempAvgMayToSep,DeepTempAvgMayToSep,DeepSalinityAvgMayToSept
 1998,5.07,-0.8,1.116666667,13.76867308,12.2959039,10.40357818,8.613591782,33.53637155
 1999,-1.75,-6.79,-1.066666667,13.20417683,10.30529062,10.06769873,7.627874994,33.85741997
 2000,-4.17,-3.64,-1.066666667,13.32789769,10.12394128,10.15571187,7.741633336,33.7818395
