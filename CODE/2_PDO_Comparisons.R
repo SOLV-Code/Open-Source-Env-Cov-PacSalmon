@@ -88,7 +88,7 @@ plot(pdo.data$PDOMeanNovToMar,pdo.data$PDOSumDecToMarch,
 		 ylab = "PDO Sum Dec-Mar\n(NOAA Ocean Cond Index)",
 		 bty="n",axes=FALSE,pch=21,col="darkblue",bg="lightblue",
 		 cex=1.3,
-		 main="Comparison of Winter PDO Covariates\nAll Years")
+		 main="Comparison of Winter PDO Covariates\nExcluding 2022")
 axis(1)
 axis(2,at=seq(-6,8,by =2),las=1)
 abline(h=0,col="red",lty=2)
