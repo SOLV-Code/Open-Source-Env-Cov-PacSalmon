@@ -37,7 +37,7 @@ write_csv(merged.data, merged.filename, append = TRUE)
 # -------------------------------------------
 
 
-var.lookup <- read_csv("DATA/LookUp_VariableDescriptions.csv",comment = "#")
+var.lookup <- read_csv("DATA/LookUp_VariableDescriptions.csv",comment = "#") %>% select(-Description)
 head(var.lookup)
 
 
