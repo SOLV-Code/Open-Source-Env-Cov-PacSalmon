@@ -7,7 +7,8 @@
 
 
 
-**LINK PLOT HERE**
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/DataOverview_ALL.png"
+	width="600">
 
 
 
