@@ -49,3 +49,109 @@ var.summary.out <- var.lookup %>% left_join(num.obs, by="Variable")
 write_csv(var.summary.out,"OUTPUT/SummaryOfVariables.csv")
 
 
+# -------------------------------------------
+# Create Overview Plot: Timeline of Available Data
+# -------------------------------------------
+
+datasets.list <- unique(var.lookup$DataSet)
+
+yr.range <- c(1970,2025)
+yr.ticks <- seq(1970,2025, by=5)
+
+n.datasets <- length(datasets.list)
+n.var.all <- dim(var.lookup)[1]
+n.extrarows <- 20
+
+
+png(filename = "OUTPUT/DataOverview_ALL.png",
+		width = 480*4, height = 480*5, units = "px", pointsize = 14*3.1, bg = "white",  res = NA)
+par(mai=c(0.3,8.5,1.5,1))
+
+
+plot(1:5,1:5,type="n",xlim = yr.range, ylim=c(2*n.datasets + n.var.all + n.extrarows ,0.7),xlab="",ylab="",axes=FALSE)
+axis(3,at=yr.ticks)
+#title(main = "Availability of Spawner-Recruit Data",cex.main=1)
+
+
+y.idx <- 2
+
+
+for(set.plot in datasets.list ){
+
+
+	print("------------")
+	print(set.plot)
+
+	var.out.sub  <- var.summary.out  %>% dplyr::filter(DataSet == set.plot) %>%
+		mutate(Label = paste0(Variable," (",NumObs,")"))
+
+	var.list <- var.out.sub %>% select(Variable) %>% unlist()
+	var.labels <- var.out.sub %>% select(Label) %>% unlist()
+
+
+	print(var.list)
+	print(var.labels)
+
+	n.var <- length(var.list)
+
+
+	text(par("usr")[1]-25,y.idx-1.5,labels = set.plot, font =2, adj=0,xpd =NA)
+	axis(2,at=y.idx:(y.idx + n.var - 1),labels = var.labels,las=2,cex.axis =0.8)
+
+	abline(h=(y.idx:(y.idx + n.var -1)),col="darkgrey")
+
+
+
+	for(i in 1:n.var){ #
+
+
+
+		#print(stk.list[i])
+		#data.sub <- stock.data.use %>% dplyr::filter(Stock == stk.list[i])
+		#stk.strtyr <- stock.info %>% dplyr::filter(Stock == stk.list[i]) %>%
+	#		select(StartYr) %>% unlist()
+
+
+		#data.yrs.f <- data.sub %>% dplyr::filter(!is.na(EffSpn) & !is.na(RecAgesUse)) %>% select(Year) %>% unlist()
+		#data.yrs.o <- data.sub %>% dplyr::filter(!is.na(EffSpn))  %>% select(Year) %>% unlist()
+		#if(length(data.yrs.o)>0){points(data.yrs.o,rep(y.idx + i -1,length(data.yrs.o)),col="darkblue", pch=21,bg="lightblue",cex=0.8)}
+		#if(length(data.yrs.f)>0){points(data.yrs.f,rep(y.idx+ i -1 ,length(data.yrs.f)),col="darkblue", pch=21,bg="darkblue",cex=0.8)}
+
+		# add the start year
+		# if(length(data.yrs.o)>0 | length(data.yrs.f)>0){
+		#        segments(x0 = stk.strtyr-0.5,
+		#                 y0 = y.idx + i - 0.5 ,
+		#                 x1 = stk.strtyr -0.5,
+		#                 y1 = y.idx + i - 1.5,
+		#                 col="red",lwd=2)
+		#    }
+
+	} # end looping through variables
+
+	y.idx <- y.idx + n.var +2
+
+
+
+} # end looping through datasets
+
+
+
+
+dev.off()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,8 +8,6 @@ Given the file structure in [DATA](https://github.com/SOLV-Code/Open-Source-Env-
 
 ### Contents
 
-*
-
 * [Summary of Variables](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/SummaryOfVariables.csv): table with number of records in current holdings.
 
 
