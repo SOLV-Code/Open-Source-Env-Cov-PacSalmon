@@ -3,7 +3,10 @@
 Files in this folder are used to generate [OUTPUT](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/OUTPUT) using the R scripts in [CODE](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/CODE).
 
 
-All the contributed source data lives here. Each data set is contained in 1 folder within the data folder. A data set is a group of time series from a common source, related to a common topic, or covering a shared spatial extent (e.g., same watershed).
+[This inventory of variables]((https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/LookUp_VariableDescriptions.csv) with short descriptions, plot labels, etc. needs to be maintained manually (for now).
+
+
+All the contributed source data lives in the sub-folders. Each data set is contained in 1 folder within the data folder. A data set is a group of time series from a common source, related to a common topic, or covering a shared spatial extent (e.g., same watershed).
 
 For each data set, there are 2 main files:
 

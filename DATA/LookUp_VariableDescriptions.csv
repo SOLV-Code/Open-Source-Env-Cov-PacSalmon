@@ -1,0 +1,17 @@
+# Inventory of Active Variables in the OSEC-PS Repository,,,
+# Details and Background at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon,,,
+"# This file used to look up plot labels, group variables, etc",,,
+DataSet,Scale,Variable,Description
+DFO_FraserSockeyeForecast,Large,PDOMeanNovToMar,Mean of Nov to March monthly means of the Pacific Decadal Oscillation (PDO) Index
+DFO_FraserSockeyeForecast,Regional,EntrIslSSTMeanAprToJun,Mean of April to June monthly means of Sea Surface Temperature at Entrance Island (Strait of Georgia) Lightstation
+DFO_FraserSockeyeForecast,Regional,PineIslSSTMeanAprToJun,
+DFO_FraserSockeyeForecast,Regional,SSSIndexJulToAug,
+DFO_FraserSockeyeForecast,Regional,SSSIndexJulToSep,
+NOAA_OceanConditionsIndex,Large,PDOSumDecToMarch,
+NOAA_OceanConditionsIndex,Large,PDOSumMayToSep,
+NOAA_OceanConditionsIndex,Large,ONIAvgJanToJun,
+NOAA_OceanConditionsIndex,Regional,SST7Buoys,
+NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgNovToMar,
+NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgMayToSep,
+NOAA_OceanConditionsIndex,Regional,DeepTempAvgMayToSep,
+NOAA_OceanConditionsIndex,Regional,DeepSalinityAvgMayToSept,
