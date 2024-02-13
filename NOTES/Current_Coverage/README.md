@@ -1,9 +1,7 @@
 ## Current Coverage
 
+*These notes are designed for collaborative editing. Just click the pencil icon to edit directly in your browser (must be logged into GitHub).*
 
-
-
-## Current Coverage
 
 ### Overview
 
