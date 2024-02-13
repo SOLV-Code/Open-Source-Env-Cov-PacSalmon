@@ -3,7 +3,7 @@
 
 This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!
 
-See the [summary of current coverage](#Current-Coverage) below for a list of data sets and the environmental variables they include.
+See the [summary of current coverage](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/Current_Coverage) below for a list of data sets and the environmental variables they include.
 
 **Important Warning**: Environmental covariates in this repository are mapped onto the year of measurement. Before use, they need to be lined up properly for each specific salmon spawner and recruit data set based on the assumed mechanism of interaction and the life history of the stock. This also means that direct comparisons between diverse environmental indicators need to be approached with caution (e.g., pair-wise correlations).
 
@@ -42,6 +42,8 @@ Along the way, we are also compiling an inventory of any interesting sources of 
 
 * [OUTPUT Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/OUTPUT): includes the merged data set and summaries.
 
+* [NOTES Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES): includes a short summary of the available data and brief explorations of points of interest. Notes are kept in markdown to directly pull in plots generated in other parts of the repository and and allow for easy collaborative editing.
+
 
 
 ## Get Started
@@ -64,40 +66,6 @@ If you have any questions, comments, or ideas for extensions, you can leave a no
 on *New Issue*. Make sure to give it an informative title.
 
 You can also scroll through any other open issues to follow the discussion and contribute ideas.
-
-
-
-## Current Coverage
-
-
-### [DFO Fraser Sockeye  and Pink Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)
-
-**Large Scale**
-
-* *PDO Pacific Decadal Oscillation*: Mean Nov-Mar
-
-**Regional**
-
-* *Sea Surface Temperature*: Entrance Island (Strait of Georgia) Mean Apr-Jun, Pine Island (NE Vancouver Island) Mean Apr-Jun
-* *Sea Surface Salinity*: Amphitrite Point (WCVI) and Race Rocks (Strait of Juan de Fuca) Mean Jul-Aug/Sep
-
-**Local**
-* *Fraser River Discharge*: Peak and Mean April-June
-
-### [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) 
-
-**Large Scale**
-
-* *PDO Pacific Decadal Oscillation*: Sum Dec-March, Sum May-Sep
-* *ONI Oceanic Nino Index*: Avg Jan-Jun  
-
-**Regional** 
-
-* *Sea Surface Temperature*: Anomalies in Mean May-Sep Across 7 bouys off coastal Washington and Oregon
-* *Upper 20m Temperature*: Mean Nov-Mar, Mean May-Sep (?Same 7 buoys?)
-* *Deep Temperature*: Mean May-Sep (?Same 7 buoys?)
-* *Deep Salinity*: Mean May-Sep (?Same 7 buoys?)
-
 
 
 
