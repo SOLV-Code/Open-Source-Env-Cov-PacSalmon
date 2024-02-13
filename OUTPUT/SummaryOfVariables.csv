@@ -1,14 +1,14 @@
-DataSet,Scale,Variable,Description,NumObs
-DFO_FraserSockeyeForecast,Large,PDOMeanNovToMar,Mean of Nov to March monthly means of the Pacific Decadal Oscillation (PDO) Index,123
-DFO_FraserSockeyeForecast,Regional,EntrIslSSTMeanAprToJun,Mean of April to June monthly means of Sea Surface Temperature at Entrance Island (Strait of Georgia) Lightstation,106
-DFO_FraserSockeyeForecast,Regional,PineIslSSTMeanAprToJun,Mean of April to June monthly means of Sea Surface Temperature at Pine Island (northern tip of Vancouver Island) Lightstation,84
-DFO_FraserSockeyeForecast,Regional,SSSIndexJulToAug,Mean of July to Aug monthly means of Sea Surface Salinity at twp lightstations:  Race Rocks by Victoria in the Strait of Juan de Fuca and Amphitrite Point on the west coast of Vancouver Island.,90
-DFO_FraserSockeyeForecast,Regional,SSSIndexJulToSep,Mean of July to Sep monthly means of Sea Surface Salinity at twp lightstations:  Race Rocks by Victoria in the Strait of Juan de Fuca and Amphitrite Point on the west coast of Vancouver Island.,90
-NOAA_OceanConditionsIndex,Large,PDOSumDecToMarch,Sum of  Dec to March monthly means of the Pacific Decadal Oscillation (PDO) Index,26
-NOAA_OceanConditionsIndex,Large,PDOSumMayToSep,Sum of  May to Sep monthly means of the Pacific Decadal Oscillation (PDO) Index,26
-NOAA_OceanConditionsIndex,Large,ONIAvgJanToJun,Mean of January to June monthly means of the Oceanic Nino Index (ONI),26
-NOAA_OceanConditionsIndex,Regional,SST7BuoysMeanMayToSep,Mean of May to Sep monthly means of Sea Surface Temperature at 7 buoys off Washington and Oregon coast.,26
-NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgNovToMar,Mean of Nov to March monthly means of GET DETAILS,26
-NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS,26
-NOAA_OceanConditionsIndex,Regional,DeepTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS,26
-NOAA_OceanConditionsIndex,Regional,DeepSalinityAvgMayToSept,Mean of May to Sep monthly means of GET DETAILS,26
+DataSet,Scale,Variable,NumObs
+DFO_FraserSockeyeForecast,Large,PDOMeanNovToMar,123
+DFO_FraserSockeyeForecast,Regional,EntrIslSSTMeanAprToJun,106
+DFO_FraserSockeyeForecast,Regional,PineIslSSTMeanAprToJun,84
+DFO_FraserSockeyeForecast,Regional,SSSIndexJulToAug,90
+DFO_FraserSockeyeForecast,Regional,SSSIndexJulToSep,90
+NOAA_OceanConditionsIndex,Large,PDOSumDecToMarch,26
+NOAA_OceanConditionsIndex,Large,PDOSumMayToSep,26
+NOAA_OceanConditionsIndex,Large,ONIAvgJanToJun,26
+NOAA_OceanConditionsIndex,Regional,SST7BuoysMeanMayToSep,26
+NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgNovToMar,26
+NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgMayToSep,26
+NOAA_OceanConditionsIndex,Regional,DeepTempAvgMayToSep,26
+NOAA_OceanConditionsIndex,Regional,DeepSalinityAvgMayToSept,26
