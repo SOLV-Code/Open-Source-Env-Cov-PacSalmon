@@ -1,6 +1,6 @@
 ## NOAA Ocean Conditions Index
 
-**Status**: Complete
+**Status**: In Progress
 
 **Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG (**Use github ID,Check with them**). Official version of the data set maintained by [Northwest Fisheries Science Center](https://www.fisheries.noaa.gov/about/northwest-fisheries-science-center).
 
@@ -12,7 +12,7 @@ The NOAA ocean conditions index and stoplight summary dashboard are developed fo
 
 The specific environmental covariates combined in the index have evolved over time, and currently include large-scale climate and atmospheric indicators (e.g., PDO), regional physical indicators (e.g., mean temperature across multiple locations), and regional biological indicators (e.g., copepod diversity and biomass). Note that they define these physical and biological indicators as "local", but we categorize them as regional for consistency with other data sets in this repository.
 
-Note that the biological indicators are currently not included in this repository, but the aggregate index based on all the variables is included.
+Note that the biological indicators are currently not included in this repository. The aggregate index based on all the variables will be included if it becomes available online, or if it can be replicated. 
 
 Since 2008, annual summaries of ocean conditions are published and archived as [webpages](https://www.fisheries.noaa.gov/west-coast/science-data/summary-ocean-indicators-2008-present). 
 
@@ -29,10 +29,9 @@ Variable descriptions are available online for [large-scale climate and atmosphe
 
 Follow the links to see the discussion thread and leave comments.
 
-* Any milestones in development to highlight?
-* PDO: Sum vs mean?
-* Rank and Mean of ranks not included anymore? Replicate calculation?
-* Annual report discussion the interpretation (like the DFO reports?)
+* [Any milestones in development to highlight?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/36)
+* [PDO: Sum vs mean?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/37)
+* [Rank and Mean of ranks not included in download anymore?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/38)
 
 
 
