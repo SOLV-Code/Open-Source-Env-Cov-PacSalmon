@@ -1,25 +1,60 @@
 ## NOAA Ocean Conditions Index
 
+**Status**: Complete
+
+**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG (**Use github ID,Check with them**). Official version of the data set maintained by [Northwest Fisheries Science Center](https://www.fisheries.noaa.gov/about/northwest-fisheries-science-center).
+
+**Last Update**: 2014-02-12
+
+### Introduction
+
+The NOAA ocean conditions index and stoplight summary dashboard are developed for stocks that migrate into the California Current system, with a focus on Chinook and Coho. The environmental variables included in the index were selected based on observed relationships with marine survival of salmon, using data from long-running surveys off the Washington and Oregon coast.
+
+The specific environmental covariates combined in the index have evolved over time, and currently include large-scale climate and atmospheric indicators (e.g., PDO), regional physical indicators (e.g., mean temperature across multiple locations), and regional biological indicators (e.g., copepod diversity and biomass). Note that they define these physical and biological indicators as "local", but we categorize them as regional for consistency with other data sets in this repository.
+
+Note that the biological indicators are currently not included in this repository, but the aggregate index based on all the variables is included.
+
+Since 2008, annual summaries of ocean conditions are published and archived as [webpages](https://www.fisheries.noaa.gov/west-coast/science-data/summary-ocean-indicators-2008-present). 
+
+
+### Status of Data Set
+
+The time series used in the index are available for 
+[download](https://www.fisheries.noaa.gov/west-coast/science-data/ocean-conditions-indicators-trends) as an xls file. However, the individual ranks assigned to each value, and the aggregate index based on each year's rank of the mean rank across variables is not included.
+
+Variable descriptions are available online for [large-scale climate and atmospheric indicators](https://www.fisheries.noaa.gov/west-coast/science-data/climate-and-atmospheric-indicators) and for [regional-scale physical indicators](https://www.fisheries.noaa.gov/west-coast/science-data/local-physical-indicators).
+
+
+### Open Questions 
+
+Follow the links to see the discussion thread and leave comments.
+
+* Any milestones in development to highlight?
+* PDO: Sum vs mean?
+* Rank and Mean of ranks not included anymore? Replicate calculation?
+* Annual report discussion the interpretation (like the DFO reports?)
 
 
 
+### Highlights from Published Analyses
 
+* To be included
 
-
-
-https://www.fisheries.noaa.gov/west-coast/science-data/ocean-conditions-indicators-trends
-
-
-
-
-The NOAA ocean conditions and stoplight are developed for stocks that migrate into the California Current system, and very specific to CN and CO (CN and CO are indicators on their stoplight as a result) so won’t apply broadly to most Canadian stocks since most do not enter the California Current. At the time I spoke with the late Bill Peterson who developed these, now Brian Burke I think, and they sample juvenile salmon in the ocean off the coast, and ocean conditions, and built relationships b/w variables used and salmon responses. So they can isolate marine mechanisms since they sample juveniles in the ocean and can relate variables to marine survival. For our stocks, we largely cannot isolate marine survival for most, so have to consider both freshwater environmental variables and marine. Here’s a link to an old presentation: https://meetings.pices.int/publications/presentations/PICES_15/Ann15_S1/S1_Casillas-Peterson.pdf  and a paper: https://meridian.allenpress.com/jfwm/article-supplement/138759/pdf/10_3996_042010-jfwm-009_s6/   (dig around for papers by Bill Peterson and Brian Burke as there will be more that look at correlations b/w variables and their stocks
 
 
 
 
 ### References
 
+* [2006 PICES presentation](https://meetings.pices.int/publications/presentations/PICES_15/Ann15_S1/S1_Casillas-Peterson.pdf)
+
+* [2011 Report](https://meridian.allenpress.com/jfwm/article-supplement/138759/pdf/10_3996_042010-jfwm-009_s6/)
 
 
 
+
+### Details
+
+
+The online source file is in xls format, with layout optimized for humans, so values can't be extracted easily. We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA) (paste values with transpose, then fix column headings to br R compliant.
 
