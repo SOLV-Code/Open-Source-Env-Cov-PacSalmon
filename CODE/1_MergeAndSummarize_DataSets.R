@@ -106,16 +106,17 @@ for(set.plot in datasets.list ){
 
 
 
-		#print(stk.list[i])
-		#data.sub <- stock.data.use %>% dplyr::filter(Stock == stk.list[i])
-		#stk.strtyr <- stock.info %>% dplyr::filter(Stock == stk.list[i]) %>%
-	#		select(StartYr) %>% unlist()
+		print(var.list[i])
+		data.sub <- merged.data %>% select(all_of(c("Year",var.list[i])))
 
+		names(data.sub)[2] <- "Value"
 
-		#data.yrs.f <- data.sub %>% dplyr::filter(!is.na(EffSpn) & !is.na(RecAgesUse)) %>% select(Year) %>% unlist()
-		#data.yrs.o <- data.sub %>% dplyr::filter(!is.na(EffSpn))  %>% select(Year) %>% unlist()
-		#if(length(data.yrs.o)>0){points(data.yrs.o,rep(y.idx + i -1,length(data.yrs.o)),col="darkblue", pch=21,bg="lightblue",cex=0.8)}
-		#if(length(data.yrs.f)>0){points(data.yrs.f,rep(y.idx+ i -1 ,length(data.yrs.f)),col="darkblue", pch=21,bg="darkblue",cex=0.8)}
+		print(data.sub)
+
+		data.yrs.f <- data.sub %>% dplyr::filter( !is.na(Value)) %>% select(Year) %>% unlist()
+		data.yrs.f
+
+	  if(length(data.yrs.f)>0){points(data.yrs.f,rep(y.idx+ i -1 ,length(data.yrs.f)),col="darkblue", pch=21,bg="darkblue",cex=0.8)}
 
 		# add the start year
 		# if(length(data.yrs.o)>0 | length(data.yrs.f)>0){
