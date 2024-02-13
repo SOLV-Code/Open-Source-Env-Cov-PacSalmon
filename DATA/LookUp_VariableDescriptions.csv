@@ -1,17 +1,17 @@
 # Inventory of Active Variables in the OSEC-PS Repository,,,
 # Details and Background at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon,,,
-"# This file used to look up plot labels, group variables, etc",,,
+# This file used to look up information like plot labels and grouping ,,,
 DataSet,Scale,Variable,Description
 DFO_FraserSockeyeForecast,Large,PDOMeanNovToMar,Mean of Nov to March monthly means of the Pacific Decadal Oscillation (PDO) Index
 DFO_FraserSockeyeForecast,Regional,EntrIslSSTMeanAprToJun,Mean of April to June monthly means of Sea Surface Temperature at Entrance Island (Strait of Georgia) Lightstation
-DFO_FraserSockeyeForecast,Regional,PineIslSSTMeanAprToJun,
-DFO_FraserSockeyeForecast,Regional,SSSIndexJulToAug,
-DFO_FraserSockeyeForecast,Regional,SSSIndexJulToSep,
-NOAA_OceanConditionsIndex,Large,PDOSumDecToMarch,
-NOAA_OceanConditionsIndex,Large,PDOSumMayToSep,
-NOAA_OceanConditionsIndex,Large,ONIAvgJanToJun,
-NOAA_OceanConditionsIndex,Regional,SST7Buoys,
-NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgNovToMar,
-NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgMayToSep,
-NOAA_OceanConditionsIndex,Regional,DeepTempAvgMayToSep,
-NOAA_OceanConditionsIndex,Regional,DeepSalinityAvgMayToSept,
+DFO_FraserSockeyeForecast,Regional,PineIslSSTMeanAprToJun,Mean of April to June monthly means of Sea Surface Temperature at Pine Island (northern tip of Vancouver Island) Lightstation
+DFO_FraserSockeyeForecast,Regional,SSSIndexJulToAug,Mean of July to Aug monthly means of Sea Surface Salinity at twp lightstations:  Race Rocks by Victoria in the Strait of Juan de Fuca and Amphitrite Point on the west coast of Vancouver Island.
+DFO_FraserSockeyeForecast,Regional,SSSIndexJulToSep,Mean of July to Sep monthly means of Sea Surface Salinity at twp lightstations:  Race Rocks by Victoria in the Strait of Juan de Fuca and Amphitrite Point on the west coast of Vancouver Island.
+NOAA_OceanConditionsIndex,Large,PDOSumDecToMarch,Sum of  Dec to March monthly means of the Pacific Decadal Oscillation (PDO) Index
+NOAA_OceanConditionsIndex,Large,PDOSumMayToSep,Sum of  May to Sep monthly means of the Pacific Decadal Oscillation (PDO) Index
+NOAA_OceanConditionsIndex,Large,ONIAvgJanToJun,Mean of January to June monthly means of the Oceanic Nino Index (ONI)
+NOAA_OceanConditionsIndex,Regional,SST7BuoysMeanMayToSep,Mean of May to Sep monthly means of Sea Surface Temperature at 7 buoys off Washington and Oregon coast.
+NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgNovToMar,Mean of Nov to March monthly means of GET DETAILS
+NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS
+NOAA_OceanConditionsIndex,Regional,DeepTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS
+NOAA_OceanConditionsIndex,Regional,DeepSalinityAvgMayToSept,Mean of May to Sep monthly means of GET DETAILS
