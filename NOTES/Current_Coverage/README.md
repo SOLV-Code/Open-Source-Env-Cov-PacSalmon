@@ -14,7 +14,7 @@
 
 * Both the *DFO Fraser Forecasting* and *NOAA Ocean Conditions Index* data sets include a mix of large-scale variables (e.g., Pacific Decadal Oscillation) and more regional variables (e.g., sea surface temperature for one or a few locations). The *DFO Fraser Forecasting* data set also includes local variables (Fraser River discharge).
 
-* Both the *DFO Fraser Forecasting* and *NOAA Ocean Conditions Index* include a variable to reflect Pacific Decadal Oscillation (PDO) over the winter months, but the details of the variable definition differ. [This note](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) is taking a closer look at the similarities and differences.
+* Both the *DFO Fraser Forecasting* and *NOAA Ocean Conditions Index* data sets include a variable to reflect Pacific Decadal Oscillation (PDO) over the winter months, but the details of the variable definition differ. [This note](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) is taking a closer look at the similarities and differences.
 
 
 ### Data Timeline
