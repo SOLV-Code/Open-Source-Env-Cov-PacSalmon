@@ -40,7 +40,7 @@ Along the way, we are also compiling an inventory of any interesting sources of 
 
 * [DATA Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA): Includes all the contributed data with detailed descriptions of what they are and how they have been used.
 
-* [CODE Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/CODE): includes all the functions an code needed to process the contributed data into a single consistent data set and generate various summaries.
+* [CODE Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/CODE): includes all the functions and code needed to process the contributed data into a single consistent data set and generate various summaries.
 
 * [OUTPUT Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/OUTPUT): includes the merged data set and summaries.
 
