@@ -129,3 +129,32 @@ text(pdo.data$PDOMeanNovToMar[idx.bt.pts],
 
 dev.off()
 
+
+
+
+# -------------------------------------------
+#  Winter PDO Comparison - histograms
+# -------------------------------------------
+
+# args
+data.plot <- pdo.data %>% select(Year,PDOMeanNovToMar)
+title.use <- "Mean (DFO Fraser Forecasting)\nAll Years"
+xlab.use <- "PDO Mean Nov-Mar"
+
+# fn content
+data.vec <- data.plot[,2] %>% unlist()
+
+hist(data.vec, breaks=seq(-10,4, by=0.5),
+		 main= title.use,
+		 xlab=  xlab.use, freq = TRUE, las=1)
+
+sd(data.vec,na.rm=TRUE)/mean(data.vec,na.rm=TRUE)
+
+
+
+
+
+
+
+
+
