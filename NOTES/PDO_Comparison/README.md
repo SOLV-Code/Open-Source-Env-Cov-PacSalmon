@@ -6,8 +6,8 @@
 Projects use different versions of the PDO indicator -> take a quick look at how they compare
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_Scatter_All.png"
-	width="600">
+	width="400">
 
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_Scatter_Excl2022.png"
-	width="600">
+	width="400">
