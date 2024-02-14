@@ -18,7 +18,7 @@ Both the [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Co
 Some initial observations:
 
 * Scatterplots show that the two versions of the winter PDO variable generally provide the same signal. Years with low mean values mostly also have a low sum (e.g., 2008, 2011,2021) and years with high mean values mostly also have a high sum (e.g., 2003, 2015, 2016). However, there are several years where the mean and sum diverge considerably. For example:
-   * 2002 has a low sum but the third highest mean of the comparable years.
+   * 2002 has a low sum but the second highest mean of the comparable years starting in 1998 (4th largest mean since 1900).
    * 2022 is an extreme outlier in the mean variable, but consistent with the low end of the sum variable (i.e., sum is similar to 2000, 2009, and 2012, all of which had middle-ground values for the mean variable)
 
 * Visually, the sum variable seems to have more contrast across years (*but still pondering how to quantify, b/c CV doesn't apply to interval scale variables*)
