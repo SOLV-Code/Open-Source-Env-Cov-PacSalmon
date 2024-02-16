@@ -26,6 +26,11 @@ Some initial observations:
 
 * Visually, the sum variable seems to have more contrast across years (*but still pondering how to quantify, b/c CV doesn't apply to interval scale variables*)
 
+* The winter PDO covariate is more sensitive to nuances of definition (mean vs. sum, whether Oct or Nov are included) for years with larger differences between the monthly values. For example:
+   * monthly PDO index values were quite stable in the winters of 2003/2004 and 2010/2011, so the alternative definitions don't affect the signal.
+   * monthly PDO index values shifted quite a bit in the winters of 1994/1995 and 2021/2022, so alternative definitions might change how you interpret that year (e.g. when providing qualitative context for a run size forecast).
+
+* Many environmental indicators have become more variable in recent years. However, the Oct-Mar range in monthly PDO index  has been smaller since the 1970s than it was from the 1900s to the 1960s. *Is there some quirk in the raw data or index calculation methods to explain that?*
 
 
 
@@ -33,7 +38,12 @@ Some initial observations:
 	width="400">
 
 
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_TimeSeriesOfRanges.png"
+	width="400">
 	
+	
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_ExampleYears.png"
+	width="400">
 	
 	
 ### Winter vs Summer PDO Variables

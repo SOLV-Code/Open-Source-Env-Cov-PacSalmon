@@ -98,6 +98,7 @@ png(filename = "OUTPUT/PDO_Comparisons/PDO_Comparisons_TimeSeriesOfRanges.png",
 		width = 480*4, height = 480*3.4, units = "px",
 		pointsize = 14*4.3, bg = "white",  res = NA)
 
+
 plot(pdo.comp.df$Year,pdo.comp.df$PDORangeOctToMar,type="l",col="darkgrey",
 		 xlab="Year",ylab="Oct-Mar Range in PDO Index", bty="n",lwd=3,las=1,
 		 main ="Range")
@@ -105,6 +106,9 @@ plot(pdo.comp.df$Year,pdo.comp.df$PDORangeOctToMar,type="l",col="darkgrey",
 lines(pdo.comp.df$Year,
 			stats::filter(pdo.comp.df$PDORangeOctToMar,rep(1/5,5),sides = 1),
 			col="red",lwd=5)
+
+legend("topright",legend=c("Annual","5yr Avg"),lty=1,col=c("darkgrey","red"),lwd=c(3,5),bty="n")
+
 dev.off()
 
 # -------------------------------------------
