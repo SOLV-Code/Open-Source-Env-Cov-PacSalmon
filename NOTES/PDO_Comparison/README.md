@@ -20,7 +20,7 @@ Both the [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Co
 
 Some initial observations:
 
-* Scatterplots show that the two versions of the winter PDO variable provide the same signal for almost all years. Years with low mean values mostly also a low sum (e.g., 2000, 2009,2012,2022) and years with high mean values  also have a high sum (e.g., 1998, 2003, 2015, 2016). However, there are several years where the mean and sum diverge considerably. For example:
+* Scatterplots show that the two versions of the winter PDO variable provide the same signal for almost all years. Years with low mean values also have a low sum (e.g., 2000, 2009,2012,2022) and years with high mean values  also have a high sum (e.g., 1998, 2003, 2015, 2016). However, for the 2 most recent years, the mean and sum diverge considerably:
    * 2022 is an outlier in the mean variable, but consistent with the low end of the sum variable (i.e., sum is similar to 2000, 2009, and 2012)
    * 2023 is an extreme outlier in the mean variable, but consistent with the low end of the sum variable
 
