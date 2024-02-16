@@ -74,7 +74,7 @@ dev.off()
 
 
 # quickly check variations
-
+#
 plot(pdo.comp.df$PDOMeanOctToMar,pdo.comp.df$PDOMeanNovToMar)
 plot(pdo.comp.df$PDOMeanDecToMar,pdo.comp.df$PDOMeanNovToMar)
 
@@ -82,6 +82,30 @@ plot(pdo.comp.df$PDOMeanOctToMar,pdo.comp.df$PDOSumNovToMar)
 plot(pdo.comp.df$PDOMeanDecToMar,pdo.comp.df$PDOSumNovToMar)
 
 
+
+
+# -------------------------------------------
+#  Winter PDO - Range in Monthly Means OCt-Mar
+# -------------------------------------------
+
+hist(pdo.comp.df$PDORangeOctToMar,las=1, breaks = seq(0.5,3.5,by=0.2))
+pdo.comp.df %>% arrange(-PDORangeOctToMar) %>% select(Year,PDOMeanNovToMar,PDORangeOctToMar)
+plot(pdo.comp.df$PDOMeanNovToMar,pdo.comp.df$PDORangeOctToMar)
+
+
+
+png(filename = "OUTPUT/PDO_Comparisons/PDO_Comparisons_TimeSeriesOfRanges.png",
+		width = 480*4, height = 480*3.4, units = "px",
+		pointsize = 14*4.3, bg = "white",  res = NA)
+
+plot(pdo.comp.df$Year,pdo.comp.df$PDORangeOctToMar,type="l",col="darkgrey",
+		 xlab="Year",ylab="Oct-Mar Range in PDO Index", bty="n",lwd=3,las=1,
+		 main ="Range")
+
+lines(pdo.comp.df$Year,
+			stats::filter(pdo.comp.df$PDORangeOctToMar,rep(1/5,5),sides = 1),
+			col="red",lwd=5)
+dev.off()
 
 # -------------------------------------------
 #  Winter PDO - Annual patterns (Oct to March)
@@ -91,20 +115,31 @@ ylim.use <- range(pdo.comp.df %>% select(Oct:Mar),na.rm=TRUE)
 ylim.use
 
 
-for(yr.plot in 2010:2022){
+png(filename = "OUTPUT/PDO_Comparisons/PDO_Comparisons_ExampleYears.png",
+		width = 480*4, height = 480*3.3, units = "px",
+		pointsize = 14*4, bg = "white",  res = NA)
+par(mfrow=c(2,2),mai=c(4,4,2,2))
+
+
+for(yr.plot in c(2004,2011,1995,2022)){
 
 plot(1:5,1:5,type="n",bty="n",xlim=c(0.5,6.5),ylim=ylim.use,
-		 ylab= "PDO Index",axes=FALSE,main=yr.plot,
-			xlab="Month")
+		 ylab= "PDO Index",axes=FALSE,xlab="Month")
 axis(2,las=1)
 axis(1,at=1:6,labels = c("Oct","Nov","Dec","Jan","Feb","Mar"))
+abline(h=0,col="red",lwd=4)
+abline(v=3.5,col="red",lty=2)
+text(c(2,5),rep(2.5,2),labels = c(yr.plot-1,yr.plot),font=2, col="darkblue")
 
 val.vec <- pdo.comp.df %>% dplyr::filter(Year== yr.plot) %>% select(Oct:Mar)
 val.vec
 
-lines(1:6,val.vec,type="o",pch=19,col="darkgrey")
+lines(1:6,val.vec,type="o",pch=19,col="darkblue")
 
 }
+
+
+dev.off()
 
 # -------------------------------------------
 #  Winter PDO Comparison - histograms
