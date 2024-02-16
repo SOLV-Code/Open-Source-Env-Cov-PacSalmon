@@ -82,6 +82,30 @@ plot(pdo.comp.df$PDOMeanOctToMar,pdo.comp.df$PDOSumNovToMar)
 plot(pdo.comp.df$PDOMeanDecToMar,pdo.comp.df$PDOSumNovToMar)
 
 
+
+# -------------------------------------------
+#  Winter PDO - Annual patterns (Oct to March)
+# -------------------------------------------
+
+ylim.use <- range(pdo.comp.df %>% select(Oct:Mar),na.rm=TRUE)
+ylim.use
+
+
+for(yr.plot in 2010:2022){
+
+plot(1:5,1:5,type="n",bty="n",xlim=c(0.5,6.5),ylim=ylim.use,
+		 ylab= "PDO Index",axes=FALSE,main=yr.plot,
+			xlab="Month")
+axis(2,las=1)
+axis(1,at=1:6,labels = c("Oct","Nov","Dec","Jan","Feb","Mar"))
+
+val.vec <- pdo.comp.df %>% dplyr::filter(Year== yr.plot) %>% select(Oct:Mar)
+val.vec
+
+lines(1:6,val.vec,type="o",pch=19,col="darkgrey")
+
+}
+
 # -------------------------------------------
 #  Winter PDO Comparison - histograms
 # -------------------------------------------
