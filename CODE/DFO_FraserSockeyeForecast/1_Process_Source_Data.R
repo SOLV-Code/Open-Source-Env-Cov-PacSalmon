@@ -14,41 +14,28 @@ library(tidyverse)
 pdo.src <- read.csv("DATA/DFO_FraserSockeyeForecast/PDOIdxSource_Data.csv",
 									comment.char = "#" , header=TRUE,
 									stringsAsFactors = FALSE, blank.lines.skip=TRUE)
+
+pdo.src[pdo.src == -9.9] <- NA
+
 head(pdo.src)
 
 
-pdo.long <- pdo.src %>% pivot_longer(Jan:Dec,names_to = "Month") %>%
-							dplyr::filter(Month %in% c("Nov","Dec","Jan","Feb","Mar"))  # keep only the month used for mean
-
 # assign Nov-Dec to next year ("winter of Year-1")
-adj.yr.idx <- pdo.long$Month %in% c("Nov","dec")
-pdo.long$Year[adj.yr.idx] <- pdo.long$Year[adj.yr.idx] +1
 
-covar.pdo.winter.mean <- pdo.long %>% dplyr::filter(Year >=1901) %>% # remove partial data for first winter
-										group_by(Year) %>% summarize(PDOMeanNovToMar = round(mean(value),3))
-covar.pdo.winter.mean
+pdo.reorg.out <- pdo.src %>% select(Year, Oct,Nov,Dec) %>% mutate(Year = Year+1) %>%
+		full_join(pdo.src %>% select(Year, Jan, Feb, Mar), by="Year") %>% arrange(Year) %>%
+		rowwise() %>%
+		mutate(PDOMeanOctToMar = mean(c(Oct,Nov,Dec,Jan,Feb,Mar),na.rm=TRUE),
+					 PDOSumOctToMar = sum(c(Oct,Nov,Dec,Jan,Feb,Mar),na.rm=TRUE),
+					 PDOMeanNovToMar = mean(c(Nov,Dec,Jan,Feb,Mar),na.rm=TRUE),
+					 PDOSumNovToMar = sum(c(Nov,Dec,Jan,Feb,Mar),na.rm=TRUE),
+					 PDOMeanDecToMar = mean(c(Jan,Feb,Mar),na.rm=TRUE),
+					 PDOSumDecToMar = sum(c(Jan,Feb,Mar),na.rm=TRUE)
+					 )
 
-# https://stackoverflow.com/questions/72304594/added-commented-section-to-output-csv-with-write-csv
+pdo.reorg.out
 
-
-# alternative versions, for cross-check against PDO variable used in NOAA Ocean Cond Index
-
-
-pdo.alt.NovToMar <- pdo.long %>% dplyr::filter(Year >=1900) %>% # remove partial data for first winter
-	group_by(Year) %>% summarize(PDOMeanNovToMar = round(mean(value),3),
-															 PDOSumNovToMar = round(sum(value),3)	)
-
-pdo.long.JanToMar <- pdo.src %>% pivot_longer(Jan:Dec,names_to = "Month") %>%
-	dplyr::filter(Month %in% c("Jan","Feb","Mar"))  # keep only the month used for mean
-
-pdo.alt.JanToMar <- pdo.long.JanToMar %>% dplyr::filter(Year >=1900) %>% # remove partial data for first winter
-	group_by(Year) %>% summarize(PDOMeanJanToMar = round(mean(value),3),
-															 PDOSumJanToMar = round(sum(value),3)	)
-
-
-# ADD MONTHLY VALUES
-
-
+write_csv(pdo.reorg.out,"OUTPUT/PDO_Comparisons/PDO_Comparisons_Data.csv")
 
 
 #-------------------------------------------------------
@@ -253,7 +240,7 @@ covar.sss
 # MERGE SERIES
 #-------------------------------------------------------
 
-fraser.fc.covars <- covar.pdo.winter.mean %>%
+fraser.fc.covars <- pdo.reorg.out %>% select(Year, PDOMeanNovToMar) %>%
 										full_join(covar.sst, by="Year") %>%
 										full_join(covar.sss, by="Year")
 
