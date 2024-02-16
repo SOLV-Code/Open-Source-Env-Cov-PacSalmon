@@ -20,11 +20,11 @@ head(pdo.src)
 pdo.long <- pdo.src %>% pivot_longer(Jan:Dec,names_to = "Month") %>%
 							dplyr::filter(Month %in% c("Nov","Dec","Jan","Feb","Mar"))  # keep only the month used for mean
 
-# assign Jan-Mar to previous year ("winter of Year-1")
-adj.yr.idx <- pdo.long$Month %in% c("Jan","Feb","Mar")
-pdo.long$Year[adj.yr.idx] <- pdo.long$Year[adj.yr.idx] -1
+# assign Nov-Dec to next year ("winter of Year-1")
+adj.yr.idx <- pdo.long$Month %in% c("Nov","dec")
+pdo.long$Year[adj.yr.idx] <- pdo.long$Year[adj.yr.idx] +1
 
-covar.pdo.winter.mean <- pdo.long %>% dplyr::filter(Year >=1900) %>% # remove partial data for first winter
+covar.pdo.winter.mean <- pdo.long %>% dplyr::filter(Year >=1901) %>% # remove partial data for first winter
 										group_by(Year) %>% summarize(PDOMeanNovToMar = round(mean(value),3))
 covar.pdo.winter.mean
 

@@ -34,13 +34,13 @@ axis(2,at=seq(-6,8,by =2),las=1)
 abline(h=0,col="red",lty=2)
 abline(v=0,col="red",lty=2)
 
-idx.left.pts <- pdo.data$PDOMeanNovToMar <= -1.2 &
-										pdo.data$PDOMeanNovToMar > -3
+#idx.left.pts <- pdo.data$PDOMeanNovToMar <= -1.2 &
+#										pdo.data$PDOMeanNovToMar > -3
 
-text(pdo.data$PDOMeanNovToMar[idx.left.pts],
-		 pdo.data$PDOSumDecToMarch[idx.left.pts],
-		 labels = pdo.data$Year[idx.left.pts],
-		 adj=1.2,col="darkblue",cex=0.8)
+#text(pdo.data$PDOMeanNovToMar[idx.left.pts],
+#		 pdo.data$PDOSumDecToMarch[idx.left.pts],
+#		 labels = pdo.data$Year[idx.left.pts],
+#		 adj=1.2,col="darkblue",cex=0.8)
 
 idx.rt.pts <- pdo.data$PDOMeanNovToMar >  1.5
 
@@ -73,34 +73,34 @@ dev.off()
 
 
 # -------------------------------------------
-#  Winter PDO Comparison - Scatter / Excluding 2022
+#  Winter PDO Comparison - Scatter / Excluding 2023
 # -------------------------------------------
 
 
-png(filename = "OUTPUT/PDO_Comparisons/PDO_Comparisons_Scatter_Excl2022.png",
+png(filename = "OUTPUT/PDO_Comparisons/PDO_Comparisons_Scatter_Excl2023.png",
 		width = 480*4, height = 480*4.2, units = "px",
 		pointsize = 14*3.9, bg = "white",  res = NA)
 par(mai=c(5,5,4,2))
 
 plot(pdo.data$PDOMeanNovToMar,pdo.data$PDOSumDecToMarch,
-		 xlim=c(-2.5,2.5),
+		 xlim=c(-3,3),
 		 xlab = "PDO Mean Nov-Mar\n(DFO Fraser FC)",
 		 ylab = "PDO Sum Dec-Mar\n(NOAA Ocean Cond Index)",
 		 bty="n",axes=FALSE,pch=21,col="darkblue",bg="lightblue",
 		 cex=1.3,
-		 main="Comparison of Winter PDO Covariates\nExcluding 2022")
+		 main="Comparison of Winter PDO Covariates\nExcluding 2022,2023")
 axis(1)
 axis(2,at=seq(-6,8,by =2),las=1)
 abline(h=0,col="red",lty=2)
 abline(v=0,col="red",lty=2)
 
-idx.left.pts <- pdo.data$PDOMeanNovToMar <= -1.2 &
-	pdo.data$PDOMeanNovToMar > -3
+#idx.left.pts <- pdo.data$PDOMeanNovToMar <= -1.2 &
+#	pdo.data$PDOMeanNovToMar > -3
 
-text(pdo.data$PDOMeanNovToMar[idx.left.pts],
-		 pdo.data$PDOSumDecToMarch[idx.left.pts],
-		 labels = pdo.data$Year[idx.left.pts],
-		 adj=1.2,col="darkblue",cex=0.8)
+#text(pdo.data$PDOMeanNovToMar[idx.left.pts],
+#		 pdo.data$PDOSumDecToMarch[idx.left.pts],
+#		 labels = pdo.data$Year[idx.left.pts],
+#		 adj=1.2,col="darkblue",cex=0.8)
 
 idx.rt.pts <- pdo.data$PDOMeanNovToMar >  1.5
 
