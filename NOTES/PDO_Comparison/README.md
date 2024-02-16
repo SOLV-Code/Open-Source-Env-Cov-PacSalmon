@@ -22,9 +22,9 @@ Note: We've assigned the means and sums to the latter year (i.e., mean for Nov 2
 
 **Some initial observations**
 
-Scatterplots show that the two versions of the winter PDO variable provide the same signal. Years with low mean values also have a low sum (e.g., 2000, 2009,2012,2022) and years with high mean values also have a high sum (e.g., 1998, 2003, 2015, 2016). 
+Scatterplots show that the two versions of the winter PDO variable provide the same signal *for the same year*. Years with low mean values also have a low sum (e.g., 2000, 2009,2012,2022) and years with high mean values also have a high sum (e.g., 1998, 2003, 2015, 2016). 
 
-* Visually, the sum variable seems to have more contrast across years (*but still pondering how to quantify, b/c CV doesn't apply to interval scale variables*)
+
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_Scatter_All.png"
 	width="400">
 
@@ -36,15 +36,15 @@ The winter PDO covariate is more sensitive to nuances of definition (mean vs. su
 * monthly PDO index values shifted quite a bit in the winters of 1994/1995 and 2021/2022, so alternative definitions might change how you interpret that year (e.g. when providing qualitative context for a run size forecast).
 
 
-
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_TimeSeriesOfRanges.png"
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_ExampleYears.png"
 	width="400">
-	
+
 	
 Many environmental indicators have become more variable in recent years. However, the Oct-Mar range in monthly PDO index  has been smaller since the 1970s than it was from the 1900s to the 1960s. *Is there some quirk in the raw data or index calculation methods to explain that?*	
 	
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_ExampleYears.png"
-	width="400">
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_TimeSeriesOfRanges.png"
+	width="500">
+	
 	
 	
 ### Winter vs Summer PDO Variables
