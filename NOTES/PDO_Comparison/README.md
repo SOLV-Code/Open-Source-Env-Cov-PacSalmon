@@ -18,11 +18,12 @@ Both the [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Co
 * *DFO Fraser Forecasting*  uses the **mean** of monthly PDO index values for Nov-Mar (just "Mean" below). 
 * *NOAA Ocean Conditions Index* (just "Sum" below) uses the **sum** of monthly PDO index values for Dec-Mar (just "Sum" below)
 
-Note: We've assigned the means and sums to the latter year (i.e., mean for Nov 2020 to March 2021 shows up as the 2021 indicator value)
+
+A potential source of discrepancies between alternative implementations is how environmental covariates are lined up with each other and with the salmon data. The DFO and NOAA implementations are consistent. The *NOAA Ocean Conditions Index* compares the PDO covariate with regional covariates like sea surface temperature in the same calendar year (e.g., rank of the sum of PDO index for Jan 2018 and rank of the sea surface temperature for May-Sep 2018 are combined into the mean rank for 2018). *DFO Fraser Forecasting* maps the PDO covariate to the winter preceding outmigration and the sea surface temperature covariate to ocean entry, which are in the same calendar year. In the [merged data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/Merged_CovariateSet.csv) and the [detailed PDO comparison data set] we replicate this by assigning the means and sums to the latter year (i.e., mean for Nov 2020 to March 2021 shows up as the 2021 indicator value).
 
 **Some initial observations**
 
-Scatterplots show that the two versions of the winter PDO variable provide the same signal *for the same year*. Years with low mean values also have a low sum (e.g., 2000, 2009,2012,2022) and years with high mean values also have a high sum (e.g., 1998, 2003, 2015, 2016). 
+Scatterplots show that the two versions of the winter PDO variable provide the same signal for the same year. Years with low mean values also have a low sum (e.g., 2000, 2009,2012,2022) and years with high mean values also have a high sum (e.g., 1998, 2003, 2015, 2016). 
 
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_Scatter_All.png"

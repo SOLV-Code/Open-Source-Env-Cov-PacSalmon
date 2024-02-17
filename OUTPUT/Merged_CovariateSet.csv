@@ -1,6 +1,6 @@
 # Merged set of all available records in the OSEC-PS repository
 # Variable descriptions and source data available at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon
-# File generated on Fri Feb 16 00:03:31 2024
+# File generated on Fri Feb 16 17:19:31 2024
 Year,PDOMeanNovToMar,EntrIslSSTMeanAprToJun,PineIslSSTMeanAprToJun,SSSIndexJulToAug,SSSIndexJulToSep,PDOSumDecToMarch,PDOSumMayToSep,ONIAvgJanToJun,SST7BuoysMeanMayToSep,Upper20mTempAvgNovToMar,Upper20mTempAvgMayToSep,DeepTempAvgMayToSep,DeepSalinityAvgMayToSept
 1900,0.6166666666666667,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1901,0.354,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
