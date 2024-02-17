@@ -52,7 +52,7 @@ All the reports are available [here](https://www.dfo-mpo.gc.ca/oceans/publicatio
 
 * 2006 conditions: [SAR](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/328475.pdf)
 * 2007 conditions: [ResDoc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40590707.pdf) and [SAR](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/335379.pdf)
-* 2008 conditions: {ResDoc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40590847.pdf) and [SAR](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/337639.pdf)
+* 2008 conditions: [ResDoc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40590847.pdf) and [SAR](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/337639.pdf)
 * 2009 conditions: [ResDoc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/341029.pdf) and [SAR](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/341134.pdf)
 * 2010 conditions: [ResDoc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/344128.pdf) and [SAR](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/344311.pdf)
 * 2011 conditions: [ResDoc](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/347247.pdf) and [SAR](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/347531.pdf)
