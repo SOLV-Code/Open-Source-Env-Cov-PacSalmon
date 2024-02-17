@@ -73,6 +73,15 @@ text(pdo.data$PDOMeanNovToMar[idx.bt.pts],
 dev.off()
 
 
+
+
+
+
+
+
+
+
+
 # quickly check variations
 #
 plot(pdo.comp.df$PDOMeanOctToMar,pdo.comp.df$PDOMeanNovToMar)
