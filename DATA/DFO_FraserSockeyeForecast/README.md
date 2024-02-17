@@ -4,7 +4,7 @@
 
 **Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG and KD (**Use github ID,Check with them**). Official version of the data set maintained by [DFO Stock Assessment - Lower Fraser](https://www.dfo-mpo.gc.ca/contact/regions/pacific-pacifique-eng.html#Delta).
 
-**Last Update**: 2014-02-12
+**Last Data Update**: 2014-02-12
 
 ### Introduction
 
@@ -20,9 +20,9 @@ Key milestones in the evolution of forecasting methods were:
 
 As the forecast methods have matured and stabilized, the peer-review process has changed as well. For 2000-2013, the annual forecasts were published as DFO Research Documents, which undergo a full peer-review coordinated by [DFO's Canadian Science Advisory Secretariat](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm). From 2014 to 2021, a more streamlined [Science Response](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm) process was used. Forecast reports and environmental condition supplements are available through the [References](#References) below.
 
-The supplement summarizing environmental conditions was a critical process that integrated salmon experts and data across life-stages. This process evolved and improved as expert group learned the language and nuances of each program from lake limnology, stock assessment, marine ocean ecology, physiology, etc. In the process, experts challenged each other on what could be said about what observations are telling us about survival, and what was considered to be less reliable. 
+The supplement summarizing environmental conditions was a critical process that integrated salmon experts and data across life-stages. This process evolved and improved as the expert group learned the language and nuances of each program from lake limnology, stock assessment, marine ocean ecology, physiology, etc. In the process, experts challenged each other on what could be said about the observations and their links to salmon survival, and what was considered to be less reliable. 
 
-The [2019 Supplement](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40819103.pdf) includes summary tables with key observations and qualitative of direction of effect, confidence, and significance. Table 1 has general highlights and Table 2 has stock-specific ratings.
+The [2019 Supplement](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40819103.pdf) includes summary tables with key observations and qualitative ratings of (1) direction of effect, (2) confidence, and (3) significance to survival for this specific forecast. Table 1 has general highlights and Table 2 has stock-specific ratings.
 
 
 ### Status of Data Set
