@@ -19,7 +19,7 @@ Both the [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Co
 * *NOAA Ocean Conditions Index* (just "Sum" below) uses the **sum** of monthly PDO index values for Dec-Mar (just "Sum" below)
 
 
-A potential source of discrepancies between alternative implementations is how environmental covariates are lined up with each other and with the salmon data. The DFO and NOAA implementations are consistent. The *NOAA Ocean Conditions Index* compares the PDO covariate with regional covariates like sea surface temperature in the same calendar year (e.g., rank of the sum of PDO index for Jan 2018 and rank of the sea surface temperature for May-Sep 2018 are combined into the mean rank for 2018). *DFO Fraser Forecasting* maps the PDO covariate to the winter preceding outmigration and the sea surface temperature covariate to ocean entry, which are in the same calendar year. In the [merged data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/Merged_CovariateSet.csv) and the [detailed PDO comparison data set] we replicate this by assigning the means and sums to the latter year (i.e., mean for Nov 2020 to March 2021 shows up as the 2021 indicator value).
+A potential source of discrepancies between alternative implementations is how environmental covariates are lined up with each other and with the salmon data. The DFO and NOAA implementations are consistent. The *NOAA Ocean Conditions Index* compares the PDO covariate with regional covariates like sea surface temperature in the same calendar year (e.g., rank of the sum of PDO index for Jan-Mar 2018 and rank of the mean sea surface temperature for May-Sep 2018 are combined into the mean rank for 2018). *DFO Fraser Forecasting* maps the PDO covariate to the winter preceding outmigration and the sea surface temperature covariate to ocean entry, which are in the same calendar year. In the [merged data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/Merged_CovariateSet.csv) and the [detailed PDO comparison data set] we replicate this by assigning the means and sums to the latter year (i.e., mean for Nov 2020 to March 2021 shows up as the 2021 indicator value).
 
 **Some initial observations**
 
@@ -41,7 +41,7 @@ The winter PDO covariate is more sensitive to nuances of definition (mean vs. su
 	width="400">
 
 	
-Many environmental indicators have become more variable in recent years. However, the Oct-Mar range in monthly PDO index  has been smaller since the 1970s than it was from the 1900s to the 1960s. *Is there some quirk in the raw data or index calculation methods to explain that?*	
+Many environmental indicators have become more variable in recent years. However, the Oct-Mar range in monthly PDO index  has been smaller since the 1970s than it was from the 1900s to the 1960s. *Is there some quirk in the raw data or index calculation methods to explain that? Could it be due to the [removal of the underlying long-term trend](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/26)?*	
 	
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_TimeSeriesOfRanges.png"
 	width="500">
