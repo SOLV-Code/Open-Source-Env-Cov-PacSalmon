@@ -32,7 +32,7 @@ Follow the links to see the discussion thread and leave comments.
 * [Any milestones in development to highlight?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/36)
 * [PDO: Sum vs mean?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/37)
 * [Rank and Mean of ranks not included in download anymore?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/38)
-
+* [Assumed mechanism for PDO covariate](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/69)
 
 
 ### Highlights from Published Analyses
