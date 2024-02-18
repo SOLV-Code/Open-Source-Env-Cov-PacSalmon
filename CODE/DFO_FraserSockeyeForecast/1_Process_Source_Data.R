@@ -23,7 +23,7 @@ head(pdo.src)
 # assign Nov-Dec to next year ("winter of Year-1")
 # only keep years with all 6 months of data
 pdo.reorg.out <- pdo.src %>% select(Year, Oct,Nov,Dec) %>% mutate(Year = Year+1) %>%
-		full_join(pdo.src %>% select(Year, Jan, Feb, Mar), by="Year") %>% arrange(Year) %>%
+		full_join(pdo.src %>% select(Year, Jan, Feb, Mar,May,Jun,Jul,Aug,Sep), by="Year") %>% arrange(Year) %>%
 		rowwise() %>%
 		mutate(n = sum(!is.na(c(Oct,Nov,Dec,Jan,Feb,Mar)))) %>%
 		dplyr::filter(n == 6) %>%
@@ -37,11 +37,16 @@ pdo.reorg.out <- pdo.src %>% select(Year, Oct,Nov,Dec) %>% mutate(Year = Year+1)
 					 PDOMinNovToMar = round(min(c(Nov,Nov,Dec,Jan,Feb,Mar),na.rm=TRUE),3),
 					 PDOMaxNovToMar = round(max(c(Nov,Nov,Dec,Jan,Feb,Mar),na.rm=TRUE),3),
 					 PDORangeNovToMar = PDOMaxNovToMar - PDOMinNovToMar,
-					 PDOMeanDecToMar = round(mean(c(Jan,Feb,Mar),na.rm=TRUE),3),
-					 PDOSumDecToMar = round(sum(c(Jan,Feb,Mar),na.rm=TRUE),3),
-					 PDOMinJanToMar = round(min(c(Jan,Nov,Dec,Jan,Feb,Mar),na.rm=TRUE),3),
-					 PDOMaxJanToMar = round(max(c(Jan,Nov,Dec,Jan,Feb,Mar),na.rm=TRUE),3),
-					 PDORangeJanToMar = PDOMaxJanToMar - PDOMinJanToMar
+					 PDOMeanDecToMar = round(mean(c(Dec,Jan,Feb,Mar),na.rm=TRUE),3),
+					 PDOSumDecToMar = round(sum(c(Dec,Jan,Feb,Mar),na.rm=TRUE),3),
+					 PDOMinDecToMar = round(min(c(Dec,Jan,Feb,Mar),na.rm=TRUE),3),
+					 PDOMaxDecToMar = round(max(c(Dec,Jan,Feb,Mar),na.rm=TRUE),3),
+					 PDORangeDecToMar = PDOMaxDecToMar - PDOMinDecToMar,
+					 PDOMeanMayToSep = round(mean(c(May,Jun,Jul,Aug,Sep),na.rm=TRUE),3),
+					 PDOSumMayToSep = round(sum(c(May,Jun,Jul,Aug,Sep),na.rm=TRUE),3),
+					 PDOMinMayToSep = round(min(c(May,Jun,Jul,Aug,Sep),na.rm=TRUE),3),
+					 PDOMaxMayToSep = round(max(c(May,Jun,Jul,Aug,Sep),na.rm=TRUE),3),
+					 PDORangeMayToSep = PDOMaxMayToSep - PDOMinMayToSep
 					 )
 
 pdo.reorg.out
