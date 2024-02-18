@@ -25,6 +25,7 @@ scope for this repository, then figure out how to get them.
 ### Open Questions 
 
 * [Which variables to extract? And how to get them?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/65)
+* [Link between State of Pacific Ocean Reports and forecasts](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/70)
 
 ### Highlights from Published Analyses
 

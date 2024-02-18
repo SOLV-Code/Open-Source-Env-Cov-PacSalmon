@@ -46,6 +46,8 @@ Follow the links to see the discussion thread and leave comments.
 * [PDO Index Details](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/26)
 * [Lighthouse SST and SSS Details](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/28)
 * [Values vs. Deviations from mean?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/30)
+* [Assumed mechanism for PDO covariate](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/69)
+* [Link between State of Pacific Ocean Reports and forecasts](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/70)
 
 ### Highlights from Published Analyses
 
