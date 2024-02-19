@@ -51,7 +51,7 @@ mei.covar.out <- mei.src %>%	#
 				 MEIv2MeanJunToSep = round(mean(c(DJ,JF,FM),na.rm=TRUE),3),
 				 MEIv2MeanSepToDec = round(mean(c(DJ,JF,FM),na.rm=TRUE),3)  ) %>%
 				 full_join(
-				 			envdata %>% select(year,contains("oni.")) %>% dplyr::filter(year >= 1950) %>%
+				 			envdata %>% select(year,contains("mei.")) %>% dplyr::filter(year >= 1950) %>%
 									dplyr::rename(Year = year), by = "Year") %>% arrange(Year)
 
 mei.covar.out
@@ -61,11 +61,11 @@ write_csv(mei.covar.out,"OUTPUT/MEI_Comparisons/MEI_Comparisons_Data.csv")
 
 # crosscheck -> STILL NEEDS TO BE SORTED OUT
 
-plot(mei.covar.out$MEIv2MeanDecToMar,mei.covar.out$oni.win)
+plot(mei.covar.out$MEIv2MeanDecToMar,mei.covar.out$mei.win)
 
 plot(mei.covar.out$Year,mei.covar.out$MEIv2MeanDecToMar,type="o", col="darkblue", pch=19,
 		 xlab="Year",ylab="index value",ylim=c(-2,3))
-lines(mei.covar.out$Year,mei.covar.out$oni.win,type="o", col="darkblue", pch=21,bg="white")
+lines(mei.covar.out$Year,mei.covar.out$mei.win,type="o", col="darkblue", pch=21,bg="white")
 legend("topleft",legend = c("MEIv2MeanDecToMar","oni.win"),lty=1,col="darkblue",pch=c(19,21))
 
 #-------------------------------------------------------
