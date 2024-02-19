@@ -15,3 +15,4 @@ NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgNovToMar,Mean of Nov to March 
 NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS
 NOAA_OceanConditionsIndex,Regional,DeepTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS
 NOAA_OceanConditionsIndex,Regional,DeepSalinityAvgMayToSept,Mean of May to Sep monthly means of GET DETAILS
+Chascoetal2021_SnakeRiverCk,,,
