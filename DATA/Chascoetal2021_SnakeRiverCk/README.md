@@ -49,21 +49,29 @@ Chasco B, Burke B, Crozier L, Zabel R (2021) Differential impacts of freshwater 
 
 
 For now, most covariates are just being extracted from the archived data set. 
+
+* Columbia River flow and temperature (CRflow.spr,CRflow.sum,CRtemp.spr,CRtemp.sum): source data available online, but complex
+* Seasonal upwelling index (cui.win,cui.spr,cui.sum,cui.aut): link inactive
+* Seasonal North Pacific Index (index of Aleutian Low Pressure)((npi.win,npi.spr,npi.sum,npi.aut): link inactive
+
+
+
+
 The covariates below are currently in the process of being recreated and updated from source data.
 
 
 
-**Multivariate ENSO Index Version 2 (MEI.v2) Winter/Spring/Summer/Autumn
+**Multivariate ENSO Index Version 2 (MEI.v2) Winter/Spring/Summer/Autumn**
 
 The [main source page](https://www.psl.noaa.gov/enso/mei/) describes the index as follows: *"The bi-monthly Multivariate El Niño/Southern Oscillation (ENSO) index (MEI.v2) is the time series of the leading combined Empirical Orthogonal Function (EOF) of five different variables (sea level pressure (SLP), sea surface temperature (SST), zonal and meridional components of the surface wind, and outgoing longwave radiation (OLR)) over the tropical Pacific basin (30°S-30°N and 100°E-70°W). The EOFs are calculated for 12 overlapping bi-monthly "seasons" (Dec-Jan, Jan-Feb, Feb-Mar,..., Nov-Dec) in order to take into account ENSO's seasonality, and reduce effects of higher frequency intraseasonal variability."*
 
 
 This Repo | Paper | Definition
 -- | -- |  --
-MEIv2MeanDecToMar	| oni.win? | Need to figure out the exact definition
-MEIv2MeanMarToJun	| oni.spr? | Need to figure out the exact definition
-MEIv2MeanJunToSep	| oni.sum? | Need to figure out the exact definition
-MEIv2MeanSepToDec	| oni.aut? | Need to figure out the exact definition
+MEIv2MeanDecToMar	| mei.win? | Need to figure out the exact definition
+MEIv2MeanMarToJun	| mei.spr? | Need to figure out the exact definition
+MEIv2MeanJunToSep	| mei.sum? | Need to figure out the exact definition
+MEIv2MeanSepToDec	| mei.aut? | Need to figure out the exact definition
 
 Source data available online in plain [text format](https://psl.noaa.gov/enso/mei/data/meiv2.data). 
 The annotation explains that *"Row values are 2 month seasons (YEAR DJ JF FM MA AM MJ JJ JA AS SO ON ND)"*
