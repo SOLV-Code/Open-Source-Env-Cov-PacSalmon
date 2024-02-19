@@ -55,5 +55,5 @@ Follow the links to see the discussion thread and leave comments.
 ### Details
 
 
-The online source file is in xls format, with layout optimized for humans, so values can't be extracted easily. We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA) (paste values with transpose, then fix column headings to br R compliant.
+The online source file is in xls format, with layout optimized for humans, so values can't be extracted easily. We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA) (paste values with transpose, then fix column headings to be R compliant.
 
