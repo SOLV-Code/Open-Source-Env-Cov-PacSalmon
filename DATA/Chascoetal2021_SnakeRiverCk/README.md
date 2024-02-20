@@ -8,7 +8,18 @@
 
 ### Introduction
 
-*To be included*
+The paper focuses on 1 specific group of salmon, spring/summer Chinook from the Snake River basin on the Columbia, and analyzes the complex correlations and interactions of large-scale and more local environmental covariates. They worked with a rich dataset of over 285,000 individually-tagged fish between 2000 and 2015.
+
+They describe the context as follows:
+
+* *"Evaluating drivers of survival for migrating animals is difficult because the interaction between physical processes at local, regional, and basin scales commonly results in correlated
+conditions across nearby habitat types."*
+
+* *"This correlation has the potential to amplify (or dampen) anomalous conditions in multiple habitats simultaneously, thus complicating our ability to identify causative mechanisms of variability in salmon survival."*
+
+* *"Because early ocean experiences are thought to have a large influence on salmon ocean survival, we focused environmental correlates on marine conditions spanning the winter prior to
+when fish out-migrated to the fall after outmigration.*"
+
 
 
 ### Status of Data Set
@@ -19,19 +30,26 @@ The covariate series used in the paper are available in a [github repository](ht
 
 With this information it should be possible to replicate the calculations, generate an up-to-date version of the data set, and cross-check the earlier years against the archived data set from the paper. *This is a work in progress and some challenges came up, which are being tracked at [this thread](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/74)*
 
-Note that the data file includes additional covariates not listed in Table 2 of the paper (e.g., pdo.win,pdo.spr,pdo.sum,pdo.aut). These are included also included here.
+Note that the data file includes additional covariates not listed in Table 2 of the paper , but found to have a strong effect on survival (e.g., pdo.sum). These will also be included here.
 
 
 ### Open Questions 
 
-*To be included*
+* [Challenges with recreating some covariates](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/74)
 
 ### Highlights from the paper
 
-*To be included*
+The best-fit model for smolt-to-adult survival (SAR) of *wild* Snake River Chinook included two environmental covariates:
 
+* Summer PDO (pdo.sum) had a negative effect on SAR (i.e., more positive PDO index from Jun-Aug linked to lower SAR)
 
+* Coastal upwelling index for the spring (cui.spr) had a positive effect on SAR (i.e., more positive upwelling index from Mar-May linked to higher SAR)
 
+The best-fit model for smolt-to-adult survival (SAR) of *hatchery-origin* Snake River Chinook included two environmental covariates:
+
+* Seasonal North Pacific Gyre Oscillation index for the summer (npgo.sum) had a positive effect on SAR (i.e., more positive NPGO index from Jun-Aug linked to higher SAR)
+
+* Seasonal measure of Sverdrup transport along the Washington coast for the summer (transport.sum) had a positive effect on SAR (i.e., more positive transport index from Jun-Aug linked to higher SAR)
 
 
 ### References
