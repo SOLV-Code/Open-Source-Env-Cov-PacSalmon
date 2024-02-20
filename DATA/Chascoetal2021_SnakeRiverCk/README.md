@@ -2,13 +2,13 @@
 
 **Status**: In Progress
 
-**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code). The official version of the data set used in the paper is available via the lead author's [github repository](https://github.com/bchasco/SAR_paper), but there is currently no up-to-date source for these covariates.
+**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code). The official version of the data set used in the paper is available via the lead author's [github repository](https://github.com/bchasco/SAR_paper), but there is currently no official up-to-date source for these covariates.
 
 **Last Data Update**: 2014-02-19
 
 ### Introduction
 
-The paper focuses on 1 specific group of salmon, spring/summer Chinook from the Snake River basin on the Columbia, and analyzes the complex correlations and interactions of large-scale and more local environmental covariates. They worked with a rich dataset of over 285,000 individually-tagged fish between 2000 and 2015.
+The paper focuses on one specific group of salmon, spring/summer Chinook from the Snake River basin on the Columbia, and analyzes the complex correlations and interactions of large-scale and more local environmental covariates. They worked with a rich dataset of over 285,000 individually-tagged fish between 2000 and 2015.
 
 They describe the context as follows:
 
