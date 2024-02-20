@@ -15,7 +15,7 @@ NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgNovToMar,Mean of Nov to March 
 NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS
 NOAA_OceanConditionsIndex,Regional,DeepTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS
 NOAA_OceanConditionsIndex,Regional,DeepSalinityAvgMayToSept,Mean of May to Sep monthly means of GET DETAILS
-Chascoetal2021_SnakeRiverCk,Large,MEIv2MeanDecToFeb,Multivariate ENSO Index Version 2 (MEI.v2) GET DETAILS (Variable oni.win in the paper)
-Chascoetal2021_SnakeRiverCk,Large,MEIv2MeanMarToMay,Multivariate ENSO Index Version 2 (MEI.v2) GET DETAILS (Variable oni.spr in the paper)
-Chascoetal2021_SnakeRiverCk,Large,MEIv2MeanJunToAug,Multivariate ENSO Index Version 2 (MEI.v2) GET DETAILS (Variable oni.sum in the paper)
-Chascoetal2021_SnakeRiverCk,Large,MEIv2MeanSepToNov,Multivariate ENSO Index Version 2 (MEI.v2) GET DETAILS (Variable oni.aut in the paper)
+Chascoetal2021_SnakeRiverCk,Large,MEIv2MeanDecToFeb,Multivariate ENSO Index Version 2 (MEI.v2) GET DETAILS (Variable mei.win in the paper)
+Chascoetal2021_SnakeRiverCk,Large,MEIv2MeanMarToMay,Multivariate ENSO Index Version 2 (MEI.v2) GET DETAILS (Variable mei.spr in the paper)
+Chascoetal2021_SnakeRiverCk,Large,MEIv2MeanJunToAug,Multivariate ENSO Index Version 2 (MEI.v2) GET DETAILS (Variable mei.sum in the paper)
+Chascoetal2021_SnakeRiverCk,Large,MEIv2MeanSepToNov,Multivariate ENSO Index Version 2 (MEI.v2) GET DETAILS (Variable mei.aut in the paper)
