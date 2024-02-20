@@ -13,6 +13,8 @@ This repository currently covers 4 data sets of environmental covariates:
 
 * [Chasco et al. (2021) Snake River Chinook paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk). 
 
+* [Peterman et al. (2009) summary paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Petermanetal2009_Summary)
+
 See the [summary of current coverage](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/Current_Coverage) for an inventory of environmental covariates extracted from those sources so far.
 
 See the [comparison of PDO covariates](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) for an example of a closer look at some of the data, set up for easy collaborative editing.
