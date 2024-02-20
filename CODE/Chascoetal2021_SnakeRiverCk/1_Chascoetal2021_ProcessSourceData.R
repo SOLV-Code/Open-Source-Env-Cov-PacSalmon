@@ -72,15 +72,47 @@ legend("topleft",legend = c("MEIv2MeanDecToFeb","oni.win"),lty=1,col="darkblue",
 # MERGE SERIES
 #-------------------------------------------------------
 
-# clean out the extracted object
-rm(envdata)
+
+# get the other variables (for now) from the paper source
+# rename the variable for consistency with other data sets
+names(envdata) <- gsub(".win","MeanDecToFeb",names(envdata))
+names(envdata) <- gsub(".spr","MeanMarToMay",names(envdata))
+names(envdata) <- gsub(".sum","MeanJunToAug",names(envdata))
+names(envdata) <- gsub(".aut","MeanSepToNov",names(envdata))
+
+names(envdata) <- gsub("CRflow","ColumbiaRFlow",names(envdata))
+names(envdata) <- gsub("CRtemp","ColumbiaRTemp",names(envdata))
+
+names(envdata) <- gsub("cui","CoastUpIdx",names(envdata))
+names(envdata) <- gsub("npgo","NPacGyreOsc",names(envdata))
+names(envdata) <- gsub("oni","OcNinoIdx",names(envdata))
+names(envdata) <- gsub("transport","WashTransp",names(envdata))
+names(envdata) <- gsub("pdo","PDO",names(envdata))
+
+names(envdata)[1]<-"Year"
 
 
-chasco2021.covars <-  mei.covar.out %>%
-				select(Year,MEIv2MeanDecToFeb,MEIv2MeanMarToMay,MEIv2MeanJunToAug,MEIv2MeanSepToNov)
+
+# combine extracted and recreated variables
+
+
+
+
+chasco2021.covars <- envdata %>% select(contains(c("Year","ColumbiaRFlow","ColumbiaRTemp","CoastUpIdx",
+																									 "NPacGyreOsc","OcNinoIdx","WashTransp","PDO"))) %>%
+				full_join(mei.covar.out %>%
+							select(Year,MEIv2MeanDecToFeb,MEIv2MeanMarToMay,MEIv2MeanJunToAug,MEIv2MeanSepToNov),
+							by="Year")
+
+
+
 head(chasco2021.covars)
 
 write_csv(chasco2021.covars,"DATA/Chascoetal2021_SnakeRiverCk/GENERATED_COVARS_Chascoetal2021Paper.csv")
 
+
+
+# clean out the extracted object
+rm(envdata)
 
 
