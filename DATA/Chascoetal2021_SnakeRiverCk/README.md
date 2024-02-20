@@ -47,18 +47,27 @@ Chasco B, Burke B, Crozier L, Zabel R (2021) Differential impacts of freshwater 
 
 ### Details
 
+The paper defines the following seasons:
+
+Period |Label | Months
+-- | -- |  --
+Winter | *.win | Dec/Jan/Feb
+Spring | *.spr | Mar/Apr/May
+Summer | *.sum  | Jun/Jul/Aug
+Autumn | *.aut  | Sep/Oct/Nov
+
 
 For now, most covariates are just being extracted from the archived data set. 
 
 * Columbia River flow and temperature (CRflow.spr,CRflow.sum,CRtemp.spr,CRtemp.sum): source data available online, but complex
 * Seasonal upwelling index (cui.win,cui.spr,cui.sum,cui.aut): link inactive
 * Seasonal North Pacific Index (index of Aleutian Low Pressure)((npi.win,npi.spr,npi.sum,npi.aut): link inactive
-
-
+* Seasonal sea surface temperature for coastal Washington (ersstWACoast.win, ersstWACoast.spr,ersstWACoast.sum,ersstWACoast.aut): source data available online, but complex
+* Seasonal sea surface temperature from Johnstone and Mantua (2014) source data available online, but complex
+* Seasonal measure of Sverdrup transport along the Washington coast, most correlated with the temperatures in the upper 20 meters.: no link available
 
 
 The covariates below are currently in the process of being recreated and updated from source data.
-
 
 
 **Multivariate ENSO Index Version 2 (MEI.v2) Winter/Spring/Summer/Autumn**
@@ -66,16 +75,28 @@ The covariates below are currently in the process of being recreated and updated
 The [main source page](https://www.psl.noaa.gov/enso/mei/) describes the index as follows: *"The bi-monthly Multivariate El Niño/Southern Oscillation (ENSO) index (MEI.v2) is the time series of the leading combined Empirical Orthogonal Function (EOF) of five different variables (sea level pressure (SLP), sea surface temperature (SST), zonal and meridional components of the surface wind, and outgoing longwave radiation (OLR)) over the tropical Pacific basin (30°S-30°N and 100°E-70°W). The EOFs are calculated for 12 overlapping bi-monthly "seasons" (Dec-Jan, Jan-Feb, Feb-Mar,..., Nov-Dec) in order to take into account ENSO's seasonality, and reduce effects of higher frequency intraseasonal variability."*
 
 
-This Repo | Paper | Definition
--- | -- |  --
-MEIv2MeanDecToMar	| mei.win? | Need to figure out the exact definition
-MEIv2MeanMarToJun	| mei.spr? | Need to figure out the exact definition
-MEIv2MeanJunToSep	| mei.sum? | Need to figure out the exact definition
-MEIv2MeanSepToDec	| mei.aut? | Need to figure out the exact definition
+This Repo | Paper
+-- | -- 
+MEIv2MeanDecToFeb	| mei.win 
+MEIv2MeanMarToMay	| mei.spr 
+MEIv2MeanJunToAug	| mei.sum 
+MEIv2MeanSepToNov	| mei.aut 
 
 Source data available online in plain [text format](https://psl.noaa.gov/enso/mei/data/meiv2.data). 
 The annotation explains that *"Row values are 2 month seasons (YEAR DJ JF FM MA AM MJ JJ JA AS SO ON ND)"*
 
-We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA). To get the values, copy just the tab-separated values into a text file and add column headers (like like [this](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/Chascoetal2021_SnakeRiverCk/RawFiles/MEIv2Source_DataRaw.txt)), import into Excel, and then copy values into the [csv](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/Chascoetal2021_SnakeRiverCk/MEIv2Source_Data.csv). **NOTE: The source file may include values of -999.00 or -999. These are assumed to be NA and are removed**
+We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA). To get the values, copy just the tab-separated values into a text file and add column headers (like [this](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/Chascoetal2021_SnakeRiverCk/RawFiles/MEIv2Source_DataRaw.txt)), import into Excel, and then copy values into the [csv](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/Chascoetal2021_SnakeRiverCk/MEIv2Source_Data.csv). **NOTE: The source file may include values of -999.00 or -999. These are assumed to be NA and are removed**
 
 
+**Seasonal North Pacific Gyre Oscillation**
+
+*WORKING ON IT*
+
+source data available [here](http://www.o3d.org/npgo/npgo.php)
+
+
+**Seasonal Oceanic Niño Index**
+
+*WORKING ON IT*
+
+source data available [here](https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php)
