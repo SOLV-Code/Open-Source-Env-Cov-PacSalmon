@@ -5,6 +5,9 @@
 Figures created from the [merged data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/Merged_CovariateSet.csv) and the [detailed PDO comparison data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_Data.csv) using [this script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/2_PDO_Comparisons.R).
 
 
+**TO DO: include comparisons to the seasonal PDO covariates from the [Chasco et al. (2021) paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk). They found the strongest PDO effect was from Jun-Aug (their pdo.sum variable)**
+
+
 ### Contents
 
 * [Comparing Winter PDO Variables](#Alternative-Winter-PDO-Variables)
