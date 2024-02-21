@@ -43,7 +43,7 @@ To be included.
 
 ### References
 
-Peterman RM, Pyper BJ, Mueter FJ, Haeseker SL, Su Z, et al. (2009) Statistical Models of Pacific Salmon that Include Environmental Variables. American Fisheries Society Symposium: 125–146. [Full paper - read online](https://www.researchgate.net/publication/235431358_Statistical_Models_of_Pacific_Salmon_that_Include_Environmental_Variables)
+Peterman RM, Pyper BJ, Mueter FJ, Haeseker SL, Su Z, and B. Dorner (2009) Statistical Models of Pacific Salmon that Include Environmental Variables. American Fisheries Society Symposium: 125–146. [Full paper - read online](https://www.researchgate.net/publication/235431358_Statistical_Models_of_Pacific_Salmon_that_Include_Environmental_Variables)
 
 Mueter, F. J.,  D.  M.  Ware,  and  R.  M. Peterman.  2002. Spatial  correlation  patterns  in  coastal  environmental  variables  and  survival  rates  of  salmon  in  the north-east  Paciﬁc  Ocean.  Fisheries  Oceanography 11(4):205–218. 
 
