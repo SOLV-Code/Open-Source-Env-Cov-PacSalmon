@@ -249,13 +249,58 @@ points(pdo.data$PDOMeanNovToMar, pdo.data$PDOMeanJunToAug,type = "p",
 			 pch=21,col="darkblue",bg=bg.col,cex=1.2)
 
 
+dev.off()
 
 
+#----------------------------------------------------------------
 
 
+png(filename = "OUTPUT/PDO_Comparisons/PDO_Comparisons_FraserFCvsChascoPaper_Winter.png",
+		width = 480*4, height = 480*4.2, units = "px",
+		pointsize = 14*3.9, bg = "white",  res = NA)
+par(mai=c(5,5,4,2))
+
+# color fade
+
+n.obs <- length(pdo.data$Year)
+n.obs
+bg.fade <- c(rep(0,40),seq(0,1, length.out=n.obs-40))
+bg.fade
+bg.col <- rgb(1, 0,0,bg.fade) #
+bg.col
+#bg.col <- tail(bg.col,n.obs)
 
 
+plot(pdo.data$PDOMeanNovToMar, pdo.data$PDOMeanDecToFeb,
+		 xlab = "PDO Mean Nov-Mar\n(DFO Fraser Sk Forecast)",
+		 ylab = "PDO Mean Dec-Feb\n(Chasco et al. 2021 - Snake River Ck)",
+		 bty="n",axes=FALSE,pch=21,col="darkblue",bg="lightblue",
+		 cex=1.3, xlim = c(-3,3),ylim = c(-3,3),xpd=NA,
+		 main="Comparison of Alternative Winter PDO Covariates")
+axis(1,at=seq(-3,3,by =1),las=1)
+axis(2,at=seq(-3,3,by =1),las=1)
+abline(h=0,col="red",lty=2)
+abline(v=0,col="red",lty=2)
 
+points(pdo.data$PDOMeanNovToMar, pdo.data$PDOMeanDecToFeb,type = "p",
+			 pch=21,col="darkblue",bg="white",cex=1.2)
+points(pdo.data$PDOMeanNovToMar, pdo.data$PDOMeanDecToFeb,type = "p",
+			 pch=21,col="darkblue",bg=bg.col,cex=1.2)
+
+
+idx.left.pts <- pdo.data$PDOMeanNovToMar <= -1.8
+
+text(pdo.data$PDOMeanNovToMar[idx.left.pts],
+		 pdo.data$PDOMeanDecToFeb[idx.left.pts],
+		 labels = pdo.data$Year[idx.left.pts],
+		 adj=1.2,col="darkblue",cex=0.8)
+
+idx.rt.pts <- pdo.data$PDOMeanNovToMar > 2
+
+text(pdo.data$PDOMeanNovToMar[idx.rt.pts],
+		 pdo.data$PDOMeanDecToFeb[idx.rt.pts],
+		 labels = pdo.data$Year[idx.rt.pts],
+		 adj=-0.2,col="darkblue",cex=0.8)
 
 
 dev.off()
