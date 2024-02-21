@@ -28,9 +28,9 @@ Three of the data sets include covariates based on the Pacific Decadal Oscillati
 **Some initial observations**
 
 
-Scatterplots shows that alternative time windows used for the PDO-based covariates generally produce the same signal for the same year. Years with low winter values also have a low summer values. However, the link is noisy, so that for some individual years  the alternative versions will provide a different signal (e.g. in a pre-season run size forecast).
+Scatterplots show that alternative time windows used for the PDO-based covariates generally produce the same signal for the same year. Years with low winter values also have a low summer values. However, the link is noisy, so that for some individual years  the alternative versions will provide a different signal (e.g. in a pre-season run size forecast).
 
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_FraserFCvsChascoPaper.png" idth="500">
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_FraserFCvsChascoPaper.png" width="500">
 
 
 
