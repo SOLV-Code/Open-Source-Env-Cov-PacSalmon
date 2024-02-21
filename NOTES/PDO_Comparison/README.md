@@ -5,13 +5,42 @@
 Figures created from the [merged data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/Merged_CovariateSet.csv) and the [detailed PDO comparison data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_Data.csv) using [this script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/2_PDO_Comparisons.R).
 
 
-**TO DO: include comparisons to the seasonal PDO covariates from the [Chasco et al. (2021) paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk). They found the strongest PDO effect was from Jun-Aug (their pdo.sum variable)**
-
-
 ### Contents
 
-* [Comparing Winter PDO Variables](#Alternative-Winter-PDO-Variables)
+
 * [Winter vs. Summer PDO Variables](#Winter-vs-Summer-PDO-Variables)
+* [Comparing Winter PDO Variables](#Alternative-Winter-PDO-Variables)
+
+	
+### Winter vs Summer PDO Variables
+
+Three of the data sets include covariates based on the Pacific Decadal Oscillation (PDO) index, but they are all slightly different:
+
+* The [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) data set includes a winter PDO variable (sum of monthly PDO for Dec-Mar) and a summer PDO variable (sum of monthly means for May-Sep).
+* The [Chasco et al. (2021) paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) tested four seasonal PDO covariates (Winter:Dec-Feb, Spring: Mar-May, Summer: Jun-Aug, Autumn: Sep-Nov). They found that the PDO covariates had a negative effect on smolt-to-adult survival of wild Snake River Chinook, with summer PDO the strongest.
+* [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) includes 1 PDO covariate, the mean for Nov-Mar.
+
+
+
+*Insert text on the assumed mechanism linking the PDO covariate at different time windows to salmon surival. Started a discussion thread [here](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/69).*
+
+
+**Some initial observations**
+
+
+Scatterplots shows that alternative time windows used for the PDO-based covariates generally produce the same signal for the same year. Years with low winter values also have a low summer values. However, the link is noisy, so that for some individual years  the alternative versions will provide a different signal (e.g. in a pre-season run size forecast).
+
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_FraserFCvsChascoPaper.png
+	width="500">
+
+
+
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_WintervsSummer_NOAA.png"
+	width="500">
+
+
+
+
 
 ### Alternative Winter PDO Variables
 
@@ -53,25 +82,3 @@ Many environmental indicators have become more variable in recent years. However
 	width="500">
 	
 	
-	
-### Winter vs Summer PDO Variables
-
-The [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) data set includes a winter PDO variable (sum of monthly PDO for Jan-Mar) and a summer PDO variable (sum of monthly means for May-Sep).
-
-*Discuss whether it makes sense to compare these side by side.*
-
-*Insert text on the assumed mechanism linking the summer PDO covariate to salmon surival, and how that is similar/different from the winter PDO covariate. Started a discussion thread [here](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/69).*
-
-
-
-
-**Some initial observations**
-
-
-Scatterplot shows that the winter and summer PDO variable provide generally the same signal for the same year. Years with low winter values also have a low summer values (e.g., 2008,2011,2012) and years with high winter values also have a high summer values (e.g., 2003, 2015, 2016).
-
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_WintervsSummer_NOAA.png"
-	width="500">
-
-
-

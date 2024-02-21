@@ -57,23 +57,25 @@ write_csv(var.summary.out,"OUTPUT/SummaryOfVariables.csv")
 
 datasets.list <- unique(var.lookup$DataSet)
 
-yr.range <- c(1970,2025)
-yr.ticks <- seq(1970,2025, by=5)
+yr.range <- c(1900,2030)
+yr.ticks <- seq(1900,2030, by=20)
 
 n.datasets <- length(datasets.list)
 n.var.all <- dim(var.lookup)[1]
-n.extrarows <- 20
+n.extrarows <- 2
 
 
 png(filename = "OUTPUT/DataOverview_ALL.png",
-		width = 480*4, height = 480*5, units = "px", pointsize = 14*3.1, bg = "white",  res = NA)
+		width = 480*4, height = 480*4.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
 par(mai=c(0.3,8.5,1.5,1))
 
 
-plot(1:5,1:5,type="n",xlim = yr.range, ylim=c(2*n.datasets + n.var.all + n.extrarows ,0.7),xlab="",ylab="",axes=FALSE)
+plot(1:5,1:5,type="n",xlim = yr.range, ylim=c(2*n.datasets + n.var.all + n.extrarows ,0.7),
+		 xlab="",ylab="",axes=FALSE)
 axis(3,at=yr.ticks)
 #title(main = "Availability of Spawner-Recruit Data",cex.main=1)
-
+abline(v=yr.ticks,col="darkgrey",lty=1)
+abline(v=2023,col="red",lty =2, lwd=3)
 
 y.idx <- 2
 
@@ -98,7 +100,7 @@ for(set.plot in datasets.list ){
 
 
 	text(par("usr")[1]-25,y.idx-1.5,labels = set.plot, font =2, adj=0,xpd =NA)
-	axis(2,at=y.idx:(y.idx + n.var - 1),labels = var.labels,las=2,cex.axis =0.8)
+	axis(2,at=y.idx:(y.idx + n.var - 1),labels = var.labels,las=2,cex.axis =0.6,lwd=3)
 
 	abline(h=(y.idx:(y.idx + n.var -1)),col="darkgrey")
 
@@ -106,7 +108,7 @@ for(set.plot in datasets.list ){
 
 	for(i in 1:n.var){ #
 
-
+print("------------------------------------------")
 
 		print(var.list[i])
 		data.sub <- merged.data %>% select(all_of(c("Year",var.list[i])))
@@ -118,7 +120,8 @@ for(set.plot in datasets.list ){
 		data.yrs.f <- data.sub %>% dplyr::filter( !is.na(Value)) %>% select(Year) %>% unlist()
 		data.yrs.f
 
-	  if(length(data.yrs.f)>0){points(data.yrs.f,rep(y.idx+ i -1 ,length(data.yrs.f)),col="darkblue", pch=21,bg="darkblue",cex=0.8)}
+	  if(length(data.yrs.f)>0){points(data.yrs.f,rep(y.idx+ i -1 ,length(data.yrs.f)),
+	  																col="darkblue", pch=21,bg="lightblue",cex=0.7)}
 
 		# add the start year
 		# if(length(data.yrs.o)>0 | length(data.yrs.f)>0){
