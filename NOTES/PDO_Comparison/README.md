@@ -10,7 +10,7 @@ Figures created from the [merged data set](https://github.com/SOLV-Code/Open-Sou
 * [Key Points](#Key-Points)
 * [Plots: Winter vs. Summer PDO Variables](#Winter-vs-Summer-PDO-Variables)
 * [Plots: Comparing Winter PDO Variables](#Alternative-Winter-PDO-Variables)
-* [Plots: Long-term changes in PDO Variables](#Plots: Long-Term-Changes)
+* [Plots: Long-term changes in PDO Variables](#Plots:-Long-Term-Changes)
 
 
 ### Key Points
@@ -19,24 +19,18 @@ Three of the data sets include covariates based on the Pacific Decadal Oscillati
 
 * The [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) data set includes a winter PDO variable (sum of monthly PDO for Dec-Mar) and a summer PDO variable (sum of monthly means for May-Sep).
 * The [Chasco et al. (2021) paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) tested four seasonal PDO covariates (Winter: mean Dec-Feb, Spring: mean Mar-May, Summer: mean Jun-Aug, Autumn: mean Sep-Nov). They found that the PDO covariates had a negative effect on smolt-to-adult survival of wild Snake River Chinook, with summer PDO the strongest.
-* [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) includes 1 PDO covariate, the mean for Nov-Mar.
+* [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) data set includes 1 PDO covariate, the mean for Nov-Mar.
+
+A potential source of discrepancies between alternative implementations is how environmental covariates are lined up with each other and with the salmon data. The three implementations are consistent. The *NOAA Ocean Conditions Index* compares the PDO covariate with regional covariates like sea surface temperature in the same calendar year (e.g., rank of the sum of PDO index for Jan-Mar 2018 and rank of the mean sea surface temperature for May-Sep 2018 are combined into the mean rank for 2018). *DFO Fraser Forecasting* maps the PDO covariate to the winter preceding outmigration and the sea surface temperature covariate to ocean entry, which are in the same calendar year. In the [merged data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/Merged_CovariateSet.csv) and the [detailed PDO comparison data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_Data.csv) we replicate this by assigning the means and sums to the latter year (i.e., mean for Nov 2020 to March 2021 shows up as the 2021 indicator value).
 
 
-
-*Insert text on the assumed mechanism linking the PDO covariate at different time windows to salmon surival. Started a discussion thread [here](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/69).*
-
-
-Scatterplots show that alternative time windows used for the PDO-based covariates generally produce the same signal for the same year. Years with low winter values also have a low summer values. However, the link is noisy, so that for some individual years  the alternative versions will provide a different signal (e.g. in a pre-season run size forecast).
-
-Both the [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)  and [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) data sets include a variable to reflect Pacific Decadal Oscillation (PDO) over the winter months, but the details of the variable definition differ. 
-
-* *DFO Fraser Forecasting*  uses the **mean** of monthly PDO index values for Nov-Mar (just "Mean" below). 
-* *NOAA Ocean Conditions Index* (just "Sum" below) uses the **sum** of monthly PDO index values for Dec-Mar (just "Sum" below)
-
-
-A potential source of discrepancies between alternative implementations is how environmental covariates are lined up with each other and with the salmon data. The DFO and NOAA implementations are consistent. The *NOAA Ocean Conditions Index* compares the PDO covariate with regional covariates like sea surface temperature in the same calendar year (e.g., rank of the sum of PDO index for Jan-Mar 2018 and rank of the mean sea surface temperature for May-Sep 2018 are combined into the mean rank for 2018). *DFO Fraser Forecasting* maps the PDO covariate to the winter preceding outmigration and the sea surface temperature covariate to ocean entry, which are in the same calendar year. In the [merged data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/Merged_CovariateSet.csv) and the [detailed PDO comparison data set](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_Data.csv) we replicate this by assigning the means and sums to the latter year (i.e., mean for Nov 2020 to March 2021 shows up as the 2021 indicator value).
 
 *Insert text on the assumed mechanism linking the PDO covariate to salmon surival. Started a discussion thread [here](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/69).*
+
+
+
+[Scatterplots](#Plots:-Winter-vs-Summer-PDO-Variables) show that alternative time windows used for the PDO-based covariates generally produce the same signal for the same year. Years with low winter values also have a low summer values. However, the link is noisy, so that for some individual years  the alternative versions will provide a different signal (e.g. in a pre-season run size forecast).
+
 
 
 Scatterplot shows that the two versions of the winter PDO variable provide the same signal for the same year. Years with low mean values also have a low sum (e.g., 2000, 2009,2012,2022) and years with high mean values also have a high sum (e.g., 1998, 2003, 2015, 2016). 
@@ -55,7 +49,7 @@ Many environmental indicators have become more variable in recent years. However
 	
 	
 	
-### Winter vs Summer PDO Variables
+### Plots: Winter vs Summer PDO Variables
 
 
 
@@ -75,7 +69,7 @@ Many environmental indicators have become more variable in recent years. However
 
 
 
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_FraserFCvsChascoPaper.png" width="500">
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_FraserFCvsChascoPaper_Winter.png" width="500">
 
 
 
@@ -86,7 +80,7 @@ Many environmental indicators have become more variable in recent years. However
 
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_ExampleYears.png"
-	width="400">
+	width="500">
 
 
 
