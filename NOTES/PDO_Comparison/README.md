@@ -8,9 +8,9 @@ Figures created from the [merged data set](https://github.com/SOLV-Code/Open-Sou
 ### Contents
 
 * [Key Points](#Key-Points)
-* [Plots: Winter vs. Summer PDO Variables](#Winter-vs-Summer-PDO-Variables)
-* [Plots: Comparing Winter PDO Variables](#Alternative-Winter-PDO-Variables)
-* [Plots: Long-term changes in PDO Variables](#Plots:-Long-Term-Changes)
+* [Plots: Winter vs. Summer PDO Variables](#Plots-Comparing-Winter-vs-Summer-PDO-Variables)
+* [Plots: Comparing Winter PDO Variables](#Plots-Comparing-Alternative-Winter-PDO-Variables)
+* [Plots: Long-term changes in PDO Variables](#Plots-Summarizing-Long-Term-Changes)
 
 
 ### Key Points
@@ -49,7 +49,7 @@ Many environmental indicators have become more variable in recent years. However
 	
 	
 	
-### Plots: Winter vs Summer PDO Variables
+### Plots Comparing Winter vs Summer PDO Variables
 
 
 
@@ -65,7 +65,7 @@ Many environmental indicators have become more variable in recent years. However
 
 
 
-### Alternative Winter PDO Variables
+### Plots Comparing Alternative Winter PDO Variables
 
 
 
@@ -85,7 +85,7 @@ Many environmental indicators have become more variable in recent years. However
 
 
 
-### Plots: Long Term Changes
+### Plots Summarizing Long Term Changes
 	
 
 	
