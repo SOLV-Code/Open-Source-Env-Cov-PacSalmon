@@ -29,7 +29,7 @@ The paper provides a link to the salmon data, but it is now inactive.
 For the environmental covariates, the paper cites Mueter (2002) and Mueter (2005), which provide detailed descriptions, excerpted below.
 
 However, there is no table with the actual values or link to supplementary materials. Each of the covariates combines data
-from multiple sources to construct an index of large-scale conditions, so trying to reproduce the calculations to generate an up-to-date version will require substantial effort.
+from multiple sources to construct region-specific indices of coastal conditions, so trying to reproduce the calculations to generate an up-to-date version will require substantial effort.
 
 
 
