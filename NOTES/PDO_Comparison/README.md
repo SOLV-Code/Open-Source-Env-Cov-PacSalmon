@@ -17,7 +17,7 @@ Figures created from the [merged data set](https://github.com/SOLV-Code/Open-Sou
 Three of the data sets include covariates based on the Pacific Decadal Oscillation (PDO) index, but they are all slightly different:
 
 * The [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) data set includes a winter PDO variable (sum of monthly PDO for Dec-Mar) and a summer PDO variable (sum of monthly means for May-Sep).
-* The [Chasco et al. (2021) paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) tested four seasonal PDO covariates (Winter:Dec-Feb, Spring: Mar-May, Summer: Jun-Aug, Autumn: Sep-Nov). They found that the PDO covariates had a negative effect on smolt-to-adult survival of wild Snake River Chinook, with summer PDO the strongest.
+* The [Chasco et al. (2021) paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) tested four seasonal PDO covariates (Winter: mean Dec-Feb, Spring: mean Mar-May, Summer: mean Jun-Aug, Autumn: mean Sep-Nov). They found that the PDO covariates had a negative effect on smolt-to-adult survival of wild Snake River Chinook, with summer PDO the strongest.
 * [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) includes 1 PDO covariate, the mean for Nov-Mar.
 
 
@@ -30,8 +30,7 @@ Three of the data sets include covariates based on the Pacific Decadal Oscillati
 
 Scatterplots shows that alternative time windows used for the PDO-based covariates generally produce the same signal for the same year. Years with low winter values also have a low summer values. However, the link is noisy, so that for some individual years  the alternative versions will provide a different signal (e.g. in a pre-season run size forecast).
 
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_FraserFCvsChascoPaper.png
-	width="500">
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/PDO_Comparisons/PDO_Comparisons_FraserFCvsChascoPaper.png" idth="500">
 
 
 
