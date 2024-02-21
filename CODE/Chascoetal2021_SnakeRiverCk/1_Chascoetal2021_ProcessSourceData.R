@@ -55,6 +55,8 @@ mei.covar.out <- mei.src %>%	#
 									dplyr::rename(Year = year), by = "Year") %>% arrange(Year)
 
 mei.covar.out
+
+
 write_csv(mei.covar.out,"OUTPUT/MEI_Comparisons/MEI_Comparisons_Data.csv")
 
 
@@ -66,7 +68,7 @@ plot(mei.covar.out$MEIv2MeanDecToFeb,mei.covar.out$mei.win)
 plot(mei.covar.out$Year,mei.covar.out$MEIv2MeanDecToFeb,type="o", col="darkblue", pch=19,
 		 xlab="Year",ylab="index value",ylim=c(-2,3))
 lines(mei.covar.out$Year,mei.covar.out$mei.win,type="o", col="darkblue", pch=21,bg="white")
-legend("topleft",legend = c("MEIv2MeanDecToFeb","oni.win"),lty=1,col="darkblue",pch=c(19,21))
+legend("topleft",legend = c("MEIv2MeanDecToFeb","mei.win"),lty=1,col="darkblue",pch=c(19,21))
 
 #-------------------------------------------------------
 # MERGE SERIES
@@ -104,7 +106,7 @@ chasco2021.covars <- envdata %>% select(contains(c("Year","ColumbiaRFlow","Colum
 							select(Year,MEIv2MeanDecToFeb,MEIv2MeanMarToMay,MEIv2MeanJunToAug,MEIv2MeanSepToNov),
 							by="Year")
 
-
+names(chasco2021.covars)
 
 head(chasco2021.covars)
 
