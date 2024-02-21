@@ -11,7 +11,7 @@ Figures created from the [merged data set](https://github.com/SOLV-Code/Open-Sou
 
 * Environmental covariates from the [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) data set can be downloaded directly and all start in 1998.
 
-* The [Chasco et al. 2021](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) paper on Snake River (Columbia) Chinook provides an archived version of the covariates via github, and includes active links to source data for most of the covariates. Some of the covariates have been recreated and updated, others or being extracted from the archived data set for now.
+* The [Chasco et al. 2021](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) paper on Snake River (Columbia) Chinook provides an archived version of the covariates via github, and includes active links to source data for most of the covariates. Some of the covariates have been recreated and updated, others are being extracted from the archived data set for now.
 
 * See [Variable descriptions](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/LookUp_VariableDescriptions.csv) table for details.
 
