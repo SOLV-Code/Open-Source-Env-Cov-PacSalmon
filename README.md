@@ -56,7 +56,7 @@ Along the way, we are also compiling an inventory of any interesting sources of 
 
 * [OUTPUT Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/OUTPUT): includes the merged data set and summaries.
 
-* [NOTES Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES): includes a short summary of the available data and brief explorations of points of interest. Notes are kept in markdown to directly pull in plots generated in other parts of the repository and and allow for easy collaborative editing.
+* [NOTES Folder](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES): includes a short summary of the available data and brief explorations of points of interest. Notes are kept in markdown to directly pull in plots generated in other parts of the repository and allow for easy collaborative editing.
 
 
 

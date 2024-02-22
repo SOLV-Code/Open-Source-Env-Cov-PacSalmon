@@ -12,8 +12,7 @@ The paper focuses on one specific group of salmon, spring/summer Chinook from th
 
 They describe the context as follows:
 
-* *"Evaluating drivers of survival for migrating animals is difficult because the interaction between physical processes at local, regional, and basin scales commonly results in correlated
-conditions across nearby habitat types."*
+* *"Evaluating drivers of survival for migrating animals is difficult because the interaction between physical processes at local, regional, and basin scales commonly results in correlated conditions across nearby habitat types."*
 
 * *"This correlation has the potential to amplify (or dampen) anomalous conditions in multiple habitats simultaneously, thus complicating our ability to identify causative mechanisms of variability in salmon survival."*
 
@@ -50,6 +49,12 @@ The best-fit model for smolt-to-adult survival (SAR) of *hatchery-origin* Snake 
 * Seasonal North Pacific Gyre Oscillation index for the summer (npgo.sum) had a positive effect on SAR (i.e., more positive NPGO index from Jun-Aug linked to higher SAR)
 
 * Seasonal measure of Sverdrup transport along the Washington coast for the summer (transport.sum) had a positive effect on SAR (i.e., more positive transport index from Jun-Aug linked to higher SAR)
+
+
+The discussion section of the paper covers potential explanations for the observation that summer PDO affected wild Chinook but not hatchery Chinook. Differences in size, condition, and timing of ocean entry may result in differential predation, with predation also indirectly linked to larger-scale drivers like PDO. pg 18 of the paper explains: *"In this effort, we intentionally restricted our potential ocean covariates to publicly-available (and mostly physical) variables. These variables do not necessarily directly relate to the ecosystem processes that determine salmon survival, but rather represent correlations with these processes. Some biological time series that more directly characterize ecosystem processes such as trophic dynamics are available, but only for recent years (e.g., stoplight chart for ocean survival estimates, http://www.nwfsc.noaa.gov/oceanconditions). For other research goals, such as
+near-term forecasting, these more direct metrics may be more appropriate. Indeed, as more biological data are collected, reliance on correlations should be reduced and the use of mechanistic ecosystem models will become more important"*
+
+*Also include brief text on the carry-over effect*
 
 
 ### References
