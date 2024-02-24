@@ -12,16 +12,13 @@ Analyses using environmental data sets included in this repository vary widely i
 
 Data Set |  Stocks | Env. Covar  | Comment
 -- | -- | -- | --
-[DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | 28 | 7 | Text
-[Chasco et al. (2021) paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) | 1 | 40 | Analysis looks smolt-to-adult survival of Snake River Chinook, split into wild and hatchery-origin fish. The environmental covariates include seasonal versions (e.g., PDO winter, PDO spring).
+[DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) | 28 | 7 | Annually complete a retrospective test of models with and without env. covariates. 
+[Chasco et al. (2021) paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) | 1 | 40 | Analysis looked at smolt-to-adult survival of Snake River Chinook, split into wild and hatchery-origin fish. The environmental covariates include seasonal versions (e.g., PDO winter, PDO spring).
+[NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) | NA  | 8 | General index, not designed for a specific stock (but variables selected based on previous work). Also includes 8 biological covariates (e.g., copepod richness).
+[Peterman et al. (2009) summary paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Petermanetal2009_Summary) | 120 | 3 | Analyses summarized in this paper focused on covariates capturing *coastal* conditions at a regional scale, for stocks from Washington State to western Alaska.
+[DFO State of the Pacific Oceans](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_StateOfThePacificOcean) | NA | NA | Detailed description of ocean conditions produced annually. Not currently a standard set of analyses or covariates. Recent reports include a systematic table with qualitative ratings.
 
 
-
-
-
-* The [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex) data set includes a winter PDO variable (sum of monthly PDO for Dec-Mar) and a summer PDO variable (sum of monthly means for May-Sep).
-* The [Chasco et al. (2021) paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) tested four seasonal PDO covariates (Winter: mean Dec-Feb, Spring: mean Mar-May, Summer: mean Jun-Aug, Autumn: mean Sep-Nov). They found that the PDO covariates had a negative effect on smolt-to-adult survival of wild Snake River Chinook, with summer PDO the strongest.
-* [DFO Fraser River Sockeye and Pink Forecast](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast) data set includes 1 PDO covariate, the mean for Nov-Mar.
 
 
 

@@ -8,4 +8,4 @@ Notes in progress:
 
 * [Comparison of PDO covariates](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) takes a closer look at the alternative versions used in different applications.
 
-* [Comparing the scope of different analyses](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/ScopeOfAnalyses) takes compares and contrasts the data sets and how they were used.
+* [Scope of analyses](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/ScopeOfAnalyses) compares and contrasts the data sets and how they were used.
