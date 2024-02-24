@@ -30,10 +30,10 @@ when fish out-migrated to the fall after outmigration."*). In the [merged data s
 
 
 
-[Scatterplots](#Plots:-Winter-vs-Summer-PDO-Variables) comparing alternative seasons used for the PDO-based covariates show that these variations generally produce the same signal for the same year. Years with low winter values also have a low values the following summer. However, the link is noisy, so that for some individual years the winter and summer covariates will provide a different signal (e.g. in a pre-season run size forecast).
+[Scatterplots](#Plots-Comparing-Winter-vs-Summer-PDO-Variables) comparing alternative seasons used for the PDO-based covariates show that these variations generally produce the same signal for the same year. Years with low winter values also have a low values the following summer. However, the link is noisy, so that for some individual years the winter and summer covariates will provide a different signal (e.g. in a pre-season run size forecast).
 
 
-[Scatterplots]((#Plots-Comparing-Alternative-Winter-PDO-Variables)) comparing alternative versions of the winter PDO variable show that these variations provide the same signal for the same year. Years with low mean values also have a low sum (e.g., 2000, 2009,2012,2022) and years with high mean values also have a high sum (e.g., 1998, 2003, 2015, 2016). However, for some years with larger differences between the monthly values the winter PDO covariate is more sensitive to nuances of definition (mean vs. sum, whether Oct or Nov are included). For example:
+[Scatterplots](#Plots-Comparing-Alternative-Winter-PDO-Variables) comparing alternative versions of the winter PDO variable show that these variations provide the same signal for the same year. Years with low mean values also have a low sum (e.g., 2000, 2009,2012,2022) and years with high mean values also have a high sum (e.g., 1998, 2003, 2015, 2016). However, for some years with larger differences between the monthly values the winter PDO covariate is more sensitive to nuances of definition (mean vs. sum, whether Oct or Nov are included). For example:
  
 * monthly PDO index values were quite stable in the winters of 2003/2004 and 2010/2011, so the alternative definitions don't affect the signal.
 
