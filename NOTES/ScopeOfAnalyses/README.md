@@ -22,5 +22,5 @@ Data Set |  Stocks | Env. Covar  | Comment | Status
 
 
 
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/ScopeOfAnalyses/ScopeAndCurrentStatus.png" width="500">
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/ScopeOfAnalyses/ScopeAndCurrentStatus.png" width="600">
 

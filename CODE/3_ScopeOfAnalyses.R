@@ -22,22 +22,22 @@ scope.df
 
 png(filename = "OUTPUT/ScopeOfAnalyses/ScopeAndCurrentStatus.png",
 		width = 480*4, height = 480*4.2, units = "px",
-		pointsize = 14*4.2, bg = "white",  res = NA)
-par(mai=c(5,5,4,2))
+		pointsize = 14*5.6, bg = "white",  res = NA)
+par(mai=c(5.3,5.3,4.4,2.5))
 
 plot(log(scope.df$EnvCovar),log(scope.df$Stocks),axes = FALSE,bty="n",
 		 xlab = "Environmental Covariates",xlim=c(0,4),
 		 ylab = "Stocks",ylim=c(-2,5),
-		 main = "Scope and Current Status of Datasets")
+		 main = "Scope and Current Status\nof Datasets")
 
 stk.ticks <- c(0.2,1,10,30,100)
 stk.ticks.labels <- c("None*",1,10,30,100)
 axis(2,at = log(stk.ticks),labels = stk.ticks.labels, las=1 )
-abline(h=log(stk.ticks),col="darkgrey",lty=2)
+abline(h=log(stk.ticks),col="darkgrey",lty=1)
 
 covar.ticks <- c(1,3,10,40)
 axis(1,at = log(covar.ticks),labels = covar.ticks, las=1 )
-abline(v=log(covar.ticks),col="darkgrey",lty=2)
+abline(v=log(covar.ticks),col="darkgrey",lty=1)
 
 
 
