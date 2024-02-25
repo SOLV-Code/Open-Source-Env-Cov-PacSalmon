@@ -19,6 +19,9 @@ See the [summary of current coverage](https://github.com/SOLV-Code/Open-Source-E
 
 See the [comparison of PDO covariates](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) for an example of a closer look at some of the data, set up for easy collaborative editing.
 
+Suggestions for additional data sets can be added on the [To Do List](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/97).
+
+
 **Important Warning**: Environmental covariates in this repository are mapped onto the year of measurement. Before use, they need to be lined up properly for each specific salmon spawner and recruit data set based on the assumed mechanism of interaction and the life history of the stock. This also means that direct comparisons between diverse environmental indicators need to be approached with caution (e.g., pair-wise correlations).
 
 
