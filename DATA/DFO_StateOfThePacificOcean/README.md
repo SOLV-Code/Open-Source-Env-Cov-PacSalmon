@@ -2,9 +2,9 @@
 
 **Status**: In Progress
 
-**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from XYZ. There is currently no official version of a data set from this report series.
+**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code). There is currently no official version of a data set from this report series.
 
-**Last Data Update**: 2014-02-17
+**Last Data Update**: 2024-02-17
 
 ### Introduction
 
