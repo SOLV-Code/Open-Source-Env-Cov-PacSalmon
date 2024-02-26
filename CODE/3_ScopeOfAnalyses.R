@@ -28,15 +28,18 @@ par(mai=c(5.3,5.3,4.4,2.5))
 plot(log(scope.df$EnvCovar),log(scope.df$Stocks),axes = FALSE,bty="n",
 		 xlab = "Environmental Covariates",xlim=c(0,4),
 		 ylab = "Stocks",ylim=c(-2,5),
-		 main = "Scope and Current Status\nof Datasets")
+		 main = "Scope and Current Status\nof Datasets",col.main="darkblue",
+		 col.lab = "darkblue")
 
 stk.ticks <- c(0.2,1,10,30,100)
 stk.ticks.labels <- c("None*",1,10,30,100)
-axis(2,at = log(stk.ticks),labels = stk.ticks.labels, las=1 )
+axis(2,at = log(stk.ticks),labels = stk.ticks.labels, las=1,
+		 col.ticks = "darkblue",col="darkblue",col.axis = "darkblue" )
 abline(h=log(stk.ticks),col="darkgrey",lty=1)
 
 covar.ticks <- c(1,3,10,40)
-axis(1,at = log(covar.ticks),labels = covar.ticks, las=1 )
+axis(1,at = log(covar.ticks),labels = covar.ticks, las=1,
+		  col.ticks = "darkblue",col="darkblue",col.axis = "darkblue")
 abline(v=log(covar.ticks),col="darkgrey",lty=1)
 
 
@@ -45,7 +48,7 @@ text(log(scope.df$EnvCovar),log(scope.df$Stocks),scope.df$DataSet,
 		 adj=c(1.05,-0.4),
 		 col="darkblue",cex = 0.8,xpd=NA)
 
-legend("topright",title = "Env. covars\nup to date?",
+legend("topright",title = "Env. covars\nup to date?",text.col="darkblue",
 			 legend = c("None","Some","Most","All"),
 			 bty="o",cex=0.8, box.col="white",
 			 pch = 21,col="darkblue", pt.cex =1.2,

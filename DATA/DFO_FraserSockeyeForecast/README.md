@@ -2,9 +2,9 @@
 
 **Status**: In progress
 
-**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG and KD (**Use github ID,Check with them**). Official version of the data set maintained by [DFO Stock Assessment - Lower Fraser](https://www.dfo-mpo.gc.ca/contact/regions/pacific-pacifique-eng.html#Delta).
+**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG and KD (*get github usernames*). Official version of the data set maintained by [DFO Stock Assessment - Lower Fraser](https://www.dfo-mpo.gc.ca/contact/regions/pacific-pacifique-eng.html#Delta).
 
-**Last Data Update**: 2014-02-12
+**Last Data Update**: 2024-02-12
 
 ### Introduction
 

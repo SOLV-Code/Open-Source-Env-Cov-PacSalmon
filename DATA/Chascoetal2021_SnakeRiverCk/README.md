@@ -4,7 +4,7 @@
 
 **Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code). The official version of the data set used in the paper is available via the lead author's [github repository](https://github.com/bchasco/SAR_paper), but there is currently no official up-to-date source for these covariates.
 
-**Last Data Update**: 2014-02-19
+**Last Data Update**: 2024-02-19
 
 ### Introduction
 
