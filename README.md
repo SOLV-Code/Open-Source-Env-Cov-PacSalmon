@@ -3,6 +3,9 @@
 
 This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!
 
+**Poster from WFC 2024 in Seattle is available [here](http://solv.ca/HumanCenteredDataMgmt/POSTER_WFC2024_Tunon&Pestal_OSEC-PS_Handout.pdf).**
+
+
 This repository currently covers 5 data sets of environmental covariates: 
 
 * [DFO Fraser Sockeye and Pink Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)
