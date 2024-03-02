@@ -20,7 +20,9 @@ Since 2008, annual summaries of ocean conditions are published and archived as [
 ### Status of Data Set
 
 The time series used in the index are available for 
-[download](https://www.fisheries.noaa.gov/west-coast/science-data/ocean-conditions-indicators-trends) as an xls file. However, the individual ranks assigned to each value, and the aggregate index based on each year's rank of the mean rank across variables is not included.
+[download](https://www.fisheries.noaa.gov/west-coast/science-data/ocean-conditions-indicators-trends) as an xls file. However, the individual ranks assigned to each value, and the aggregate index based on each year's rank of the mean rank across variables is not included. An R script to reproduce the rank calculations is started [here](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/NOAA_OceanConditionsIndex/1_OceanCondIdx_CalculateRanks.R) and explores some alternative versions (see below)
+
+
 
 Variable descriptions are available online for [large-scale climate and atmospheric indicators](https://www.fisheries.noaa.gov/west-coast/science-data/climate-and-atmospheric-indicators) and for [regional-scale physical indicators](https://www.fisheries.noaa.gov/west-coast/science-data/local-physical-indicators).
 
@@ -33,7 +35,7 @@ Follow the links to see the discussion thread and leave comments.
 * [PDO: Sum vs mean?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/37)
 * [Rank and Mean of ranks not included in download anymore?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/38)
 * [Assumed mechanism for PDO covariate](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/69)
-
+* [ranking details](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/104)
 
 ### Highlights from Published Analyses
 
@@ -57,3 +59,18 @@ Follow the links to see the discussion thread and leave comments.
 
 The online source file is in xls format, with layout optimized for humans, so values can't be extracted easily. We manually generate source files matching the [data structure for this repository](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA) (paste values with transpose, then fix column headings to be R compliant.
 
+
+
+Type	| Label
+-- | --
+Climate / Atmos |  PDOSumDecToMarch
+Climate / Atmos |  		PDOSumMayToSep
+Climate / Atmos |  		ONIAvgJanToJun
+Regional Physical |		SST7BuoysMeanMayToSep
+Regional Physical |		Upper20mTempAvgNovToMar
+Regional Physical |		Upper20mTempAvgMayToSep
+Regional Physical |		DeepTempAvgMayToSep
+Regional Physical |		DeepSalinityAvgMayToSept
+
+
+**include comparison text and plot for alternative mean ranks**
