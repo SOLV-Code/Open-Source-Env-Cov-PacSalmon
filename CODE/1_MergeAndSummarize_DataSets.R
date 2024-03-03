@@ -8,7 +8,9 @@ library(tidyverse)
 # -------------------------------------------
 
 merged.data <- read_csv("DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFraserRiverForecasts.csv") %>%
-							full_join(read_csv("DATA/NOAA_OceanConditionsIndex/NOAAOceanCond_DATAwithRanks.csv",comment = "#"),
+							full_join(read_csv("DATA/NOAA_OceanConditionsIndex/NOAAOceanCond_DATAwithRanks.csv",comment = "#") %>%
+													select(Year:DeepSalinityAvgMayToSept,RankOfMeanRank) %>%
+													dplyr::rename(NOAAOceanCondIdx = RankOfMeanRank) ,
 												by="Year") %>%
 							full_join(read_csv("DATA/Chascoetal2021_SnakeRiverCk/GENERATED_COVARS_Chascoetal2021Paper.csv",comment = "#"),
 												by="Year")

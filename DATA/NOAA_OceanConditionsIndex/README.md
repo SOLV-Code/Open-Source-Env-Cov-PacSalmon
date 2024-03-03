@@ -80,13 +80,10 @@ Regional Biological |	CopeRichAnom| Lower is better | Copepod richness anomalies
 Regional Biological |	NthCopeMassAnom| **Higher** is better | Northern copepod biomass anomalies(mg C m-3, May-Sep)
 Regional Biological|	SthCopeMassAnom| Lower is better | Southern copepod biomass anomalies(mg C m-3, May-Sep)
 Regional Biological |	BiolTransition| Lower is better | Biological transition (day of year)
-Regional Biological |	NearIplanktonJantoMar| **Higher** is better | Nearshore Ichthyoplankton
-Log(mg C 1,000 m-3; Jan-Mar)
+Regional Biological |	NearIplanktonJantoMar| **Higher** is better | Nearshore Ichthyoplankton Log(mg C 1,000 m-3; Jan-Mar)
 Regional Biological |	NearOffIplanktonCommIdxJanToMar| Lower is better | Copepod community index
-Regional Biological  |	CkJuvCtJune| **Higher** is better | Chinook salmon juvenile
-catches Log (no. km-1; June)
-Regional Biological |	CoJuvCtJune| **Higher** is better | Coho salmon juvenile
-catches Log (no. km-1; June)
+Regional Biological  |	CkJuvCtJune| **Higher** is better | Chinook salmon juvenile catches Log (no. km-1; June)
+Regional Biological |	CoJuvCtJune| **Higher** is better | Coho salmon juvenile catches Log (no. km-1; June)
 
 
 The component indicators are correlated, but do pick up different signals for individual years. The largest observed difference is for 2022, which has a very good rank for climate and atmospheric indicators (mean rank = 3), but a very poor rank for more regional indicators summarizing coastal temperature and salinity (mean rank = 20.6). The overall index for 2022 comes out as a middle ground (rank of mean ranks across all indicators is 12 out of 26), which is categorized as "fair" conditions in the [stoplight summary table](https://www.fisheries.noaa.gov/west-coast/science-data/ocean-conditions-indicators-trends).

@@ -15,6 +15,7 @@ NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgNovToMar,Mean of Nov to March 
 NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS
 NOAA_OceanConditionsIndex,Regional,DeepTempAvgMayToSep,Mean of May to Sep monthly means of GET DETAILS
 NOAA_OceanConditionsIndex,Regional,DeepSalinityAvgMayToSept,Mean of May to Sep monthly means of GET DETAILS
+NOAA_OceanConditionsIndex,Regional,NOAAOceanCondIdx,"Rank of mean ranks across all indicator types (climate/atmospheric, regional physical, regional biological)."
 Chascoetal2021_SnakeRiverCk,Large,PDOMeanDecToFeb,Mean of Dec-Feb monthly means of the Pacific Decadal Oscillation (PDO) Index (Variable pdo.win in the paper)
 Chascoetal2021_SnakeRiverCk,Large,PDOMeanMarToMay,Mean of Mar-May monthly means of the Pacific Decadal Oscillation (PDO) Index (Variable pdo.spr in the paper)
 Chascoetal2021_SnakeRiverCk,Large,PDOMeanJunToAug,Mean of Jun-Aug monthly means of the Pacific Decadal Oscillation (PDO) Index (Variable pdo.sum in the paper)
