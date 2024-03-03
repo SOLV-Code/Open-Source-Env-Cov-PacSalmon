@@ -12,6 +12,7 @@ NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgNovToMar,26
 NOAA_OceanConditionsIndex,Regional,Upper20mTempAvgMayToSep,26
 NOAA_OceanConditionsIndex,Regional,DeepTempAvgMayToSep,26
 NOAA_OceanConditionsIndex,Regional,DeepSalinityAvgMayToSept,26
+NOAA_OceanConditionsIndex,Regional,NOAAOceanCondIdx,26
 Chascoetal2021_SnakeRiverCk,Large,PDOMeanDecToFeb,119
 Chascoetal2021_SnakeRiverCk,Large,PDOMeanMarToMay,119
 Chascoetal2021_SnakeRiverCk,Large,PDOMeanJunToAug,119
