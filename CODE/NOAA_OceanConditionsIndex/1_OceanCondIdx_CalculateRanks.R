@@ -11,8 +11,8 @@
 
 
 # TO DO
-# - add the biol indicators to the extracted data set (but filter them before merging into overall dataset)
-# - figure out directionality of ranking for each indicator (are they all the same?)
+# - improve plots (use colour scheme from WSP status plots)
+
 
 library(tidyverse)
 
@@ -67,4 +67,36 @@ head(oci.out)
 
 write_csv(oci.out,"DATA/NOAA_OceanConditionsIndex/NOAAOceanCond_DATAwithRanks.csv")
 
+
+
+##############################
+# Comparison plots
+
+ranks.range <- range(oci.out$RankOfMeanRank)
+ranks.range
+
+rank.ticks <- (ranks.range[2]-ranks.range[1]) * c(1/3,2/3)
+rank.ticks
+
+png(filename = "OUTPUT/NOAA_OceanConditonsIndex/MeanRankComparison.png",
+		width = 480*4, height = 480*4.2, units = "px",
+		pointsize = 14*3.9, bg = "white",  res = NA)
+
+plot(oci.out$Year,oci.out$RankOfMeanRank,type="o", pch=19,col="darkblue",bty="n",
+		 ylim = rev(ranks.range),las=1,xlab="Year",ylab = "Rank",lwd=3,main =
+		 	"Mean Rank Comparisons")
+abline(h=rank.ticks[1],col="green",lwd=2)
+abline(h=rank.ticks[2],col="red",lwd=2)
+
+
+lines(oci.out$Year,oci.out$MeanRank.ClimateAtmos,type="o",col="darkblue",pch=3)
+lines(oci.out$Year,oci.out$MeanRank.RegPhys ,type="o",col="darkblue",pch=4)
+lines(oci.out$Year,oci.out$MeanRank.Bio ,type="o",col="darkblue",pch=8)
+
+lines(oci.out$Year,oci.out$RankOfMeanRank,type="o", pch=19,col="darkblue",lwd=3)
+
+legend(2015,0,legend = c("All","Climate","Physical", "Biol" ),
+			 pch = c(19,3,4,8),col="darkblue",bty="n",cex=0.8)
+
+dev.off()
 

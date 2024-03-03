@@ -84,4 +84,6 @@ Regional Physical |	CoJuvCtJune| **Higher** is better | TBI
 
 
 
-**include comparison text and plot for alternative mean ranks**
+**include comparison text**
+
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/NOAA_OceanConditionsIndex/MeanRankComparison.png" width="500">
