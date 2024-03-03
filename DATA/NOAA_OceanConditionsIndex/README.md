@@ -84,6 +84,8 @@ Regional Physical |	CoJuvCtJune| **Higher** is better | TBI
 
 
 
-**include comparison text**
+The component indicators are correlated, but do pick up different signals for individual years. The largest observed difference is for 2022, which has a very good rank for climate and atmospheric indicators (mean rank = 3), but a very poor rank for more regional indicators summarizing coastal temperature and salinity (mean rank = 20.6). The overall index for 2022 comes out as a middle ground (rank of mean ranks across all indicators is 12 out of 26), which is categorized as "fair" conditions in the [stoplight summary table](https://www.fisheries.noaa.gov/west-coast/science-data/ocean-conditions-indicators-trends).
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/NOAA_OceanConditionsIndex/MeanRankComparison.png" width="500">
+
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/NOAA_OceanConditionsIndex/MeanRankScatterplot.png" width="500">
