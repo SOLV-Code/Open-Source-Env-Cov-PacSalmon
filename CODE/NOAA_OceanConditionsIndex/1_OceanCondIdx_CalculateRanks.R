@@ -78,7 +78,7 @@ ranks.range
 rank.ticks <- (ranks.range[2]-ranks.range[1]) * c(1/3,2/3)
 rank.ticks
 
-png(filename = "OUTPUT/NOAA_OceanConditonsIndex/MeanRankComparison.png",
+png(filename = "OUTPUT/NOAA_OceanConditionsIndex/MeanRankComparison.png",
 		width = 480*4, height = 480*4.2, units = "px",
 		pointsize = 14*3.9, bg = "white",  res = NA)
 
