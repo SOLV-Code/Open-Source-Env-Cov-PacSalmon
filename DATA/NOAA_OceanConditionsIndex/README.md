@@ -61,16 +61,27 @@ The online source file is in xls format, with layout optimized for humans, so va
 
 
 
-Type	| Label
--- | --
-Climate / Atmos |  PDOSumDecToMarch
-Climate / Atmos |  		PDOSumMayToSep
-Climate / Atmos |  		ONIAvgJanToJun
-Regional Physical |		SST7BuoysMeanMayToSep
-Regional Physical |		Upper20mTempAvgNovToMar
-Regional Physical |		Upper20mTempAvgMayToSep
-Regional Physical |		DeepTempAvgMayToSep
-Regional Physical |		DeepSalinityAvgMayToSept
+Type	| Label| Direction | Description
+-- | -- | -- | --
+Climate / Atmos |  PDOSumDecToMarch  | Lower is better | TBI
+Climate / Atmos |  		PDOSumMayToSep | Lower is better | TBI
+Climate / Atmos |  		ONIAvgJanToJun | Lower is better | TBI
+Regional Physical |		SST7BuoysMeanMayToSep | Lower is better | TBI
+Regional Physical |		Upper20mTempAvgNovToMar | Lower is better | TBI
+Regional Physical |		Upper20mTempAvgMayToSep | Lower is better | TBI
+Regional Physical |		DeepTempAvgMayToSep | Lower is better | TBI
+Regional Physical |		DeepSalinityAvgMayToSept | **Higher** is better | TBI
+Regional Physical |	CopeRichAnom| Lower is better | TBI
+Regional Physical |	NthCopeMassAnom| **Higher** is better | TBI
+Regional Physical |	SthCopeMassAnom| Lower is better | TBI
+Regional Physical |	BiolTransition| Lower is better | TBI
+Regional Physical |	NearIplanktonJantoMar| **Higher** is better | TBI
+Regional Physical |	NearOffIplanktonCommIdxJanToMar| Lower is better | TBI
+Regional Physical |	CkJuvCtJune| **Higher** is better | TBI
+Regional Physical |	CoJuvCtJune| **Higher** is better | TBI
+
+
+
 
 
 **include comparison text and plot for alternative mean ranks**
