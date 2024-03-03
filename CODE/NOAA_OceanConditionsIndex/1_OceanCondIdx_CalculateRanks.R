@@ -80,7 +80,8 @@ rank.ticks
 
 png(filename = "OUTPUT/NOAA_OceanConditionsIndex/MeanRankComparison.png",
 		width = 480*4, height = 480*4.2, units = "px",
-		pointsize = 14*3.9, bg = "white",  res = NA)
+		pointsize = 14*3.4, bg = "white",  res = NA)
+
 
 plot(oci.out$Year,oci.out$RankOfMeanRank,type="o", pch=19,col="darkblue",bty="n",
 		 ylim = rev(ranks.range),las=1,xlab="Year",ylab = "Rank",lwd=3,main =
@@ -99,4 +100,144 @@ legend(2015,0,legend = c("All","Climate","Physical", "Biol" ),
 			 pch = c(19,3,4,8),col="darkblue",bty="n",cex=0.8)
 
 dev.off()
+
+
+
+####################################
+
+
+plot(oci.out$MeanRank.Bio,oci.out$MeanRank.ClimateAtmos,
+		 type="p",col="darkblue",pch=19)
+abline(0,1)
+
+plot(oci.out$MeanRank.Bio,oci.out$MeanRank.RegPhys,
+		 type="p",col="darkblue",pch=19)
+abline(0,1)
+
+plot(oci.out$MeanRank.ClimateAtmos,oci.out$MeanRank.RegPhys,
+		 type="p",col="darkblue",pch=19)
+abline(0,1)
+
+
+
+# color fade
+
+n.obs <- length(oci.out$Year)
+n.obs
+bg.fade <- c(rep(0,8),seq(0,1, length.out=n.obs-8))
+bg.fade
+bg.col <- rgb(1, 0,0,bg.fade) #
+bg.col
+#bg.col <- tail(bg.col,n.obs)
+
+
+png(filename = "OUTPUT/NOAA_OceanConditionsIndex/MeanRankScatterplot.png",
+		width = 480*4, height = 480*4.2, units = "px",
+		pointsize = 14*3.9, bg = "white",  res = NA)
+par(mfrow=c(2,2))
+par(mai=c(5,5,4,2))
+
+
+plot(oci.out$MeanRank.Bio,oci.out$MeanRank.ClimateAtmos,
+		 xlab = "Biological Indicators\n(Mean Rank)",
+		 ylab = "Climate/Atmosphere Indicators\n(Mean Rank)",
+		 bty="n",axes=TRUE,pch=21,col="darkblue",bg="lightblue",
+		 cex=1.3, #xlim = c(-3,3),ylim = c(-3,3),
+		 xpd=NA,
+		 main="Bio vs. Climate/Atmos")
+
+abline(0,1,col="red",lty=2)
+points(oci.out$MeanRank.Bio,oci.out$MeanRank.ClimateAtmos,type = "p",
+			 pch=21,col="darkblue",bg="white",cex=1.2)
+points(oci.out$MeanRank.Bio,oci.out$MeanRank.ClimateAtmos,type = "p",
+			 pch=21,col="darkblue",bg=bg.col,cex=1.2)
+mtext("Best",side=3,at = par("usr")[1],adj=0)
+mtext("Worst",side=3,at = par("usr")[2],adj=0,xpd=NA)
+mtext("Best",side=4,at = par("usr")[3],adj=c(0),las=1)
+
+idx.2022 <- oci.out$Year == 2022
+pt.2022 <- c(oci.out$MeanRank.Bio[idx.2022],
+						 oci.out$MeanRank.ClimateAtmos[idx.2022])
+points(pt.2022[1],pt.2022[2], pch=19,col="red",cex=1.8)
+text(pt.2022[1],pt.2022[2],labels = "2022",col="red",cex=1,adj=-0.3,xpd=NA)
+
+
+
+plot(oci.out$MeanRank.Bio,oci.out$MeanRank.RegPhys,
+		 xlab = "Biological Indicators\n(Mean Rank)",
+		 ylab = "Regional Physical Indicators\n(Mean Rank)",
+		 bty="n",axes=TRUE,pch=21,col="darkblue",bg="lightblue",
+		 cex=1.3, #xlim = c(-3,3),ylim = c(-3,3),
+		 xpd=NA,
+		 main="Bio vs. Regional Physical")
+
+abline(0,1,col="red",lty=2)
+points(oci.out$MeanRank.Bio,oci.out$MeanRank.RegPhys,type = "p",
+			 pch=21,col="darkblue",bg="white",cex=1.2)
+points(oci.out$MeanRank.Bio,oci.out$MeanRank.RegPhys,type = "p",
+			 pch=21,col="darkblue",bg=bg.col,cex=1.2)
+mtext("Best",side=3,at = par("usr")[1],adj=0)
+mtext("Worst",side=3,at = par("usr")[2],adj=0,xpd=NA)
+mtext("Best",side=4,at = par("usr")[3],adj=c(0),las=1)
+
+idx.2022 <- oci.out$Year == 2022
+pt.2022 <- c(oci.out$MeanRank.Bio[idx.2022],
+						 oci.out$MeanRank.RegPhys[idx.2022])
+points(pt.2022[1],pt.2022[2], pch=19,col="red",cex=1.8)
+text(pt.2022[1],pt.2022[2],labels = "2022",col="red",cex=1,adj=1.3,xpd=NA)
+
+
+
+plot(oci.out$MeanRank.Bio,oci.out$MeanRank.AllPhys,
+		 xlab = "Biological Indicators\n(Mean Rank)",
+		 ylab = "All Physical Indicators\n(Mean Rank)",
+		 bty="n",axes=TRUE,pch=21,col="darkblue",bg="lightblue",
+		 cex=1.3, #xlim = c(-3,3),ylim = c(-3,3),
+		 xpd=NA,
+		 main="Bio vs. All Physical")
+
+abline(0,1,col="red",lty=2)
+points(oci.out$MeanRank.Bio,oci.out$MeanRank.AllPhys,type = "p",
+			 pch=21,col="darkblue",bg="white",cex=1.2)
+points(oci.out$MeanRank.Bio,oci.out$MeanRank.AllPhys,type = "p",
+			 pch=21,col="darkblue",bg=bg.col,cex=1.2)
+mtext("Best",side=3,at = par("usr")[1],adj=0)
+mtext("Worst",side=3,at = par("usr")[2],adj=0,xpd=NA)
+mtext("Best",side=4,at = par("usr")[3],adj=c(0),las=1)
+
+idx.2022 <- oci.out$Year == 2022
+pt.2022 <- c(oci.out$MeanRank.Bio[idx.2022],
+						 oci.out$MeanRank.AllPhys[idx.2022])
+points(pt.2022[1],pt.2022[2], pch=19,col="red",cex=1.8)
+text(pt.2022[1],pt.2022[2],labels = "2022",col="red",cex=1,adj=1.3,xpd=NA)
+
+
+
+plot(oci.out$MeanRank.RegPhys,oci.out$MeanRank.ClimateAtmos,
+		 xlab = "Regional Physical Indicators\n(Mean Rank)",
+		 ylab = "Climate/Atmosphere Indicators\n(Mean Rank)",
+		 bty="n",axes=TRUE,pch=21,col="darkblue",bg="lightblue",
+		 cex=1.3, #xlim = c(-3,3),ylim = c(-3,3),
+		 xpd=NA,
+		 main="Bio vs. Climate/Atmos")
+
+abline(0,1,col="red",lty=2)
+points(oci.out$MeanRank.RegPhys,oci.out$MeanRank.ClimateAtmos,type = "p",
+			 pch=21,col="darkblue",bg="white",cex=1.2)
+points(oci.out$MeanRank.RegPhys,oci.out$MeanRank.ClimateAtmos,type = "p",
+			 pch=21,col="darkblue",bg=bg.col,cex=1.2)
+mtext("Best",side=3,at = par("usr")[1],adj=0)
+mtext("Worst",side=3,at = par("usr")[2],adj=0,xpd=NA)
+mtext("Best",side=4,at = par("usr")[3],adj=c(0),las=1)
+
+idx.2022 <- oci.out$Year == 2022
+pt.2022 <- c(oci.out$MeanRank.RegPhys[idx.2022],
+						 oci.out$MeanRank.ClimateAtmos[idx.2022])
+points(pt.2022[1],pt.2022[2], pch=19,col="red",cex=1.8)
+text(pt.2022[1],pt.2022[2],labels = "2022",col="red",cex=1,adj=1.3,xpd=NA)
+
+dev.off()
+
+
+
 
