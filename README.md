@@ -1,9 +1,11 @@
-# OSEC-PS: Open-Source Environmental Covariates - Pacific Salmon
+# An Open-Source Data System for Pacific Salmon Environmental Covariates (PSEC)
 
 
-This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-osec-ps). All components are up for debate at this stage, so join in early to shape the project!
+This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-psec). All components are up for debate at this stage, so join in early to shape the project!
 
 **Poster from WFC 2024 in Seattle is available [here](http://solv.ca/HumanCenteredDataMgmt/POSTER_WFC2024_Tunon&Pestal_OSEC-PS_Handout.pdf).**
+
+**Overview presentation of the approach from PICES 2023 in Seattle is available [here](http://solv.ca/HumanCenteredDataMgmt/HumanCentered_DataMgmt_Pestal&Tunon_PICES_2023_FULL.pdf).**
 
 
 This repository currently covers 5 data sets of environmental covariates: 
@@ -79,7 +81,7 @@ You have four options for browsing through this repository:
 * If you really want to dig into the details and are familiar with RStudio and git, just clone this repository, then open the RStudio project file *Open-Source-Env-Cov-PacSalmon.Rproj* and start looking through the code scripts.
 
 
-## Feedback on OSEC-PS  
+## Feedback on PSEC  
 
 If you have any questions, comments, or ideas for extensions, you can leave a note on the
 [issues page](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues) by clicking
