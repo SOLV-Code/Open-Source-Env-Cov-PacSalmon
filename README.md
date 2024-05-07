@@ -8,7 +8,10 @@ This repo is taking shape based on discussions at the [2023 PICES Annual Meeting
 **Overview presentation of the approach from PICES 2023 in Seattle is available [here](http://solv.ca/HumanCenteredDataMgmt/HumanCentered_DataMgmt_Pestal&Tunon_PICES_2023_FULL.pdf).**
 
 
-This repository currently covers 5 data sets of environmental covariates: 
+This repository currently covers 6 data sets of environmental covariates: 
+
+
+* [DFO Ocean Science Division Data Products Group](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_OceanScienceDiv_DataProd)
 
 * [DFO Fraser Sockeye and Pink Forecasting](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_FraserSockeyeForecast)
 
@@ -23,6 +26,8 @@ This repository currently covers 5 data sets of environmental covariates:
 See the [summary of current coverage](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/Current_Coverage) for an inventory of environmental covariates extracted from those sources so far.
 
 See the [comparison of PDO covariates](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) for an example of a closer look at some of the data, set up for easy collaborative editing.
+
+See the [scope of current data sets](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/ScopeOfAnalyses) for a high-level comparison of the source data sets.
 
 Suggestions for additional data sets can be added on the [To Do List](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/97).
 
