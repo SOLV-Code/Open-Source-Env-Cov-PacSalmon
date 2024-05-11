@@ -4,7 +4,7 @@
 
 **Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code). Official version of the data set maintained the ```pbs-assess``` team in the [pacea package repository](https://github.com/pbs-assess/pacea).
 
-**Last Data Update**: 2024-05-08
+**Last Data Update**: 2024-05-11
 
 ### Introduction
 
@@ -16,7 +16,35 @@
 
 
 * some series updated monthly, some annually
-* new series being added as papers are being written (e.g.: state ofthe pacific ocesn reports)
+* new series being added as papers are being written (e.g.: state of the pacific ocean reports)
+
+
+Each data set is fully documented with links to raw data, data processing code, and detailed description of the data and context in a help file. If you use R and have the ```pacea``` package installed, you can access this information for each data set within R with ```help(object_name)``` or ```?object_name``` (e.g., ```?pdo```). If you are not accessing these data from within R, you can get the raw version of the help file in the package repository [man folder](https://github.com/pbs-assess/pacea/tree/main/man).
+
+
+
+**Annual Coastwide Indices in Pacea**
+
+
+Variable Name | Description | pacea object name 
+-- | -- | --
+ALPI | Aleutian Low Pressure Index annual anomalies | alpi
+NPIa | North Pacific Index values and annual anomalies | npi_annual
+
+**Monthly Coastwide Indices in Pacea**
+
+
+Variable Name | Description | pacea object name 
+-- | -- | --
+AO | Arctic Oscillation  monthly anomalies| ao
+ENSO MEI | Multivariate ENSO Index  monthly anomalies |
+NPGO | North Pacific Gyre Oscillation  monthly anomalies |
+NPIm | North Pacific Index monthly values  |
+ONI | Oceanographic Niño Index  monthly values and anomalies | 
+PDO | Pacific Decadal Oscillation  monthly anomalies|
+
+
+
 
 
 ### Open Questions 
