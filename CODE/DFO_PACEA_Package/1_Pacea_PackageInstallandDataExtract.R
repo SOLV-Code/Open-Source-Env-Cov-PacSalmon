@@ -34,8 +34,8 @@ help(package = "pacea")
 pacea.annual <- full_join(alpi %>% dplyr::rename(Pacea_ALPI_Anomaly = anomaly),
 					npi_annual %>% dplyr::rename(Pacea_NPI_Value = value,Pacea_NPI_Anomaly = anomaly),
 					by=c("year")) %>% dplyr::rename(Year = year)
-
-write_csv(pacea.annual,"DATA/DFO_PACEA_Package/GENERATE_pacea_series_annual.csv")
+pacea.annual
+write_csv(pacea.annual,"DATA/DFO_PACEA_Package/GENERATED_pacea_series_annual.csv")
 
 
 # currently including the following monthly variables
@@ -52,6 +52,23 @@ npi_monthly
 oni
 pdo
 
+help(pdo)
+
+
+# npi_monthly doesn't have anomaly column
+# ?npi_annual states that anomalies are calculated relative to 1925-1989 mean
+base.mean <- mean( npi_monthly %>% dplyr::filter(year %in% 1925:1989) %>% select(value) %>% unlist(),na.rm=TRUE)
+base.mean
+# different from the 1008.9 hPa value in the npi_annual help file?
+# mean of the annual values matches the help file
+# explanation for discrepancy? _> started issue at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/118
+mean(npi_annual %>% dplyr::filter(year %in% 1925:1989) %>% select(value) %>% unlist(),na.rm=TRUE)
+
+
+
+
+
+
 pacea.monthly <- full_join(ao %>% dplyr::rename(Pacea_AO_anomaly=anomaly),
 													 mei %>% dplyr::rename(Pacea_MEI_anomaly=anomaly), by=c("year","month")) %>%
 									full_join(npgo %>% dplyr::rename(Pacea_NPGO_anomaly=anomaly), by=c("year","month")) %>%
@@ -61,7 +78,7 @@ pacea.monthly <- full_join(ao %>% dplyr::rename(Pacea_AO_anomaly=anomaly),
 										dplyr::rename(Year = year,Month = month)
 pacea.monthly
 
-write_csv(pacea.monthly,"DATA/DFO_PACEA_Package/GENERATE_pacea_series_monthly.csv")
+write_csv(pacea.monthly,"DATA/DFO_PACEA_Package/GENERATED_pacea_series_monthly.csv")
 
 
 
