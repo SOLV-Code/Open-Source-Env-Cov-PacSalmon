@@ -57,12 +57,33 @@ help(pdo)
 
 # npi_monthly doesn't have anomaly column
 # ?npi_annual states that anomalies are calculated relative to 1925-1989 mean
-base.mean <- mean( npi_monthly %>% dplyr::filter(year %in% 1925:1989) %>% select(value) %>% unlist(),na.rm=TRUE)
-base.mean
+base.mean.monthly <- mean( npi_monthly %>% dplyr::filter(year %in% 1925:1989) %>% select(value) %>% unlist(),na.rm=TRUE)
+base.mean.monthly
+
 # different from the 1008.9 hPa value in the npi_annual help file?
 # mean of the annual values matches the help file
 # explanation for discrepancy? _> started issue at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/118
-mean(npi_annual %>% dplyr::filter(year %in% 1925:1989) %>% select(value) %>% unlist(),na.rm=TRUE)
+base.mean.annual <- mean(npi_annual %>% dplyr::filter(year %in% 1925:1989) %>% select(value) %>% unlist(),na.rm=TRUE)
+base.mean.annual
+
+# also: shouldn't it look at difference from mean for that month?
+base.mean.by.month <- npi_monthly %>% dplyr::filter(year %in% 1925:1989) %>% dplyr::filter(year %in% 1925:1989) %>%
+							group_by(month) %>% summarize(BaseMeanByMonth = mean(value,na.rm=TRUE))
+base.mean.by.month
+
+npi_monthly_mod <- npi_monthly %>% mutate(BaseMeanMonthly = base.mean.monthly,
+											 BaseMeanAnnual = base.mean.annual) %>%
+						left_join(base.mean.by.month, by="month") %>%
+						mutate(anomaly_month = value - BaseMeanMonthly,
+									 anomaly = value - BaseMeanAnnual, # using this as the default in the merge, for now
+									 anomaly_bymonth = value - BaseMeanByMonth)
+
+npi_monthly_mod <- npi_monthly_mod  %>% arrange(year,month) %>% mutate(plot_index = c(1:dim(npi_monthly_mod)[1]))
+npi_monthly_mod
+write_csv(npi_monthly_mod,"DATA/DFO_PACEA_Package/GENERATED_pacea_NPI_MonthlyAnomaliesVariations.csv")
+
+oni$value+oni$anomaly
+plot(oni$value+oni$anomaly,type="l")
 
 
 
@@ -72,15 +93,17 @@ mean(npi_annual %>% dplyr::filter(year %in% 1925:1989) %>% select(value) %>% unl
 pacea.monthly <- full_join(ao %>% dplyr::rename(Pacea_AO_anomaly=anomaly),
 													 mei %>% dplyr::rename(Pacea_MEI_anomaly=anomaly), by=c("year","month")) %>%
 									full_join(npgo %>% dplyr::rename(Pacea_NPGO_anomaly=anomaly), by=c("year","month")) %>%
-									full_join(npi_monthly %>% dplyr::rename(Pacea_NPIm_value=value),by=c("year","month")) %>%
+									full_join(npi_monthly_mod %>% select(year, month, value, anomaly) %>%
+															dplyr::rename(Pacea_NPIm_value=value,
+																						Pacea_NPIm_anomaly=anomaly),by=c("year","month")) %>%
 									full_join(oni %>% dplyr::rename(Pacea_ONI_value=value,Pacea_ONI_anomaly=anomaly),by=c("year","month")) %>%
 									full_join(pdo %>% dplyr::rename(Pacea_PDO_anomaly=anomaly),by=c("year","month")) %>%
 										dplyr::rename(Year = year,Month = month)
+
+pacea.monthly  <- pacea.monthly %>% arrange(Year,Month) %>% mutate(plot_index = c(1:dim(pacea.monthly)[1]))
 pacea.monthly
 
 write_csv(pacea.monthly,"DATA/DFO_PACEA_Package/GENERATED_pacea_series_monthly.csv")
-
-
 
 
 
