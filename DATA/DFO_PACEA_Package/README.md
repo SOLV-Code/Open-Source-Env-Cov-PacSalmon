@@ -15,10 +15,13 @@
 * just starting with package install and exploration. See [this script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/DFO_PACEA_Package/1_Pacea_PackageInstallandDataExtract.R)
 
 
+* some series updated monthly, some annually
+* new series being added as papers are being written (e.g.: state ofthe pacific ocesn reports)
+
+
 ### Open Questions 
 
-*None at this time*
-
+* [Best way to extract data from pacea package?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/116)
 
 
 ### Highlights from Published Analyses
