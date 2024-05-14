@@ -51,6 +51,12 @@ PDO | Pacific Decadal Oscillation  monthly anomalies|
 
 * [Best way to extract data from pacea package?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/116)
 
+* [NPI monthly anomalies](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/118)
+
+* [easier access to data decriptions](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/120)
+
+* [two different versions of pdo index? (OI SST v2 vs. ER SST v5](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/26)
+
 
 ### Highlights from Published Analyses
 

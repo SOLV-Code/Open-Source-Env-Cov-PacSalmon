@@ -2,8 +2,10 @@
 if(FALSE){
 # only run these lines if you want to update the package
 library(remotes)
+install.packages("gh")
+remotes::install_github("r-lib/usethis", force=TRUE)
 remotes::install_github("pbs-assess/pacea")
-}
+1}
 
 library(tidyverse)
 library(pacea)
