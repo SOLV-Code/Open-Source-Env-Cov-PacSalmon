@@ -1,6 +1,6 @@
-# Merged set of all available records in the OSEC-PS repository
+# Merged set of all available records in the PSECrepository
 # Variable descriptions and source data available at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon
-# File generated on Sun Mar  3 11:33:53 2024
+# File generated on Mon May 13 15:46:46 2024
 Year,PDOMeanNovToMar,EntrIslSSTMeanAprToJun,PineIslSSTMeanAprToJun,SSSIndexJulToAug,SSSIndexJulToSep,PDOSumDecToMarch,PDOSumMayToSep,ONIAvgJanToJun,SST7BuoysMeanMayToSep,Upper20mTempAvgNovToMar,Upper20mTempAvgMayToSep,DeepTempAvgMayToSep,DeepSalinityAvgMayToSept,NOAAOceanCondIdx,ColumbiaRFlowMeanDecToFeb,ColumbiaRFlowMeanMarToMay,ColumbiaRFlowMeanJunToAug,ColumbiaRTempMeanMarToMay,ColumbiaRTempMeanJunToAug,CoastUpIdxMeanDecToFeb,CoastUpIdxMeanMarToMay,CoastUpIdxMeanJunToAug,CoastUpIdxMeanSepToNov,NPacGyreOscMeanDecToFeb,NPacGyreOscMeanMarToMay,NPacGyreOscMeanJunToAug,NPacGyreOscMeanSepToNov,OcNinoIdxMeanDecToFeb,OcNinoIdxMeanMarToMay,OcNinoIdxMeanJunToAug,OcNinoIdxMeanSepToNov,WashTranspMeanDecToFeb,WashTranspMeanMarToMay,WashTranspMeanJunToAug,WashTranspMeanSepToNov,PDOMeanDecToFeb,PDOMeanMarToMay,PDOMeanJunToAug,PDOMeanSepToNov,MEIv2MeanDecToFeb,MEIv2MeanMarToMay,MEIv2MeanJunToAug,MEIv2MeanSepToNov
 1900,0.6166666666666667,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0.68,0.536666666666667,0.58,-0.15,NA,NA,NA,NA
 1901,0.354,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0.62,0.18,-0.616666666666667,-0.256666666666667,NA,NA,NA,NA

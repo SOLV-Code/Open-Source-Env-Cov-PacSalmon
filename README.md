@@ -8,8 +8,10 @@ This repo is taking shape based on discussions at the [2023 PICES Annual Meeting
 **Overview presentation of the approach from PICES 2023 in Seattle is available [here](http://solv.ca/HumanCenteredDataMgmt/HumanCentered_DataMgmt_Pestal&Tunon_PICES_2023_FULL.pdf).**
 
 
-This repository currently covers 6 data sets of environmental covariates: 
+This repository currently covers 7 data sets of environmental covariates: 
 
+
+* [DFO Pacea Package](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_PACEA_Package)
 
 * [DFO Ocean Science Division Data Products Group](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_OceanScienceDiv_DataProd)
 
