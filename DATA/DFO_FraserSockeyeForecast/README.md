@@ -109,6 +109,8 @@ The online source file is in text format with annotations, so values can't be ex
 [This R script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/DFO_FraserSockeyeForecast/1_Process_Source_Data.R) then reorganizes the raw data and calculates Nov-Mar means.
 
 
+**Important to resolve:** The [pacea package](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_PACEA_Package) uses a different version of the PDO index. Need to pick on or the other. Details at [this discussion thread](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/26).
+
 **Sea Surface Temperature and Salinity**
 
 The latest forecast report provides 

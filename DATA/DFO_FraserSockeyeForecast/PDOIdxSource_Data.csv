@@ -4,6 +4,7 @@
 # global warming signal that may be present in the data.,,,,,,,,,,,,
 # Values extracted on 2024-02-11 from https://psl.noaa.gov/gcos_wgsp/Timeseries/Data/pdo.long.data,,,,,,,,,,,,
 # Data description and references at  http://research.jisao.washington.edu/pdo/PDO.latest.txt,,,,,,,,,,,,
+# IMPORTANT: Source file codes NA at the end of the series as -9.90. Need to change to NA!,,,,,,,,,,,,
 Year,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec
 1900,0.04,1.32,0.49,0.35,0.77,0.65,0.95,0.14,-0.24,0.23,-0.44,1.19
 1901,0.79,-0.12,0.35,0.61,-0.42,-0.05,-0.6,-1.2,-0.33,0.16,-0.6,-0.14
@@ -127,4 +128,4 @@ Year,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec
 2019,0.66,0.46,0.37,1.07,1.03,1.09,1.03,0.38,0.41,-0.45,0.15,0.97
 2020,-0.23,-0.68,-0.82,-0.57,0.09,-0.08,-0.38,-0.28,-0.7,-0.69,-1.12,-0.9
 2021,-0.16,-0.54,-1.17,-0.91,-0.94,-1.18,-1.87,-1.12,-1.53,-2.55,-2.52,-2
-2022,-1.24,-1.08,-1,-1.51,-1.92,-1.21,-2.86,-1.92,-1.55,-1.46,-9.9,-9.9
+2022,-1.24,-1.08,-1,-1.51,-1.92,-1.21,-2.86,-1.92,-1.55,-1.46,NA,NA
