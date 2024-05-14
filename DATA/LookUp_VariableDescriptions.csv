@@ -45,7 +45,3 @@ Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanDecToFeb,Measure of Sverdrup 
 Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanMarToMay,Measure of Sverdrup transport along the Washington coast GET DETAILS (Variable transport.spr in the paper)
 Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanJunToAug,Measure of Sverdrup transport along the Washington coast GET DETAILS (Variable transport.sum in the paper)
 Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanSepToNov,Measure of Sverdrup transport along the Washington coast GET DETAILS (Variable transport.aut in the paper)
-Chascoetal2021_SnakeRiverCk,Large,PDOMeanDecToFeb,Mean of Dec-Feb monthly means of the Pacific Decadal Oscillation (PDO) Index (Variable pdo.win in the paper)
-Chascoetal2021_SnakeRiverCk,Large,PDOMeanMarToMay,Mean of Mar-May monthly means of the Pacific Decadal Oscillation (PDO) Index (Variable pdo.spr in the paper)
-Chascoetal2021_SnakeRiverCk,Large,PDOMeanJunToAug,Mean of Jun-Aug monthly means of the Pacific Decadal Oscillation (PDO) Index (Variable pdo.sum in the paper)
-Chascoetal2021_SnakeRiverCk,Large,PDOMeanSepToNov,Mean of Sep-Nov monthly means of the Pacific Decadal Oscillation (PDO) Index (Variable pdo.aut in the paper)
