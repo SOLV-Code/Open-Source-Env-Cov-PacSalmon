@@ -5,7 +5,7 @@ library(tidyverse)
 
 # explore alt anomaly calcs
 
-yrs.plot <- 2010:2014
+yrs.plot <- 2020:2024
 
 npi.alt.anomalies <- read_csv("DATA/DFO_PACEA_Package/GENERATED_pacea_NPI_MonthlyAnomaliesVariations.csv") %>%
 												arrange(year, month) %>% dplyr::filter(year %in% yrs.plot)
@@ -13,29 +13,25 @@ npi.alt.anomalies <- read_csv("DATA/DFO_PACEA_Package/GENERATED_pacea_NPI_Monthl
 axis.src <- npi.alt.anomalies %>% dplyr::filter(month==1)
 
 
-plot(npi.alt.anomalies$plot_index,npi.alt.anomalies$anomaly,type="l",ylim=c(-12,12),
-		 axes=FALSE)
+png(filename = "OUTPUT/Values_CrossCheck/ComparisonOfNPIAnomalies.png",
+		width = 480*4.5, height = 480*3.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
+
+
+plot(npi.alt.anomalies$plot_index,npi.alt.anomalies$anomaly,ylim=c(-12,12),
+		 axes=FALSE,xlab = "Month",ylab = "Anomaly", main = "NPI Anomalies Relative to 3 Alternative Base Values",
+		 type="o",col="darkblue", pch=19,cex= 0.6)
 axis(2,las=2)
 axis(1,at=axis.src$plot_index,labels= paste0("Jan\n",axis.src$year ))
 abline(v=axis.src$plot_index,col="darkgrey",lty=2)
 
-lines(npi.alt.anomalies$plot_index,npi.alt.anomalies$anomaly_month,type="l")
-lines(npi.alt.anomalies$plot_index,npi.alt.anomalies$anomaly_bymonth,type="l",col="red")
-abline(h=0,col="red")
+lines(npi.alt.anomalies$plot_index,npi.alt.anomalies$anomaly_month,type="l",col="darkblue",lwd=1,lty=2)
+lines(npi.alt.anomalies$plot_index,npi.alt.anomalies$anomaly_bymonth,type="o",col="red",lwd=1,lty=2,pch=17,cex=0.6)
+abline(h=0,col="red",lwd=3)
 
+legend("bottom",legend = c("Mean of Monthly Index (1925-1989)",
+												"Mean of Annual Index (1925-1989)",
+												"Mean by Month (1925-1989)"),
+			 border="white", pch = c(NA,19,17),col=c("darkblue","darkblue","red"),
+			 lty = c(2,1,2), lwd=c(2,2,1),ncol=2, cex = 0.7)
 
-
-
-bar_col <- ifelse(obj_lub[[value]] >= 0,
-									"red",
-									"blue")
-
-plot(obj_lub$date,
-		 obj_lub[[value]], # [[]] returns a vector not a tibble
-		 type = "h",
-		 xlab = xlab,
-		 ylab = ylab,
-		 col = bar_col,
-		 lend = 1,
-		 ...)
-abline(h = 0)
+dev.off()

@@ -84,6 +84,10 @@ npi_monthly_mod <- npi_monthly_mod  %>% arrange(year,month) %>% mutate(plot_inde
 npi_monthly_mod
 write_csv(npi_monthly_mod,"DATA/DFO_PACEA_Package/GENERATED_pacea_NPI_MonthlyAnomaliesVariations.csv")
 
+
+
+
+
 oni$value+oni$anomaly
 plot(oni$value+oni$anomaly,type="l")
 
