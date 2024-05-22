@@ -2,8 +2,8 @@ library(tidyverse)
 
 
 
-
-# explore alt anomaly calcs
+###########################################
+# explore alt anomaly calcs for NPI
 
 yrs.plot <- 2020:2024
 
@@ -35,3 +35,28 @@ legend("bottom",legend = c("Mean of Monthly Index (1925-1989)",
 			 lty = c(2,1,2), lwd=c(2,2,1),ncol=2, cex = 0.7)
 
 dev.off()
+
+
+###########################################
+# explore base values used for ONI anomalies
+
+
+oni.plot.df <- oni %>% mutate(BaseVal = value - anomaly)
+oni.plot.df
+
+
+
+
+month.plot <-8
+oni.plot.df.sub <- oni.plot.df %>% dplyr::filter(month == month.plot)
+plot(oni.plot.df.sub$year,oni.plot.df.sub$BaseVal,type="o",
+		 ylim=c(26.2,27.2))
+
+
+
+
+month.plot <- 1
+oni.plot.df.sub <- oni.plot.df %>% dplyr::filter(month == month.plot)
+lines(oni.plot.df.sub$year,oni.plot.df.sub$BaseVal,type="o")
+
+
