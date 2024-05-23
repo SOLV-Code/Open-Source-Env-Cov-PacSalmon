@@ -9,3 +9,5 @@ Notes in progress:
 * [Comparison of PDO covariates](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) takes a closer look at the alternative versions used in different applications.
 
 * [Scope of analyses](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/ScopeOfAnalyses) compares and contrasts the data sets and how they were used.
+
+* [Trends vs. Anomalies](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/TrendsVsAnomalies) looks at  how anomalies are calculated for common large-scale environmental covariates to remove underlying trends, and whether that is the appropriate data treatment for salmon models.
