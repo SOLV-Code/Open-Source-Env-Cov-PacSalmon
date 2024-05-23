@@ -6,6 +6,9 @@
 
 **Last Data Update**: 2024-02-12
 
+
+**TO DO: Incorporate the data and results from the  [XU et al 2024 paper](https://cdnsciencepub.com/doi/abs/10.1139/cjfas-2023-0139?journalCode=cjfas): Assessing the impacts of environmental and ecological variables on the performance of Fraser sockeye salmon forecast**
+
 ### Introduction
 
 Run size forecasts for stocks of Fraser River sockeye are developed annually, using a comprehensive suite of candidate models and extensive retrospective evaluation. Environmental covariates considered include local river conditions during juvenile outmigration, regional conditions during ocean entry, and large-scale climate conditions during the winter preceding outmigration.

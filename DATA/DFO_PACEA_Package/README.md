@@ -52,9 +52,11 @@ PDO | Pacific Decadal Oscillation  monthly anomalies|
 
 ### Open Questions 
 
+* [Using the same version of common covariates across DFO projects](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/124)
+
 * [Best way to extract data from pacea package?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/116)
 
-* [NPI monthly anomalies](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/118)
+* [NPI and ONI monthly anomalies](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/118)
 
 * [easier access to data decriptions](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/120)
 
