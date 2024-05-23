@@ -13,11 +13,13 @@ Figures created from the [merged data set](https://github.com/SOLV-Code/Open-Sou
 
 * The [Chasco et al. 2021](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk) paper on Snake River (Columbia) Chinook provides an archived version of the covariates via github, and includes active links to source data for most of the covariates. Some of the covariates have been recreated and updated, others are being extracted from the archived data set for now.
 
+* The [DFO Pacea Package for R](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_PACEA_Package) is designed to easily integrate into existing workflows for users who are already doing their analyses in R. It includes diverse data sets, from annual coastwide indices to fine-scale satellite data, and provides detailed descriptions of each data set. For now, only 2 annual coastwide indices from Pacea have been incorporated here, but work is on-going to develop and incorporate annual covariates from the monthly coastwide indices (like the Nov-Mar mean PDO anomaly used in the Fraser Sockeye forecast data set).
+
 * See [Variable descriptions](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/LookUp_VariableDescriptions.csv) table for details.
 
-* All three data sets include a mix of covariates at different scales. All three include large-scale variables (e.g., Pacific Decadal Oscillation) and more regional variables (e.g., sea surface temperature for one or a few locations). The *DFO Fraser Forecasting* data set and the Chasco et al. (2021) paper also include local variables (Fraser River discharge, Columbia River flow and temperature).
+* All 4 data sets include a mix of covariates at different scales. All three include large-scale variables (e.g., Pacific Decadal Oscillation) and more regional variables (e.g., sea surface temperature for one or a few locations). The *DFO Fraser Forecasting* data set, the Chasco et al. (2021) paper, and the Pacea package also include local variables (Fraser River discharge, Columbia River flow and temperature).
 
-* All three data sets include a variable to reflect Pacific Decadal Oscillation (PDO), but the details of the variable definition differ. [This note](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) is taking a closer look at the similarities and differences.
+* All 4 data sets include a variable to reflect Pacific Decadal Oscillation (PDO), but the details of the variable definition differ. [This note](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) is taking a closer look at the similarities and differences.
 
 
 ### Data Timeline

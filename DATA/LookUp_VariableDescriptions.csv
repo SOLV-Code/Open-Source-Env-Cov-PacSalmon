@@ -45,3 +45,6 @@ Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanDecToFeb,Measure of Sverdrup 
 Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanMarToMay,Measure of Sverdrup transport along the Washington coast GET DETAILS (Variable transport.spr in the paper)
 Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanJunToAug,Measure of Sverdrup transport along the Washington coast GET DETAILS (Variable transport.sum in the paper)
 Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanSepToNov,Measure of Sverdrup transport along the Washington coast GET DETAILS (Variable transport.aut in the paper)
+DFO_Pacea,Large,Pacea_ALPI_Anomaly,Aleutian Low Pressure Index annual anomalies (object alpi in the package)
+DFO_Pacea,Large,Pacea_NPI_Value,North Pacific Index values (object alpi_annual in the package)
+DFO_Pacea,Large,Pacea_NPI_Anomaly,North Pacific Index anomalies (object alpi_annual in the package)

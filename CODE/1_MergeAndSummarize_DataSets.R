@@ -13,7 +13,11 @@ merged.data <- read_csv("DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFras
 													dplyr::rename(NOAAOceanCondIdx = RankOfMeanRank) ,
 												by="Year") %>%
 							full_join(read_csv("DATA/Chascoetal2021_SnakeRiverCk/GENERATED_COVARS_Chascoetal2021Paper.csv",comment = "#"),
-												by="Year")
+												by="Year") %>%
+							full_join(read_csv("DATA/DFO_PACEA_Package/GENERATED_pacea_series_annual.csv",comment = "#"),
+											by="Year")
+
+
 
 
 head(merged.data)
