@@ -3,9 +3,9 @@
 
 This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-psec). All components are up for debate at this stage, so join in early to shape the project!
 
-**Poster from WFC 2024 in Seattle is available [here](https://solv.ca/HumanCenteredDataMgmt/POSTER_WFC2024_Tunon&Pestal_OSEC-PS_Handout.pdf).**
+**Poster from WFC 2024 in Seattle is available [here - FIX LINK](**
 
-**Overview presentation of the approach from PICES 2023 in Seattle is available [here](https://solv.ca/HumanCenteredDataMgmt/HumanCentered_DataMgmt_Pestal&Tunon_PICES_2023_FULL.pdf).**
+**Overview presentation of the approach from PICES 2023 in Seattle is available [here - Fix Link).**
 
 
 This repository currently covers 7 data sets of environmental covariates: 
