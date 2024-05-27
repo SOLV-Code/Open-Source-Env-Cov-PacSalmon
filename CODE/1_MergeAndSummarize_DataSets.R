@@ -157,7 +157,9 @@ dev.off()
 
 
 
-
+Sys.setenv(MAKEFLAGS = "-j2")
+Sys.setenv("R_REMOTES_NO_ERRORS_FROM_WARNINGS" = "true")
+remotes::install_github("stan-dev/rstanarm", INSTALL_opts = "--no-multiarch", force = TRUE)
 
 
 

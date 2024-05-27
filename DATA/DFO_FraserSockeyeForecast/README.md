@@ -88,11 +88,19 @@ Candidate models with environmental covariates generally haven't been the best p
 * 2020 Forecast [Supplement](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4088546x.pdf)
 * 2021 Forecast
 [SciResp](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)
-
+* 2022 Forecast [Tech Report](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41227153.pdf)
 
 **Other Analyses**
 
-*Still looking for other reports/papers that use the same data set.*
+
+
+* Xu, Y., Q. Liu, C. Fu, and J. Holmes. 2024. [Assessing the impacts of environmental and ecological
+variables on the performance of Fraser sockeye salmon
+forecast](https://cdnsciencepub.com/doi/pdf/10.1139/cjfas-2023-0139). Can. J. Fish. Aquat. Sci. 00: 1–16 (2024). Retrospective test of 37 alternative forecast models on 18 stocks, for 2009-2020.
+
+
+
+
 
 
 
