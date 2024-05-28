@@ -72,7 +72,10 @@ Candidate models with environmental covariates generally haven't been the best p
 
 A review of environmental and biological covariate performance was just published [Xu et al. 2024](https://cdnsciencepub.com/doi/pdf/10.1139/cjfas-2023-0139). Key results are:
 
-*
+* *"incorporated five new covariates, including sea surface temperature in the Gulf of Alaska and the abundance of salmon species, into the existing forecast models. Results revealed better performances by both the Ricker and Power models when coupled with the newly included covariates. Moreover, models selected over a decade ago underperformed compared to those selected based on our recent retrospective analysis from 2009 to 2020."*
+
+* *"time-varying effects of environmental conditions on population and community processes, i.e., non-stationary relationships, are becoming more prevalent in the face of climate
+change, and have been increasingly recognized"*
 
 
 ### References
