@@ -2,26 +2,33 @@
 
 **Status**: In progress
 
-**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG and KD (*get github usernames*). Official version of the data set maintained by [DFO Stock Assessment - Lower Fraser](https://www.dfo-mpo.gc.ca/contact/regions/pacific-pacifique-eng.html#Delta).
+**Maintained by**: This entry maintained by [@SOLV-Code](https://github.com/SOLV-Code), with contributions from SG and KD (*get github usernames*). Official version of the data set maintained by [DFO Stock Assessment - Lower Fraser](https://www.dfo-mpo.gc.ca/contact/regions/pacific-pacifique-eng.html#Delta). A static copy of the covariates up to brood year 2022 is available in the [github repo](https://github.com/yi-xu/Sockeye_paper/tree/main/data) for the [Xu et al. 2024 paper](https://cdnsciencepub.com/doi/abs/10.1139/cjfas-2023-0139?journalCode=cjfas)
 
-**Last Data Update**: 2024-02-12
+**Last Data Update**: 2024-05-28
 
-
-**TO DO: Incorporate the data and results from the  [XU et al 2024 paper](https://cdnsciencepub.com/doi/abs/10.1139/cjfas-2023-0139?journalCode=cjfas): Assessing the impacts of environmental and ecological variables on the performance of Fraser sockeye salmon forecast**
 
 ### Introduction
 
-Run size forecasts for stocks of Fraser River sockeye are developed annually, using a comprehensive suite of candidate models and extensive retrospective evaluation. Environmental covariates considered include local river conditions during juvenile outmigration, regional conditions during ocean entry, and large-scale climate conditions during the winter preceding outmigration.
+Run size forecasts for stocks of Fraser River sockeye are developed annually, using a comprehensive suite of candidate models and extensive retrospective evaluation. Candidate models and forecast evaluation methods have evolved over more than 20 years through an intensive annual peer-review process.
 
-Candidate models and forecast evaluation methods have evolved over more than 20 years through an intensive annual peer-review process.
+The following environmental covariates are currently included in the forecast explorations:
+
+Scale | Category | variables
+-- | -- | --
+local | Fraser river conditions during juvenile outmigration|  monthly mean flow (Apr, May, Jun), Apr-Jun peak discharge
+regional | conditions during ocean entry | Mean monthly sea surface temperature at Entrance Island and Pine Island lightstations (Apr, May, Jun, Jul), 
+large scale | climate conditions during the winter preceding outmigration | Pacific Decadal Oscillation (PDO)
+large-scale | *how lined up with brood year?* | North Pacific Gyre Oscillation (NPGO)
+large-scale | *how lined up with brood year?* |  Gulf of Alaska sea surface temperature
 
 Key milestones in the evolution of forecasting methods were: 
 
 * [2010 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/341025.pdf), which expanded the analyses and communication of uncertainty in the forecasts and formalized the consideration and testing of environmental covariates
 * [2012 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/345619.pdf), which documented the retrospective and jacknife approaches for testing candidate models and more rigorous approach to evaluating model performance.
-* [2014 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/365999.pdf), which first included a detailed discussion of environmental and other considerations by life history stage, packaged as a stand-alone [supplement document](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/363655.pdf). 2014 is the year when 'the blob' marine heatwave developed in the NE Pacific. So timing of this development was aligned with how observations of ocean conditions were exceptional. It is increasingly challenging to create quantitative forecasts, when observations exceed historical record. As the global climate and oceans warm, using historical data to forecast the future may change relationships etc. The supplement was added to provide an indication on where in the quantitative forecast probability distribution the returns might fall based on expert input prior to the return season. This ensures science expertise is integrated ahead of the season in an objective way. The supplements are developed by an expert working group and cover topics like adult migration conditions, spawner condition, spawner success, egg-to-fry survival, freshwater rearing conditions, juvenile migration timing, and juvenile diets at ocean entry. This supplemental information was later published as a stand-alone technical report (2018-2020), and then included as an appendix in the main forecast report in the most recent years.  
-
-As the forecast methods have matured and stabilized, the peer-review process has changed as well. For 2000-2013, the annual forecasts were published as DFO Research Documents, which undergo a full peer-review coordinated by [DFO's Canadian Science Advisory Secretariat](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm). From 2014 to 2021, a more streamlined [Science Response](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm) process was used. Forecast reports and environmental condition supplements are available through the [References](#References) below.
+* [2014 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/365999.pdf), which first included a detailed discussion of environmental and other considerations by life history stage, packaged as a stand-alone [supplement document](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/363655.pdf). 2014 is the year when 'the blob' marine heatwave developed in the NE Pacific. So timing of this development was aligned with how observations of ocean conditions were exceptional. It is increasingly challenging to create quantitative forecasts, when observations exceed historical record. As the global climate and oceans warm, using historical data to forecast the future may change relationships etc. The supplement was added to provide an indication on where in the quantitative forecast probability distribution the returns might fall based on expert input prior to the return season. This ensures science expertise is integrated ahead of the season in an objective way. The supplements are developed by an expert working group and cover topics like adult migration conditions, spawner condition, spawner success, egg-to-fry survival, freshwater rearing conditions, juvenile migration timing, and juvenile diets at ocean entry. This supplemental information was later published as a stand-alone technical report (2018-2020), and then included as an appendix in the main forecast report in the most recent years. 
+* [2022 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41227153.pdf) and [2024 CJFAS paper](https://cdnsciencepub.com/doi/abs/10.1139/cjfas-2023-0139?journalCode=cjfas) evaluated new environmental and biological covariates (fry body length and weight, Pacific salmon abundance indices, Gulf of Alaska sea surface temperature and North Pacific Gyre Oscillation).
+ 
+As the forecast methods have matured and stabilized, the peer-review process has changed as well. For 2000-2013, the annual forecasts were published as DFO Research Documents, which undergo a full peer-review coordinated by [DFO's Canadian Science Advisory Secretariat](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm). From 2014 to 2021, a more streamlined [Science Response](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/srp-prs-eng.htm) process was used. The 2022 forecast was published as a DFO technical report, but combined with a CJFAS paper documenting the test of new covariates. Forecast reports, environmental condition supplements, and technical reports are available through the [References](#References) below.
 
 The supplement summarizing environmental conditions was a critical process that integrated salmon experts and data across life-stages. This process evolved and improved as the expert group learned the language and nuances of each program from lake limnology, stock assessment, marine ocean ecology, physiology, etc. In the process, experts challenged each other on what could be said about the observations and their links to salmon survival, and what was considered to be less reliable. 
 
@@ -30,10 +37,10 @@ The [2019 Supplement](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40
 
 ### Status of Data Set
 
-Most of the source data can be accessed through links in the latest report, but the final time series actually being used is not currently available online. 
-It is, however, available upon request from the [DFO Lower Fraser Office](https://www.dfo-mpo.gc.ca/contact/regions/pacific-pacifique-eng.html#Delta). 
+Most of the source data can be accessed through links in the latest report, but the up-to-date time series actually being used is not currently available online. 
+It is, however, available upon request from the [DFO Lower Fraser Office](https://www.dfo-mpo.gc.ca/contact/regions/pacific-pacifique-eng.html#Delta). A static copy of the covariates up to brood year 2022 is available in the [github repo](https://github.com/yi-xu/Sockeye_paper/tree/main/data) for the [Xu et al. 2024 paper](https://cdnsciencepub.com/doi/abs/10.1139/cjfas-2023-0139?journalCode=cjfas)
 
-The source data used to generate the specific environmental covariate time series are described in detail in the reports. The most recent report includes active links to online source data for the PDO variable as well as the raw sea surface temperature and salinity data. For the Fraser River discharge data, an agency contact is provided.  
+The source data used to generate the specific environmental covariate time series are described in detail in the reports. The most recent report includes active links to online source data for the PDO variable as well as the raw sea surface temperature and salinity data (BC ligh stations, Gulf of Alaska SST). For the Fraser River discharge data, an agency contact is provided.  
 
 The reports include plots of the environmental covariate time series (e.g., Figures 3-5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)), but do not include a table with the actual annual values. Recent forecast reports also include detailed discussion of environmental conditions in a supplemental document or appendix (e.g., Appendix A5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)).
 
@@ -51,6 +58,7 @@ Follow the links to see the discussion thread and leave comments.
 * [Values vs. Deviations from mean?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/30)
 * [Assumed mechanism for PDO covariate](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/69)
 * [Link between State of Pacific Ocean Reports and forecasts](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/70)
+* [stn2js and stn2ja covariates not used anymore?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/135)
 
 ### Highlights from Published Analyses
 
@@ -62,7 +70,9 @@ Candidate models with environmental covariates generally haven't been the best p
 
 * *"For many stocks, top-ranked models without climate-driven covariates, tended to provide forecast estimates at productivity levels far higher than those observed recently (Table 2). In many cases, the only models that provided forecast values near recently observed productivity levels were either forecast models with climate-driven covariates, or naïve models based on recent recruit-per-spawner (RS) estimates (such as RS4yr and RS8yr)."*
 
+A review of environmental and biological covariate performance was just published [Xu et al. 2024](https://cdnsciencepub.com/doi/pdf/10.1139/cjfas-2023-0139). Key results are:
 
+*
 
 
 ### References
@@ -145,5 +155,20 @@ Online sources of raw data:
 
 
 * Fraser River conditions from DFO Environmental Watch (EWatch) Program: [Detailed weekly summaries ](https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/index-eng.html), but no digital source file available.
+
+
+
+**Gulf of Alaska SST**
+
+*Need to check through the [Xu et al. 2024 paper](https://cdnsciencepub.com/doi/pdf/10.1139/cjfas-2023-0139) and companion [repo](https://github.com/yi-xu/Sockeye_paper) to figure out how exactly the 
+covariates were calculated, then replicate*
+
+
+
+
+**North Pacific Gyre Oscillation (NPGO)**
+
+*Need to check through the [Xu et al. 2024 paper](https://cdnsciencepub.com/doi/pdf/10.1139/cjfas-2023-0139) and companion [repo](https://github.com/yi-xu/Sockeye_paper) to figure out how exactly the 
+covariates were calculated, then replicate*
 
 
