@@ -47,6 +47,11 @@ pdo.reorg.out <- pdo.src %>% select(Year, Oct,Nov,Dec) %>% mutate(Year = Year+1)
 					 PDOMinMayToSep = round(min(c(May,Jun,Jul,Aug,Sep),na.rm=TRUE),3),
 					 PDOMaxMayToSep = round(max(c(May,Jun,Jul,Aug,Sep),na.rm=TRUE),3),
 					 PDORangeMayToSep = PDOMaxMayToSep - PDOMinMayToSep
+					 ) %>%
+		mutate(NumPosAnomOctToMar = sum(Oct >0,Nov>0,Dec>0,Jan>0,Feb>0,Mar>0),
+					 NumLgPosAnomOctToMar = sum(Oct >0.7,Nov>0.7,Dec>0.7,Jan>0.7,Feb>0.7,Mar>0.7),
+					 NumNegAnomOctToMar = sum(Oct <0,Nov<0,Dec<0,Jan<0,Feb<0,Mar<0),
+					 NumLgNegAnomOctToMar = sum(Oct < -0.7,Nov< -0.7,Dec< -0.7,Jan< -0.7,Feb< -0.7,Mar< -0.7)
 					 )
 
 pdo.reorg.out
