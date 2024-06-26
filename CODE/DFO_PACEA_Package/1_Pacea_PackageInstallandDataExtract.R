@@ -54,6 +54,9 @@ npi_monthly
 oni
 pdo
 
+
+
+
 help(pdo)
 
 
@@ -121,9 +124,18 @@ write_csv(pacea.monthly,"DATA/DFO_PACEA_Package/GENERATED_pacea_series_monthly.c
 # additional exploration of variations
 
 
+pdo.mod <- pdo %>% rowid_to_column(var="ID") %>% dplyr::filter(year>=1950)
+head(pdo.mod)
 
+plot(pdo.mod$ID,pdo.mod$anomaly, type="n",bty="n",axes=FALSE,xlab="",
+		 ylab="PDO Monthly Anomaly")
 
+pdo.mod$RngAvg <- stats::filter(pdo.mod$anomaly,filter = rep(1/6,6),sides=1)
 
+abline(h=0,col="red")
 
+lines(pdo.mod$ID,pdo.mod$RngAvg,col="red")
 
+axis.src <- pdo.mod %>% dplyr::filter(month==1) %>% select(ID, year)
 
+axis(1,at =axis.src$ID )

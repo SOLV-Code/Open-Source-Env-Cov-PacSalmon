@@ -18,11 +18,9 @@ merged.data <- read_csv("DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFras
 											by="Year")
 
 
-names(merged.data)
 
 
-
-
+head(merged.data)
 
 
 
@@ -32,11 +30,6 @@ merged.filename <- "OUTPUT/Merged_CovariateSet.csv"
 comment.text1 <- paste("# Merged set of all available records in the PSECrepository")
 comment.text2 <- paste("# Variable descriptions and source data available at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon")
 comment.text3 <- paste("# File generated on", format(Sys.time(), "%a %b %e %H:%M:%S %Y"))
-
-
-
-
-
 
 
 write_lines(comment.text1, merged.filename)
