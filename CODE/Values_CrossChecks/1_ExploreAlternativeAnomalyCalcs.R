@@ -1,5 +1,4 @@
 library(tidyverse)
-library(pacea)
 
 
 
@@ -46,29 +45,18 @@ oni.plot.df <- oni %>% mutate(BaseVal = value - anomaly)
 oni.plot.df
 
 
-png(filename = "OUTPUT/Values_CrossCheck/ONI_BaseValueTrends.png",
-		width = 480*4.5, height = 480*3.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
 
 
 month.plot <-8
 oni.plot.df.sub <- oni.plot.df %>% dplyr::filter(month == month.plot)
 plot(oni.plot.df.sub$year,oni.plot.df.sub$BaseVal,type="o",
-		 ylim=c(26.2,27.2),las=1, bty="n",
-		 xlab = "Year", ylab = "ONI Base Value (Degrees C)",
-		 main = "ONI Base Value Used For Monthly Anomaly",
-		 pch=19,col="darkblue",cex=0.7)
-text(tail(oni.plot.df.sub$year,1),
-		 tail(oni.plot.df.sub$BaseVal,1),
-		 month.abb[month.plot],adj=-0.2,xpd=NA,col="darkblue")
+		 ylim=c(26.2,27.2))
+
 
 
 
 month.plot <- 1
 oni.plot.df.sub <- oni.plot.df %>% dplyr::filter(month == month.plot)
-points(oni.plot.df.sub$year,oni.plot.df.sub$BaseVal,type="o",
-		pch=19,col="darkblue",cex=0.7)
-text(tail(oni.plot.df.sub$year,1),
-		 tail(oni.plot.df.sub$BaseVal,1),
-		 month.abb[month.plot],adj=-0.2,xpd=NA,col="darkblue")
+lines(oni.plot.df.sub$year,oni.plot.df.sub$BaseVal,type="o")
 
-dev.off()
+

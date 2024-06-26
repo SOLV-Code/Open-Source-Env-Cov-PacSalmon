@@ -123,18 +123,36 @@ write_csv(pacea.monthly,"DATA/DFO_PACEA_Package/GENERATED_pacea_series_monthly.c
 #################
 # additional exploration of variations
 
+# running avg versions to "spiky" for 3D prints, use lowess smoothing instead
 
-pdo.mod <- pdo %>% rowid_to_column(var="ID") %>% dplyr::filter(year>=1950)
-head(pdo.mod)
+# create time-series objects for lowess plots
+start.yr <- 1980
+pdo.ts <- ts(pdo %>% dplyr::filter(year>=start.yr) %>% select(anomaly) ,start = c(start.yr,1),freq=12)
+pdo.ts
 
-plot(pdo.mod$ID,pdo.mod$anomaly, type="n",bty="n",axes=FALSE,xlab="",
-		 ylab="PDO Monthly Anomaly")
+mei.ts <- ts(mei %>% dplyr::filter(year>=start.yr) %>% select(anomaly) ,start = c(start.yr,1),freq=12)
+mei.ts
 
-pdo.mod$RngAvg <- stats::filter(pdo.mod$anomaly,filter = rep(1/6,6),sides=1)
+
+
+ao
+npgo
+npi_monthly
+oni
+
+
+
+
+plot(lowess(pdo.ts,f=1/35), type="l", col="red",
+		 bty="n",axes=FALSE,xlab="Year", ylab="PDO Monthly Anomaly")
+lines(lowess(mei.ts,f=1/35), type="l", col="darkblue")
+
+
+
+
 
 abline(h=0,col="red")
 
-lines(pdo.mod$ID,pdo.mod$RngAvg,col="red")
 
 axis.src <- pdo.mod %>% dplyr::filter(month==1) %>% select(ID, year)
 
