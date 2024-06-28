@@ -111,6 +111,13 @@ abline(h=0,col="red",lwd=2)
 lines(smoothed.indices$year,smoothed.indices$mei)
 lines(smoothed.indices$year,smoothed.indices$oni,col="red")
 
+plot(1:5,1:5,type="n",xlim= c(1980,2025),ylim=c(-2.5,2.5),xlab="Year",ylab="Smoothed Monthly Anomaly",
+		 bty="n",main = "mei vs npi")
+abline(h=0,col="red",lwd=2)
+lines(smoothed.indices$year,smoothed.indices$mei)
+lines(smoothed.indices$year,smoothed.indices$npi_monthly,col="red")
+
+
 #----------------------------------------------------------------------------------------------------
 # Plot for notes page
 ylim.use <- c(-2.5,2.5)

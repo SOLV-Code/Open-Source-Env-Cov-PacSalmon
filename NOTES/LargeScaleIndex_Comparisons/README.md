@@ -21,7 +21,7 @@ Figures created from the [PACEA data set](https://github.com/SOLV-Code/Open-Sour
 
 
 
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/OverviewOfIndicesStarting1980.png" width="500">
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/OverviewOfIndicesStarting1980.png" width="700">
 
 
 
