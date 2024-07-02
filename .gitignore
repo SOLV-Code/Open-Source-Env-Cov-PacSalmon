@@ -1,6 +1,8 @@
 
 Reports_NoGit
 
+# shapefiles for 3D prints
+*.stl
 
 # History files
 .Rhistory
