@@ -8,6 +8,7 @@ library(pacea) # use this as the data source
 # get custom functions from the FigRs repo at https://github.com/SOLV-Code/FigRs
 # 3D printing code and steps are summarized here: https://github.com/SOLV-Code/FigRs/tree/master/3D%20Prints
 # the stl files generated here can be post-processed using Blender as per the tips there
+# NOTE: Code for other series is there too (e.g., Atmospheric CO2)
 
 source("https://raw.githubusercontent.com/SOLV-Code/FigRs/master/3D%20Prints/Time%20Series/FUNCTION_r2stlMOD.R")
 source("https://raw.githubusercontent.com/SOLV-Code/FigRs/master/3D%20Prints/Time%20Series/FUNCTION_ts2persp.R")
@@ -149,5 +150,19 @@ r2stl.mod(x=c(1:dim(oni_persp)[1])/scalar,
 					filename="OUTPUT/SourcesFor3DPrints/ONI_SmoothedAnomalies_1980to2023.stl",
 					show.persp=TRUE,z.expand=TRUE,
 					min.height=0.008)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
