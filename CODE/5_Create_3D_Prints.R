@@ -37,7 +37,7 @@ lines(pdo.lowess$x[jan.idx],pdo.lowess$y[jan.idx], col="red")
 
 
 # change to difference from lowest value (plus a base of 5%) and
-pdo.lowess.adj <- pdo.lowess$y[jan.idx] - min(0.95* pdo.lowess$y[jan.idx])
+pdo.lowess.adj <- pdo.lowess$y[jan.idx] - min(1.05* pdo.lowess$y[jan.idx])
 pdo.lowess.adj
 
 #rescale to a max height of some specified units relative to the 4 grid cells/year
@@ -82,7 +82,7 @@ lines(npgo.lowess$x[jan.idx],npgo.lowess$y[jan.idx], col="red")
 
 
 # change to difference from lowest value (plus a base of 5%) and
-npgo.lowess.adj <- npgo.lowess$y[jan.idx] - min(0.95* npgo.lowess$y[jan.idx])
+npgo.lowess.adj <- npgo.lowess$y[jan.idx] - min(1.05* npgo.lowess$y[jan.idx])
 npgo.lowess.adj
 
 #rescale to a max height of some specified units relative to the 4 grid cells/year
@@ -107,5 +107,47 @@ r2stl.mod(x=c(1:dim(npgo_persp)[1])/scalar,
 
 
 
+# ----------------------------------------------------------------------------------
+# Smoothed ONI  series
+start.yr <- 1980
+end.yr <- 2023
+smoother.span <- 1/35 # f value for lowess()
+
+oni.ts <- ts(oni %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) ,start = c(start.yr,1),freq=12)
+oni.ts
+oni.lowess <- lowess(oni.ts,f=smoother.span)
+oni.lowess
+plot(oni.lowess, type="l", col="dodgerblue", bty="n",axes=TRUE,xlab="Year", ylab="ONI Anomaly (Lowess Smoothed)")
+abline(h=0,col="red")
+
+# use only first smoothed value from each year
+# to work with default dimension of generated surfaces
+dec.idx <- c(rep(FALSE,11),TRUE) # do dec to pick up recent increase in 2023
+lines(oni.lowess$x[dec.idx],oni.lowess$y[dec.idx], col="red")
+
+
+# change to difference from lowest value (plus a base of 5%) and
+oni.lowess.adj <- oni.lowess$y[dec.idx] - min(1.05* oni.lowess$y[dec.idx])
+oni.lowess.adj
+
+#rescale to a max height of some specified units relative to the 4 grid cells/year
+oni.lowess.adj <- oni.lowess.adj/max(oni.lowess.adj)*80
+
+# convert time series to surface coordinates
+oni_persp <- ts2persp(oni.lowess.adj)
+
+# plot surface
+persp(x=1:dim(oni_persp)[1],y=1:dim(oni_persp)[2],z=oni_persp,theta=90,phi=25, zlim=c(0,max(oni_persp)), scale=FALSE)
+
+# scale to determine size of eventual object (2 = half of default size)
+scalar <- 1
+
+# create stl file
+r2stl.mod(x=c(1:dim(oni_persp)[1])/scalar,
+					y=c(1:dim(oni_persp)[2]), #/scalar,
+					z=oni_persp/scalar,
+					filename="OUTPUT/SourcesFor3DPrints/ONI_SmoothedAnomalies_1980to2023.stl",
+					show.persp=TRUE,z.expand=TRUE,
+					min.height=0.008)
 
 
