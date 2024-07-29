@@ -6,7 +6,7 @@ This repo is taking shape based on discussions at the [2023 PICES Annual Meeting
 **Poster from WFC 2024 in Seattle and an overview presentation of the approach from PICES 2023 in Seattle are available [here](https://drive.google.com/drive/folders/1DjgJcDe70dZeFMcW9qCPYFsEafsClxco?usp=sharing).**
 
 
-This repository currently covers 7 data sets of environmental covariates: 
+This repository currently covers 8 data sets of environmental covariates: 
 
 
 * [DFO Pacea Package](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_PACEA_Package)
@@ -18,6 +18,8 @@ This repository currently covers 7 data sets of environmental covariates:
 * [NOAA Ocean Conditions Index](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex)
 
 * [DFO State of the Pacific Oceans](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_StateOfThePacificOcean)
+
+* [DFO Salmon in Regional Ecosystems Program (SiRE-P)](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_SalmonInRegionalEcosystems)
 
 * [Chasco et al. (2021) Snake River Chinook paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk). 
 
