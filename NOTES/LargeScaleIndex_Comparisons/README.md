@@ -16,6 +16,10 @@ Figures created from the [PACEA data set](https://github.com/SOLV-Code/Open-Sour
 
 *TBI*
 	
+	
+* explanation of ONI and other SST-based indices: https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni	
+	
+	
 ### Plots
 
 
