@@ -13,9 +13,7 @@
 
 ### Key Points
 
-Large-scale environmental covariates are commonly used in terms of anomalies rather
-than actual values, including the *Oceanographic Niño Index* (ONI), the *North Pacific Index* (NPI),  
-the *Pacific Decadal Oscillation* (PDO), and the *North Pacific Gyre Oscillation* (NPGO). 
+Large-scale environmental covariates are commonly used in terms of anomalies rather than actual values, including the *Oceanographic Niño Index* (ONI), the *North Pacific Index* (NPI),  the *Pacific Decadal Oscillation* (PDO), and the *North Pacific Gyre Oscillation* (NPGO). 
 
 The exact calculation of the anomalies differs between these key indices, and maybe even between 
 versions of the same index. For example:
