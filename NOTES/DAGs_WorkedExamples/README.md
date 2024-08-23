@@ -5,6 +5,8 @@
 Figures created with [this script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/6_DAG_Explorations.R).
 
 
+
+
 ### Workflow Using *ggdag* and *DAGitty*
 
 The R package *ggdag* allows you the specify complex models using standard R model syntax. The DAG can then be plotted in R, or copied into the *DAGitty* online app for easier formatting and interactive analysis. Once your DAG sketches stabilize, you can create the final plots and analyses using *ggdag* and *ggplot* for reproducible outputs without copy/pasting into a different program and without clicking through menu options. But the DAGitty app greatly simplifies the initial exploration.
@@ -29,6 +31,12 @@ Then use the ```ggdag::dagify()``` function to generate a basic version of the D
 
 
 ```
+library(devtools)
+devtools::install_github("r-causal/ggdag")
+
+library(ggdag)
+library(ggplot2)
+
 dagify(
 	Rec ~ Juv + MProd,
 	Juv ~ Spn + FWProd,
