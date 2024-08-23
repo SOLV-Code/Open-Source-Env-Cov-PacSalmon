@@ -25,9 +25,9 @@ ggdag(dag.basic.sr) + theme_dag()
 
 # 2 stage life-history SR
 dag.2stages.sr <- dagify(
-	Rec ~ Juv + Mp,
-	Juv ~ Spn + FWp,
-	FWp ~ Spn,
+	Rec ~ Juv + MProd,
+	Juv ~ Spn + FWProd,
+	FWProd ~ Spn,
 	exposure = "Spn",
 	outcome = "Rec"
 ) %>%
@@ -35,30 +35,12 @@ dag.2stages.sr <- dagify(
 
 ggdag(dag.2stages.sr) + theme_dag()
 
+png(filename = "OUTPUT/DAGs_WorkedExamples/SR_2Stages_DefaultPlot.png",
+		width = 300, height = 300, units = "px", pointsize = 50, bg = "white",  res = NA)
 
-########
-# dagitty code
+ggdag(dag.2stages.sr) + theme_dag()
 
-dag {
-	bb="0,0,1,1"
-	ONIAnomWinterY2 [pos="0.201,0.210"]
-	OceanCondY2 [latent,pos="0.300,0.271"]
-	OceanCondY3 [pos="0.418,0.266"]
-	PDOAnomWinterY2 [pos="0.198,0.289"]
-	Prod [pos="0.377,0.388"]
-	Rec [outcome,pos="0.564,0.490"]
-	Spn [exposure,pos="0.217,0.499"]
-	OceanCondY2 -> ONIAnomWinterY2
-	OceanCondY2 -> PDOAnomWinterY2
-	OceanCondY2 -> Prod
-	OceanCondY3 -> Prod
-	Prod -> Rec
-	Spn -> Prod
-	Spn -> Rec
-}
-
-
-
+dev.off()
 
 
 
@@ -104,9 +86,29 @@ ggdag(dag.test ) + theme_dag()
 ####################################
 # Run Recon
 
+if(FALSE){
+
+#*Yukon River Chinook Run Reconstruction*
+
+#[Connors et al. 2022](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41117347.pdf) developed an integrated run reconstruction and spawner-recruit model for Yukon River Chinook salmon.  Their Figure 4 shows a schematic of the run reconstruction component, which almost follows the DAG conventions:
+
+* Unobserved quantities (dashed boxes) are clearly distinguished from observed variables (solid boxes).  Unobserved quantities include total run entering the lower river, run passing the border, and spawner abundance in each surveyed tributary. Observed quantities include estimates from sonar lower river sonar,  estimates from border mark-recapture, and visual estimates from tributary overflights.
+* Some, but not all, of the arrows follow the direction of causal effect (e.g., run size determines passage estimate)
+
+
+**build corresponding DAG in ggdag**
+
+
+### Worked Examples of full Workflow: From DAG sketches to Bayesian Model
+
+* Basic DAG (analysis of fundamental statistical pitfalls, "reversal" example)
+* Refined DAG
+* Models with adjustment sets determined based on the DAG
+* "Full luxury Bayesian models" that model the entire DAG using joint likelihoods and then use posterior simulations to get the causal estimates.
 
 
 
+}
 
 
 
