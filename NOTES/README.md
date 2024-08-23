@@ -12,4 +12,4 @@ Notes in progress:
 
 * [Trends vs. Anomalies](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/TrendsVsAnomalies) looks at  how anomalies are calculated for common large-scale environmental covariates to remove underlying trends, and whether that is the appropriate data treatment for salmon models.
 
-* [Worked Examples of DAGs] (https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/DAGs_WorkedExamples) has some step-by-step examples of building diagrams for causal inference.
+* [Worked Examples of DAGs](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/DAGs_WorkedExamples) has some step-by-step examples of building diagrams for causal inference.
