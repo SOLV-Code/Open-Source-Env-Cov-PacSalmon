@@ -6,6 +6,9 @@ This repo is taking shape based on discussions at the [2023 PICES Annual Meeting
 **Poster from WFC 2024 in Seattle and an overview presentation of the approach from PICES 2023 in Seattle are available [here](https://drive.google.com/drive/folders/1DjgJcDe70dZeFMcW9qCPYFsEafsClxco?usp=sharing).**
 
 
+**NEW: Check out the [Github Page for this project](https://solv-code.github.io/PacSalmonEnvCov/)**
+
+
 This repository currently covers 8 data sets of environmental covariates: 
 
 
