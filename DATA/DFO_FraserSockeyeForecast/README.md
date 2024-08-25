@@ -44,7 +44,7 @@ The source data used to generate the specific environmental covariate time serie
 
 The reports include plots of the environmental covariate time series (e.g., Figures 3-5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)), but do not include a table with the actual annual values. Recent forecast reports also include detailed discussion of environmental conditions in a supplemental document or appendix (e.g., Appendix A5 of the [2021 Forecast](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41006057.pdf)).
 
-For this repository, we are trying to replicate the data treatment steps to generate an [up-to-date downloadable covariate time series](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFraserRiverForecasts.csv) directly from the publicly available source data. *This is still a work in progress, as we are checking the generated file against the official data set*.
+For this repository, we are trying to replicate the data treatment steps to generate an [up-to-date downloadable covariate time series](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFraserRiverForecasts.csv) directly from the publicly available source data, using [this R script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/DFO_FraserSockeyeForecast/1_FraserFC_Process_Source_Data.R). *This is still a work in progress, as we are checking the generated file against the official data set*. 
 
 
 ### Open Questions 
