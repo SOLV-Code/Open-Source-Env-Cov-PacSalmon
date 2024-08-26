@@ -158,11 +158,3 @@ r2stl.mod(x=c(1:dim(oni_persp)[1])/scalar,
 
 
 
-
-
-
-
-
-
-
-
