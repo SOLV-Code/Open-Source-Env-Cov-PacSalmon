@@ -12,7 +12,7 @@ The [Causal Inference Wiki Page](https://github.com/SOLV-Code/Open-Source-Env-Co
 The R package *ggdag* allows you the specify complex models using standard R model syntax. The DAG can then be plotted in R, or copied into the *DAGitty* online app for easier formatting and interactive analysis. Once your DAG sketches stabilize, you can create the final plots and analyses using *ggdag* and *ggplot* for reproducible outputs without copy/pasting into a different program and without clicking through menu options. But the DAGitty app greatly simplifies the initial exploration.
 
 
-### Sep 1: Salmon spawner-recruit model with 2 life-history stages
+### Step 1: Salmon spawner-recruit model with 2 life-history stages
 
 Start with the writing out the functional relationships as text and corresponding R model equations
 
@@ -121,15 +121,25 @@ Environmental factors need to be matched up based on the life history of the sto
 
 ```
 Freshwater productivity is influenced by 
-(1) weather conditions in the interior of BC during the first winter (i.e. after egg deposition in the fall, before emergence in the spring) 
-(2) rearing lake conditions between first and second spring (from fry entering the lake to smolts leaving the lake and migrating to the ocean)
+
+(1) weather conditions in the interior of BC during the first winter 
+(i.e. after egg deposition in the fall, before emergence in the spring) 
+
+(2) rearing lake conditions between first and second spring 
+(from fry entering the lake to smolts leaving the lake and migrating 
+to the ocean)
+
 (3) river conditions during smolt outmigration in the second spring
 
 FWProd ~ InteriorCondW0
 FWProd ~ LakeCondY1
 FWProd ~ RiverCondY2
 
-Marine productivity is influenced by coastal conditions during the early ocean residence and by large-scale ocean conditions during the rest of the marine growth phase. But coastal conditions in the year of ocean entry are influenced by the larger-scale ocean conditions that year.
+Marine productivity is influenced by coastal conditions during the 
+early ocean residence and by large-scale ocean conditions during 
+the rest of the marine growth phase. But coastal conditions in the 
+year of ocean entry are influenced by the larger-scale ocean 
+conditions that year.
 
 MProd ~ CoastalCondY2
 MProd ~ OceanCondY2
@@ -141,7 +151,7 @@ CoastalCondY2 ~ OceanCondY2
 Adding these general ideas to the DAG gives
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/DAGs_WorkedExamples/SR_2Stages_DAGittyPlot2.PNG"
-	width="300">
+	width="450">
 
 The underlying DAG model code is
 
@@ -179,17 +189,23 @@ Spn -> Juv
 ### Step 3: Consider how some specific environmental covariates fit into this structure
 
 
-The next step is to link specific covariates for which you have data into the draft causal structure developed in Example 3. This illustrates how DAGs can grow very quickly into highly complex diagrams.
+The next step is to link specific covariates for which you have data into the draft causal structure developed in Step 2. This illustrates how DAGs can grow very quickly into highly complex diagrams.
 
 
 ```
-River conditions during smolt outmigration are influenced by ocean conditions in the preceding winter. One commonly used mesasure of North Pacific ocean conditions is the Pacific Decadal Oscillation (PDO) index. For PDO, we may want to include either anomalies, or mean values, or both.
+River conditions during smolt outmigration are influenced by ocean 
+conditions in the preceding winter. One commonly used mesasure of 
+North Pacific ocean conditions is the Pacific Decadal Oscillation (PDO) 
+index. For PDO, we may want to include either anomalies, or mean values, or both.
 
 RiverCondY2 ~ OceanCondW2
 PDOAnomW2 ~ OceanCondW2
 PDOMeanW2~ OceanCondW2
 
-Similarly, the North Pacific Gyre Oscillation (NPGO) and Oceanic Niño Index (ONI) are summary indices reflecting ocean conditions. A Coastal Upwelling Index (or coastal SST index?) can be included to capture coastal conditions.
+Similarly, the North Pacific Gyre Oscillation (NPGO) and 
+Oceanic Niño Index (ONI) are summary indices reflecting ocean 
+conditions. A Coastal Upwelling Index (or coastal SST index?) 
+can be included to capture coastal conditions.
 
 CoastalUpwellY2 ~ CoastalCondY2
 
@@ -199,7 +215,7 @@ CoastalUpwellY2 ~ CoastalCondY2
 Adding these considerations to the DAG gives
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/DAGs_WorkedExamples/SR_2Stages_DAGittyPlot3.PNG"
-	width="400">
+	width="450">
 
 The underlying DAG model code is
 
@@ -249,8 +265,7 @@ Spn -> Juv
 
 ### Step 4: Pruning the DAG
 
-The next step is to prune the DAG, removing any chains of latent variables and any mediators. As an illustration, assume that you want to focus on estimating the total effect of spawner abundance on recruitment. In the DAG from Step 3, that pathway is "blocked" by the ```Juv``` node (i.e., coefficients on ```Spn``` would only capture a part of the effect). If you remove the ```Juv``` node requires that you merge the freshwater and marine productivity nodes into a single total productivity (```TotProd```) parameter. Let's also assume that based on previous work, you decide to focus on two of the covariates: PDO anomalies and the coastal upwelling index.
-
+The next step is to prune the DAG, removing any chains of latent variables and any mediators. As an illustration, assume that you want to focus on estimating the total effect of spawner abundance on recruitment. In the DAG from Step 3, that pathway is "blocked" by the ```Juv``` node (i.e., coefficients on ```Spn``` would only capture a part of the effect). Removing the ```Juv``` node requires that you merge the freshwater and marine productivity nodes into a single total productivity (```TotProd```) parameter. Let's also assume that based on previous work, you decide to focus on two of the covariates: PDO anomalies and the coastal upwelling index. If you keep track the considerations used for first growing and then pruning the DAG, you have a clearly documented rationale for how you ended up choosing the covariates included in your model (i.e., for each node and arrow a concise verbal description of why they are there). Feedback during peer-review will inevitably identify other considerations, and the DAG workflow provides a structure for mapping them, exploring their implications, and facilitating the discussion.
 
 Simplifying the DAG based on these considerations gives
 
