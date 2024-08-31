@@ -265,12 +265,14 @@ Spn -> Juv
 
 ### Step 4: Pruning the DAG
 
-The next step is to prune the DAG, removing any chains of latent variables and any mediators. As an illustration, assume that you want to focus on estimating the total effect of spawner abundance on recruitment. In the DAG from Step 3, that pathway is "blocked" by the ```Juv``` node (i.e., coefficients on ```Spn``` would only capture a part of the effect). Removing the ```Juv``` node requires that you merge the freshwater and marine productivity nodes into a single total productivity (```TotProd```) parameter. Let's also assume that based on previous work, you decide to focus on two of the covariates: PDO anomalies and the coastal upwelling index. If you keep track the considerations used for first growing and then pruning the DAG, you have a clearly documented rationale for how you ended up choosing the covariates included in your model (i.e., for each node and arrow a concise verbal description of why they are there). Feedback during peer-review will inevitably identify other considerations, and the DAG workflow provides a structure for mapping them, exploring their implications, and facilitating the discussion.
+The next step is to prune the DAG, removing any chains of latent variables and any mediators. As an illustration, assume that you want to focus on estimating the total effect of spawner abundance on recruitment. In the DAG from Step 3, that pathway is "blocked" by the ```Juv``` node (i.e., coefficients on ```Spn``` would only capture a part of the effect). Removing the ```Juv``` node requires that you merge the freshwater and marine productivity nodes into a single total productivity (```TotProd```) parameter. Let's also assume that based on previous work, you decide to focus on two of the covariates: PDO anomalies and the coastal upwelling index. 
 
 Simplifying the DAG based on these considerations gives
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/DAGs_WorkedExamples/SR_2Stages_DAGittyPlot4.PNG"
 	width="400">
+
+If you keep track the considerations used for first growing and then pruning the DAG, you have a clearly documented rationale for how you ended up choosing the covariates included in your model (i.e., for each node and arrow a concise verbal description of why they are there). Feedback during peer-review will inevitably identify other considerations, and the DAG workflow provides a structure for mapping them, exploring their implications, and facilitating the discussion.
 
 The underlying DAG model code is
 
