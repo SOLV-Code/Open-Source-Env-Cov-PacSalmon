@@ -9,7 +9,7 @@ The [Causal Inference Wiki Page](https://github.com/SOLV-Code/Open-Source-Env-Co
 
 ### Workflow Using *ggdag* and *DAGitty*
 
-The R package *ggdag* allows you the specify complex models using standard R model syntax. The DAG can then be plotted in R, or copied into the *DAGitty* online app for easier formatting and interactive analysis. Once your DAG sketches stabilize, you can create the final plots and analyses using *ggdag* and *ggplot* for reproducible outputs without copy/pasting into a different program and without clicking through menu options. But the DAGitty app greatly simplifies the initial exploration.
+The R package *ggdag* ([CRAN](https://cran.r-project.org/web/packages/ggdag/index.html),[github](https://r-causal.github.io/ggdag/)) allows you the specify complex models using standard R model syntax. The DAG can then be plotted in R, or copied into the [*DAGitty* online app](https://www.dagitty.net/dags.html) for easier formatting and interactive analysis. Once your DAG sketches stabilize, you can copy the DAG model code back into R for creating the final plots and analyses using *ggdag* and *ggplot* for reproducible outputs. But the DAGitty app greatly simplifies the exploration step.
 
 
 ### Step 1: Salmon spawner-recruit model with 2 life-history stages
