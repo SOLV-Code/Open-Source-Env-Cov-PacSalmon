@@ -3,7 +3,7 @@
 
 This repo is taking shape based on discussions at the [2023 PICES Annual Meeting](https://meetings.pices.int/meetings/annual/2023/PICES/scope) and the [2024 World Fisheries Congress](https://wfc2024.fisheries.org/). Check back frequently and leave [some feedback](#feedback-on-psec). All components are up for debate at this stage, so join in early to shape the project!
 
-**Poster from WFC 2024 in Seattle and an overview presentation of the approach from PICES 2023 in Seattle are available [here](https://drive.google.com/drive/folders/1DjgJcDe70dZeFMcW9qCPYFsEafsClxco?usp=sharing).**
+**Conference constributions from this project are available [here](https://drive.google.com/drive/folders/1DjgJcDe70dZeFMcW9qCPYFsEafsClxco?usp=sharing).**
 
 
 **NEW: Check out the [Github Page for this project](https://solv-code.github.io/PacSalmonEnvCov/)**
