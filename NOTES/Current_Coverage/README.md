@@ -24,6 +24,9 @@ Figures created from the [merged data set](https://github.com/SOLV-Code/Open-Sou
 
 ### Data Timeline
 
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/DataOverview_ALL.png"
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/DataOverview_Part1.png"
+	width="600">
+	
+	<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/DataOverview_Part2.png"
 	width="600">
 
