@@ -1,15 +1,15 @@
 # Large-Scale Environmental Covariates used in Chinook Forecasting by the Chinook Technical Committee (CTC) of the Pacific Salmon Commission,,,,,,,,,,,,
-"# CTC has an annual process to compile a covariate data set, combining variables derived from public raw data and variables contributed by different agencies (DFO, NOAA)",,,,,,,,,,,,
-"# To get the latest official version of these data, contact the CTC chairs via https://www.psc.org/membership-lists/",,,,,,,,,,,,
-"# Alternatively, you can use the code in the covariates_forecastr repository to generate the data set (https://github.com/nembrown/covariates_forecastr)",,,,,,,,,,,,
+# CTC has an annual process to compile a covariate data set. This combines variables derived from public raw data and variables contributed by different agencies (DFO and NOAA),,,,,,,,,,,,
+# To get the latest official version of these data: contact the CTC chairs via https://www.psc.org/membership-lists/,,,,,,,,,,,,
+# Alternatively you can use the code in the covariates_forecastr repository to generate the data set (https://github.com/nembrown/covariates_forecastr),,,,,,,,,,,,
 # THIS VERSION: ,,,,,,,,,,,,
 # - Extracted from data file provided by CTC July 2024,,,,,,,,,,,,
 # - Includes only large-scale covariates that match the same values to all stocks ,,,,,,,,,,,,
 # - Excludes large-scale covariates that are taken from the NOAA ocean conditions index (https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/NOAA_OceanConditionsIndex),,,,,,,,,,,,
-"# - Years are calendar years so need to be matched to stock-specific spawner-recruit data based on life history and assumed mechanism (e.g., ONI matched to brood year)",,,,,,,,,,,,
+# - Years are calendar years so need to be matched to stock-specific spawner-recruit data based on life history and assumed mechanism (e.g. ONI matched to brood year),,,,,,,,,,,,
 # NOTE: some of these covariates are calculated from monthly indices extracted from the pacea package (https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_PACEA_Package),,,,,,,,,,,,
 # Data descriptions and references at  https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/PSC_Chinook_Forecasting,,,,,,,,,,,,
-Year,cov_ONI_yearly_mean,cov_ONI_yearly_anomaly,cov_ONI_summer_mean,cov_ONI_summer_anomaly,cov_SOI_summer_mean,cov_SOI_yearly_mean,cov_PDO_summer_mean,cov_PDO_yearly_mean,cov_NPGO_yearly_mean,cov_NPGO_summer_mean,cov_EPNP_yearly_mean,cov_EPNP_summer_mean
+Year,CTC_ONI_AnnualMean,CTC_ONI_AnnualAnomaly,CTC_ONI_SummerMean,CTC_ONI_SummerAnomaly,CTC_SOI_SummerMean,CTC_SOI_AnnualMean,CTC_PDO_SummerMean,CTC_PDO_AnnualMean,CTC_NPGO_AnnualMean,CTC_NPGO_SummerMean,CTC_EPNP_AnnualMean,CTC_EPNP_SummerMean
 1970,26.42833333,-0.32,26.35,-0.563333333,0.406,0.289166667,-1.08,-0.404166667,0.061043154,0.38518747,-0.164545455,-0.41
 1971,25.8625,-0.94,26.19,-0.77,0.838,1.0725,-1.27,-1.315833333,0.381984271,0.601138358,-0.252727273,0.432
 1972,27.73083333,0.9275,28.1,1.14,-1.528,-0.829166667,-1.158,-1.144166667,-0.659303726,-0.5645368,0.019090909,0.448

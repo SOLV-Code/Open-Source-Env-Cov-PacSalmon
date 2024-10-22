@@ -45,3 +45,15 @@ Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanSepToNov,52
 DFO_Pacea,Large,Pacea_ALPI_Anomaly,123
 DFO_Pacea,Large,Pacea_NPI_Value,125
 DFO_Pacea,Large,Pacea_NPI_Anomaly,125
+CTC_ChinookForecast_Covars,Large,CTC_ONI_AnnualMean,54
+CTC_ChinookForecast_Covars,Large,CTC_ONI_AnnualAnomaly,54
+CTC_ChinookForecast_Covars,Large,CTC_ONI_SummerMean,54
+CTC_ChinookForecast_Covars,Large,CTC_ONI_SummerAnomaly,54
+CTC_ChinookForecast_Covars,Large,CTC_SOI_SummerMean,53
+CTC_ChinookForecast_Covars,Large,CTC_SOI_AnnualMean,53
+CTC_ChinookForecast_Covars,Large,CTC_PDO_SummerMean,54
+CTC_ChinookForecast_Covars,Large,CTC_PDO_AnnualMean,54
+CTC_ChinookForecast_Covars,Large,CTC_NPGO_AnnualMean,54
+CTC_ChinookForecast_Covars,Large,CTC_NPGO_SummerMean,54
+CTC_ChinookForecast_Covars,Large,CTC_EPNP_AnnualMean,54
+CTC_ChinookForecast_Covars,Large,CTC_EPNP_SummerMean,54
