@@ -48,3 +48,15 @@ Chascoetal2021_SnakeRiverCk,Regional,WashTranspMeanSepToNov,Measure of Sverdrup 
 DFO_Pacea,Large,Pacea_ALPI_Anomaly,Aleutian Low Pressure Index annual anomalies (object alpi in the package)
 DFO_Pacea,Large,Pacea_NPI_Value,North Pacific Index values (object alpi_annual in the package)
 DFO_Pacea,Large,Pacea_NPI_Anomaly,North Pacific Index anomalies (object alpi_annual in the package)
+CTC_ChinookForecast_Covars,Large,CTC_ONI_AnnualMean,Oceanic Niño Index (ONI) Mean of monthly values Jan-Dec using Nino 3.4 series
+CTC_ChinookForecast_Covars,Large,CTC_ONI_AnnualAnomaly,Oceanic Niño Index (ONI) TBI using Nino 3.4 series
+CTC_ChinookForecast_Covars,Large,CTC_ONI_SummerMean,Oceanic Niño Index (ONI) Mean of monthly values May-Sep (inclusive) using Nino 3.4 series
+CTC_ChinookForecast_Covars,Large,CTC_ONI_SummerAnomaly,Oceanic Niño Index (ONI) TBI using Nino 3.4 series
+CTC_ChinookForecast_Covars,Large,CTC_SOI_SummerMean,Southern Oscillation Index (SOI) Mean of monthly values May-Sep (inclusive)
+CTC_ChinookForecast_Covars,Large,CTC_SOI_AnnualMean,Southern Oscillation Index (SOI)  Mean of monthly values Jan-Dec
+CTC_ChinookForecast_Covars,Large,CTC_PDO_SummerMean,Pacific Decadal Oscillation (PDO) Mean of monthly values May-Sep (inclusive) using ERSST Version 5
+CTC_ChinookForecast_Covars,Large,CTC_PDO_AnnualMean,Pacific Decadal Oscillation (PDO) Mean of monthly values Jan-Dec using ERSST Version 5
+CTC_ChinookForecast_Covars,Large,CTC_NPGO_AnnualMean,North Pacific Gyre Oscillation (NPGO) Mean of monthly values Jan-Dec using AVISO Satellite SSHa
+CTC_ChinookForecast_Covars,Large,CTC_NPGO_SummerMean,North Pacific Gyre Oscillation (NPGO) Mean of monthly values May-Sep (inclusive) using AVISO Satellite SSHa
+CTC_ChinookForecast_Covars,Large,CTC_EPNP_AnnualMean,East Pacific - North Pacific Index (EPNP) Mean of monthly values Jan-Dec
+CTC_ChinookForecast_Covars,Large,CTC_EPNP_SummerMean,East Pacific - North Pacific Index (EPNP)  Mean of monthly values May-Sep (inclusive)

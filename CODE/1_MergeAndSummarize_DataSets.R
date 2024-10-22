@@ -15,12 +15,20 @@ merged.data <- read_csv("DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFras
 							full_join(read_csv("DATA/Chascoetal2021_SnakeRiverCk/GENERATED_COVARS_Chascoetal2021Paper.csv",comment = "#"),
 												by="Year") %>%
 							full_join(read_csv("DATA/DFO_PACEA_Package/GENERATED_pacea_series_annual.csv",comment = "#"),
-											by="Year")
+											by="Year") %>%
+							full_join(read_csv("DATA/CTC_ChinookForecast_Covars/ChinookTC_Forecasting_LargeScaleCovars_Data.csv",comment = "#"),
+											by="Year") %>%
+							arrange(Year)
 
 
+# filter out any rows with all NA except Year
+# %>% filter(!if_all(a:b, is.na)) # how to make this generic for variable number of cols?
+# do it the hard way:
+merged.data <- merged.data[rowSums(!is.na(merged.data)) > 1,]
 
 
 head(merged.data)
+names(merged.data)
 
 
 
@@ -54,6 +62,8 @@ num.obs <- merged.data %>% summarize(across(-Year, ~ sum(!is.na(.x))) ) %>% t() 
 
 
 var.summary.out <- var.lookup %>% left_join(num.obs, by="Variable")
+view(var.summary.out)
+
 write_csv(var.summary.out,"OUTPUT/SummaryOfVariables.csv")
 
 
@@ -152,14 +162,10 @@ print("------------------------------------------")
 dev.off()
 
 
-
-
-
-
-
-Sys.setenv(MAKEFLAGS = "-j2")
-Sys.setenv("R_REMOTES_NO_ERRORS_FROM_WARNINGS" = "true")
-remotes::install_github("stan-dev/rstanarm", INSTALL_opts = "--no-multiarch", force = TRUE)
+# What is this doing here?
+#Sys.setenv(MAKEFLAGS = "-j2")
+#Sys.setenv("R_REMOTES_NO_ERRORS_FROM_WARNINGS" = "true")
+#remotes::install_github("stan-dev/rstanarm", INSTALL_opts = "--no-multiarch", force = TRUE)
 
 
 
