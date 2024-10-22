@@ -9,10 +9,12 @@ This repo is taking shape based on discussions at the [2023 PICES Annual Meeting
 **NEW: Check out the [Github Page for this project](https://solv-code.github.io/PacSalmonEnvCov/)**
 
 
-This repository currently covers 8 data sets of environmental covariates: 
+This repository currently covers 9 data sets of environmental covariates: 
 
 
 * [DFO Pacea Package](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_PACEA_Package)
+
+* [CTC Chinook Forecast Covariates](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/CTC_ChinookForecast_Covars)
 
 * [DFO Ocean Science Division Data Products Group](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_OceanScienceDiv_DataProd)
 

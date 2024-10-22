@@ -42,9 +42,7 @@ East Pacific - North Pacific Index (EPNP) | CTC_EPNP_SummerMean | cov_EPNP_summe
 
 Follow the links to see the discussion thread and leave comments.
 
-* None yet
-
-3) [Means vs. Anomalies: the data set has both for some variables, but not others. Why?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/161)
+* [Means vs. Anomalies: the data set has both for some variables, but not others. Why?](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/161)
 
 
 
