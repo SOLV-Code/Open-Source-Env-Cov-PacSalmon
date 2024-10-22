@@ -6,6 +6,14 @@ Reports_NoGit
 # shapefiles for 3D prints
 *.stl
 
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+
 # History files
 .Rhistory
 .Rapp.history
