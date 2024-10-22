@@ -62,7 +62,7 @@ num.obs <- merged.data %>% summarize(across(-Year, ~ sum(!is.na(.x))) ) %>% t() 
 
 
 var.summary.out <- var.lookup %>% left_join(num.obs, by="Variable")
-view(var.summary.out)
+#view(var.summary.out)
 
 write_csv(var.summary.out,"OUTPUT/SummaryOfVariables.csv")
 
@@ -71,7 +71,27 @@ write_csv(var.summary.out,"OUTPUT/SummaryOfVariables.csv")
 # Create Overview Plot: Timeline of Available Data
 # -------------------------------------------
 
-datasets.list <- unique(var.lookup$DataSet)
+# split into 2 plots
+
+
+
+
+datasets.list.src <- unique(var.lookup$DataSet)
+datasets.list.src
+
+part2.idx <- datasets.list.src %in% c("Chascoetal2021_SnakeRiverCk")
+
+plot.list <- list(Part1 = datasets.list.src[!part2.idx],
+									Part2 = datasets.list.src[part2.idx] )
+plot.list
+
+
+for(i in 1:length(plot.list)){
+
+print(i)
+
+datasets.list <- unlist(plot.list[i])
+
 
 yr.range <- c(1900,2030)
 yr.ticks <- seq(1900,2030, by=20)
@@ -81,14 +101,14 @@ n.var.all <- dim(var.lookup)[1]
 n.extrarows <- 2
 
 
-png(filename = "OUTPUT/DataOverview_ALL.png",
+png(filename = paste0("OUTPUT/DataOverview_", names(plot.list)[i]  ,".png"),
 		width = 480*4, height = 480*4.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
-par(mai=c(0.3,8.5,1.5,1))
+par(mai=c(0.3,8.5,3,1))
 
-
-plot(1:5,1:5,type="n",xlim = yr.range, ylim=c(2*n.datasets + n.var.all + n.extrarows ,0.7),
+plot(1:5,1:5,type="n",xlim = yr.range, ylim=c(37,0.7),   #2*n.datasets + n.var.all + n.extrarows
 		 xlab="",ylab="",axes=FALSE)
 axis(3,at=yr.ticks)
+mtext("Year of Measurement", side=3, line=2,font=2,col = "darkblue")
 #title(main = "Availability of Spawner-Recruit Data",cex.main=1)
 abline(v=yr.ticks,col="darkgrey",lty=1)
 abline(v=2023,col="red",lty =2, lwd=3)
@@ -161,6 +181,7 @@ print("------------------------------------------")
 
 dev.off()
 
+} # end looping through plots
 
 # What is this doing here?
 #Sys.setenv(MAKEFLAGS = "-j2")
