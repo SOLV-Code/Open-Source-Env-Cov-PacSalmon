@@ -67,6 +67,27 @@ smoothed.indices <- data.frame(year = pdo.lowess$x,
 smoothed.indices
 
 
+# as per https://stackoverflow.com/questions/72304594/added-commented-section-to-output-csv-with-write-csv
+smoothed.filename <- "OUTPUT/Smoothed_LargeScaleIndices_FromPacea.csv"
+
+comment.text1 <- paste("# SMOOTHED VERSION OF MONTHLY ANOMALIES OF LARGE-SCALE OCEAN INDICES")
+comment.text2 <- paste("# Variable descriptions and source data available at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon")
+comment.text3 <- paste("# File generated on", format(Sys.time(), "%a %b %e %H:%M:%S %Y"))
+comment.text4 <- paste("# Extracted monthly anomalies from the pacea package and then converted to time series with ts()")
+comment.text5 <- paste("# and applied loess() smoothing with f=1/35")
+comment.text6 <- paste("# Source data: https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_PACEA_Package")
+comment.text7 <- paste("# Processing script:https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/4_ComparisonOfLargeScaleOceanIndices.R")
+
+write_lines(comment.text1, smoothed.filename)
+write_lines(comment.text2, smoothed.filename, append = TRUE)
+write_lines(comment.text3, smoothed.filename, append = TRUE)
+write_lines(comment.text4, smoothed.filename, append = TRUE)
+write_lines(comment.text5, smoothed.filename, append = TRUE)
+write_lines(comment.text6, smoothed.filename, append = TRUE)
+write_lines(comment.text7, smoothed.filename, append = TRUE)
+smoothed.indices |> colnames() |> paste0(collapse = ",") |> write_lines(smoothed.filename, append = TRUE)
+write_csv(smoothed.indices, smoothed.filename, append = TRUE)
+
 
 # some exploratory plots
 range(smoothed.indices %>% select(-1))
@@ -123,7 +144,10 @@ lines(smoothed.indices$year,smoothed.indices$npi_monthly,col="red")
 ylim.use <- c(-2.5,2.5)
 
 
-png(filename = "OUTPUT//LargeScaleIndex_Comparisons/OverviewOfIndicesStarting1980.png",
+# PLOT 1: OVERVIEW OF 6 SERIES
+
+
+png(filename = "OUTPUT/LargeScaleIndex_Comparisons/OverviewOfIndicesStarting1980.png",
 		width = 480*4.5, height = 480*4.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
 
 
@@ -204,6 +228,9 @@ mtext("Smoothed Monthly Anomaly", side=2, line=2.2, cex=0.8,col="darkblue")
 dev.off()
 
 
+#####################################
+# PLOT 2: ONI vs MEI
+
 
 png(filename = "OUTPUT//LargeScaleIndex_Comparisons/ONIvsMEI_Starting1980.png",
 		width = 480*4.5, height = 480*3.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
@@ -219,3 +246,99 @@ legend("bottom",legend=c("Multivariate El Niño/Southern Oscillation\n(ENSO) Ind
 			 lty=1,lwd=4,col=c("darkblue","red"),bty="n")
 
 dev.off()
+
+
+
+#######################################
+# PLOT 3: Quick Check: does it matter which month you extract -> not really
+
+num.rows <- dim(smoothed.indices)[1]
+
+ylim.use <- c(-2.5,1.5) #range(smoothed.indices$pdo)
+xlim.use <- range(floor(smoothed.indices$year))
+
+par(mfrow=c(3,2))
+
+for(var.do in names(smoothed.indices)[-1]){
+
+plot(1:5,1:5, type="n", xlim=xlim.use, ylim = ylim.use, axes=FALSE,xlab = "",ylab="", main = var.do)
+
+for(i in 1:12){
+
+df.use <- smoothed.indices[seq(i, num.rows, 12),c("year",var.do)] %>%
+						mutate(year= floor(year))
+print(head(df.use))
+lines(df.use$year,df.use[,var.do] , col="darkgrey")
+}
+
+
+}
+
+
+
+
+
+#####################################
+# PLOT 3: OVERLAY (using smoothed values for Jan)
+
+
+smoothed.jan <- smoothed.indices[seq(1, num.rows,12),]
+
+
+
+plot(smoothed.jan$year, smoothed.jan$pdo,
+		 type="n",col="darkblue", pch=19, bty="n", las=1,
+		 ylim=c(-2.5,2.5),
+		 xlab= "Year", ylab = "Anomaly",cex.axis=1.2,cex=1.5)
+abline(h=0,col="red")
+cex.use <- 0.95
+lines(smoothed.jan$year, smoothed.jan$pdo,type="o",col="darkblue", bg="lightblue",pch=21,cex=cex.use)
+lines(smoothed.jan$year, smoothed.jan$oni,type="o",col="darkblue", bg="white",pch=21,cex=cex.use)
+lines(smoothed.jan$year, smoothed.jan$npgo,type="o",col="darkblue", bg="red",pch=21,cex=cex.use)
+
+
+
+
+plot(smoothed.jan$pdo,smoothed.jan$npgo,ylim=c(-2.5,2.5),xlim=c(-2.5,2.5), type="p",
+		 col="lightgrey",bty="n")
+
+plot(smoothed.indices$pdo,smoothed.indices$npgo,ylim=c(-2.5,2.5),xlim=c(-2.5,2.5),type="o",
+		 col="lightgrey",bty="n")
+abline(h=0,col="red",lty=2)
+abline(v=0,col="red",lty=2)
+points(smoothed.jan$pdo,smoothed.jan$npgo,col="red",bty="n")
+
+
+summary(lm(smoothed.jan$npgo~smoothed.jan$pdo))
+summary(lm(smoothed.indices$npgo~smoothed.indices$pdo))
+
+
+plot(pdo %>% dplyr::filter(year>=1980) %>% select(anomaly) %>% unlist(),
+		 npgo %>% dplyr::filter(year>=1980)%>% select(anomaly) %>% unlist(),
+		 ylim=c(-4.5,4.5),xlim=c(-4.5,4.5),type="o",
+		 col="lightgrey",bty="n")
+
+
+
+
+
+#points(smoothed.indices$pdo,smoothed.indices$npgo,pch=19,col="lightgrey", cex=0.9)
+
+
+npgo
+
+
+
+
+tmp.values <- ccf(ts(smoothed.jan$pdo),ts(smoothed.jan$oni))
+tmp.values
+
+
+smoothed.jan$pdo
+lag(smoothed.jan$pdo,2)
+
+plot(smoothed.jan$pdo,lag(smoothed.jan$npgo,3))
+plot(lag(smoothed.jan$pdo),smoothed.jan$npgo)
+
+
+
