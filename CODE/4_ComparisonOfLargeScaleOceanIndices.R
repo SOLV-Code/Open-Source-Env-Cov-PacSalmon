@@ -50,6 +50,27 @@ abline(h=0,col="red")
 # See issue at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/118 for details
 
 
+
+raw.series <- data.frame(year = pdo %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(year) %>% unlist(),
+												 month = pdo %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(month) %>% unlist(),
+												 pdo = pdo %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) %>% unlist(),
+												 mei = mei %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) %>% unlist() ,
+												 ao = ao %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) %>% unlist(),
+												 npgo = npgo %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) %>% unlist(),
+												 npi = npi_monthly_mod %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) %>% unlist(),
+												 oni = oni %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) %>% unlist()
+)
+head(raw.series)
+
+
+meanJanToMarch.series <- raw.series %>% dplyr::filter(month %in% 1:3) %>%
+													group_by(year) %>%
+													summarise(across(pdo:oni, mean))
+
+head(meanJanToMarch.series)
+
+
+
 smoothed.indices <- data.frame(year = pdo.lowess$x,
 															 pdo = pdo.lowess$y,
 															 mei = lowess(ts(mei %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) ,start = c(start.yr,1),freq=12),
@@ -58,7 +79,7 @@ smoothed.indices <- data.frame(year = pdo.lowess$x,
 															 						 f= smoother.span)$y,
 															 npgo = lowess(ts(npgo %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) ,start = c(start.yr,1),freq=12),
 															 						 f= smoother.span)$y,
-															 npi_monthly = lowess(ts(npi_monthly_mod %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly_bymonth) ,start = c(start.yr,1),freq=12),
+															 npi = lowess(ts(npi_monthly_mod %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly_bymonth) ,start = c(start.yr,1),freq=12),
 															 						 f= smoother.span)$y,
 															 oni = lowess(ts(oni %>% dplyr::filter(year>=start.yr, year <= end.yr) %>% select(anomaly) ,start = c(start.yr,1),freq=12),
 															 						 f= smoother.span)$y
@@ -109,7 +130,7 @@ plot(1:5,1:5,type="n",xlim= c(1980,2025),ylim=c(-2.5,2.5),xlab="Year",ylab="Smoo
 		 bty="n",main = "pdo vs npi_mothly")
 abline(h=0,col="red",lwd=2)
 lines(smoothed.indices$year,smoothed.indices$pdo)
-lines(smoothed.indices$year,smoothed.indices$npi_monthly,col="red")
+lines(smoothed.indices$year,smoothed.indices$npi,col="red")
 
 
 plot(1:5,1:5,type="n",xlim= c(1980,2025),ylim=c(-2.5,2.5),xlab="Year",ylab="Smoothed Monthly Anomaly",
@@ -136,7 +157,7 @@ plot(1:5,1:5,type="n",xlim= c(1980,2025),ylim=c(-2.5,2.5),xlab="Year",ylab="Smoo
 		 bty="n",main = "mei vs npi")
 abline(h=0,col="red",lwd=2)
 lines(smoothed.indices$year,smoothed.indices$mei)
-lines(smoothed.indices$year,smoothed.indices$npi_monthly,col="red")
+lines(smoothed.indices$year,smoothed.indices$npi,col="red")
 
 
 #----------------------------------------------------------------------------------------------------
@@ -203,9 +224,9 @@ text(bar.ticks$x.tick,rep(par("usr")[3],dim(bar.ticks)[1]),bar.ticks$year,xpd=NA
 axis(2,cex.axis=1,col.axis="darkblue",las=1)
 mtext("Smoothed Monthly Anomaly", side=2, line=2.2, cex=0.8,col="darkblue")
 
-barplot(height=smoothed.indices$npi_monthly,
-				col=ifelse(smoothed.indices$npi_monthly > 0, "dodgerblue", "tomato1"),
-				border=ifelse(smoothed.indices$npi_monthly > 0, "dodgerblue", "tomato1"),
+barplot(height=smoothed.indices$npi,
+				col=ifelse(smoothed.indices$npi > 0, "dodgerblue", "tomato1"),
+				border=ifelse(smoothed.indices$npi > 0, "dodgerblue", "tomato1"),
 				axes=FALSE, ylim=ylim.use, main= "North Pacific Index (NPI)",col.main = "darkblue" )
 abline(v=bar.ticks$x.tick,col="darkblue",lty=2)
 abline(h=0,col="darkblue")
@@ -250,7 +271,7 @@ dev.off()
 
 
 #######################################
-# PLOT 3: Quick Check: does it matter which month you extract -> not really
+# PLOT 3: Quick Check: does it matter which month you extract for smoothed indices -> not really
 
 num.rows <- dim(smoothed.indices)[1]
 
@@ -279,12 +300,9 @@ lines(df.use$year,df.use[,var.do] , col="darkgrey")
 
 
 #####################################
-# PLOT 3: OVERLAY (using smoothed values for Jan)
-
+# PLOT 4: OVERLAY (using smoothed values for Jan) -> tried variations, but not really clear once you have >2 series.
 
 smoothed.jan <- smoothed.indices[seq(1, num.rows,12),]
-
-
 
 plot(smoothed.jan$year, smoothed.jan$pdo,
 		 type="n",col="darkblue", pch=19, bty="n", las=1,
@@ -296,49 +314,272 @@ lines(smoothed.jan$year, smoothed.jan$pdo,type="o",col="darkblue", bg="lightblue
 lines(smoothed.jan$year, smoothed.jan$oni,type="o",col="darkblue", bg="white",pch=21,cex=cex.use)
 lines(smoothed.jan$year, smoothed.jan$npgo,type="o",col="darkblue", bg="red",pch=21,cex=cex.use)
 
+# Do it in panels with pdo as base
+
+png(filename = "OUTPUT//LargeScaleIndex_Comparisons/IndexComparison_Timeline_4Panels.png",
+		width = 480*5.5, height = 480*3.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
+
+
+par(mfrow=c(2,2))
+
+plot(smoothed.jan$year, smoothed.jan$pdo,
+		 type="n",col="darkblue", pch=19, bty="n", las=1,
+		 ylim=c(-2.5,2.5),
+		 xlab= "Year", ylab = "Anomaly",
+		 main= "Smoothed Anomalies: PDO vs. NPGO",
+		 cex.axis=1.2,cex=1.5)
+abline(h=0,col="red")
+cex.use <- 0.95
+lines(smoothed.jan$year, smoothed.jan$pdo,type="o",col="darkblue", bg="lightblue",pch=21,cex=cex.use)
+lines(smoothed.jan$year, smoothed.jan$npgo,type="o",col="darkblue", bg="red",pch=21,cex=cex.use)
+legend(1980,3,c("PDO","NPGO"),pch=21,col="darkblue",pt.bg=c("lightblue","red"),bty="n",ncol=2,xpd=NA)
+
+plot(smoothed.jan$year, smoothed.jan$oni,
+		 type="n",col="darkblue", pch=19, bty="n", las=1,
+		 ylim=c(-2.5,2.5),
+		 xlab= "Year", ylab = "Anomaly",
+		 main= "Smoothed Anomalies: PDO vs. ONI",
+		 cex.axis=1.2,cex=1.5)
+abline(h=0,col="red")
+cex.use <- 0.95
+lines(smoothed.jan$year, smoothed.jan$pdo,type="o",col="darkblue", bg="lightblue",pch=21,cex=cex.use)
+lines(smoothed.jan$year, smoothed.jan$oni,type="o",col="darkblue", bg="red",pch=21,cex=cex.use)
+legend(1980,3,c("PDO","ONI"),pch=21,col="darkblue",pt.bg=c("lightblue","red"),bty="n",ncol=2,xpd=NA)
 
 
 
-plot(smoothed.jan$pdo,smoothed.jan$npgo,ylim=c(-2.5,2.5),xlim=c(-2.5,2.5), type="p",
-		 col="lightgrey",bty="n")
+plot(smoothed.jan$year, smoothed.jan$mei,
+		 type="n",col="darkblue", pch=19, bty="n", las=1,
+		 ylim=c(-2.5,2.5),
+		 xlab= "Year", ylab = "Anomaly",
+		 main= "Smoothed Anomalies: PDO vs. MEI",
+		 cex.axis=1.2,cex=1.5)
+abline(h=0,col="red")
+cex.use <- 0.95
+lines(smoothed.jan$year, smoothed.jan$pdo,type="o",col="darkblue", bg="lightblue",pch=21,cex=cex.use)
+lines(smoothed.jan$year, smoothed.jan$mei,type="o",col="darkblue", bg="red",pch=21,cex=cex.use)
+legend(1980,3,c("PDO","MEI"),pch=21,col="darkblue",pt.bg=c("lightblue","red"),bty="n",ncol=2,xpd=NA)
 
-plot(smoothed.indices$pdo,smoothed.indices$npgo,ylim=c(-2.5,2.5),xlim=c(-2.5,2.5),type="o",
-		 col="lightgrey",bty="n")
+
+
+# just for check
+plot(smoothed.jan$year, smoothed.jan$npi,
+		 type="n",col="darkblue", pch=19, bty="n", las=1,
+		 ylim=c(-2.5,2.5),
+		 xlab= "Year", ylab = "Anomaly",
+		 main= "Smoothed Anomalies: PDO vs. NPI",
+		 cex.axis=1.2,cex=1.5)
+abline(h=0,col="red")
+cex.use <- 0.95
+lines(smoothed.jan$year, smoothed.jan$pdo,type="o",col="darkblue", bg="lightblue",pch=21,cex=cex.use)
+lines(smoothed.jan$year, smoothed.jan$npi,type="o",col="darkblue", bg="red",pch=21,cex=cex.use)
+legend(1980,3,c("PDO","NPI"),pch=21,col="darkblue",pt.bg=c("lightblue","red"),bty="n",ncol=2,xpd=NA)
+
+dev.off()
+
+
+
+
+
+#############################################################################
+# SCATTERPLOT SEQUENCE FROM RAW TO LOESS SMOOTHED
+
+# always use PDO as the base
+
+plot.list <- list(
+	NPGO = "npgo",
+	ONI = "oni",
+	MEI = "mei",
+	NPI = "npi")
+
+
+for(plot.do in names(plot.list)){
+
+var.plot <- plot.list[plot.do] %>% unlist()
+
+print(plot.do)
+print(var.plot)
+
+
+png(filename = paste0("OUTPUT//LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_Sequence_PDOvs",plot.do,".png"),
+		width = 480*5.5, height = 480*2.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
+
+
+par(mfrow=c(1,3))
+
+
+# Panel 1: Raw Scatter Plot
+
+plot(raw.series$pdo, raw.series %>% select(var.plot) %>% unlist(),
+		 #ylim=c(-4.5,4.5),xlim=c(-4.5,4.5),
+		 main="Raw Monthly Anomalies", col.main="darkblue",
+		 type="p", col="blue",pch=21,bg="white", bty="n",
+		 xlab="PDO",ylab = plot.do)
 abline(h=0,col="red",lty=2)
 abline(v=0,col="red",lty=2)
-points(smoothed.jan$pdo,smoothed.jan$npgo,col="red",bty="n")
+points(raw.series$pdo, raw.series %>% select(var.plot) %>% unlist(),
+ col.main="darkblue",type="p", col="blue",pch=21,bg="white")
 
 
-summary(lm(smoothed.jan$npgo~smoothed.jan$pdo))
-summary(lm(smoothed.indices$npgo~smoothed.indices$pdo))
+title(main = paste("PDO vs.",plot.do,paste(range(raw.series$year),collapse="-")),
+			col.main="darkblue",
+			outer=TRUE,line=-1)
+
+# Panel 2: Winter Mean ScatterPlot
+
+plot(meanJanToMarch.series$pdo, meanJanToMarch.series %>% select(var.plot) %>% unlist(),
+		 #ylim=c(-4.5,4.5),xlim=c(-4.5,4.5),
+		 main="Mean Jan-Mar Anomalies", col.main="darkblue",
+		 type="p", col="blue",pch=21,bg="white", bty="n",
+		 xlab="PDO",ylab = plot.do)
+abline(h=0,col="red",lty=2)
+abline(v=0,col="red",lty=2)
+points(meanJanToMarch.series$pdo, meanJanToMarch.series %>% select(var.plot) %>% unlist(),
+		 type="p", col="blue",pch=21,bg="white")
 
 
-plot(pdo %>% dplyr::filter(year>=1980) %>% select(anomaly) %>% unlist(),
-		 npgo %>% dplyr::filter(year>=1980)%>% select(anomaly) %>% unlist(),
-		 ylim=c(-4.5,4.5),xlim=c(-4.5,4.5),type="o",
-		 col="lightgrey",bty="n")
+# Panel 3: Smoothed Anomalies scatter
+
+# color fade
+n.obs <- dim(smoothed.indices)[1]
+n.fade <- 80
+bg.fade <- c(rep(0,n.obs-n.fade),seq(0.025,1, length.out=n.fade))
+bg.col <- rgb(1, 0, 0,bg.fade)
+bg.col <- tail(bg.col,n.obs)
+
+
+plot(smoothed.indices$pdo,
+		 smoothed.indices %>% select(var.plot) %>% unlist(),
+		 ylim=c(-2.5,2.5),xlim=c(-2.5,2.5),
+		 main="Loess Smoothed Anomalies", col.main="darkblue",
+		 type="o", col="darkblue",pch=21,bg="white", bty="n",
+		 xlab="PDO",ylab = plot.do)
+
+abline(h=0,col="red",lty=2)
+abline(v=0,col="red",lty=2)
+
+
+points(smoothed.indices$pdo,
+		 smoothed.indices %>% select(var.plot) %>% unlist(),
+		 type="o", col="darkblue",pch=21,bg="white")
+points(smoothed.indices$pdo,
+			 smoothed.indices %>% select(var.plot) %>% unlist(),
+			 type="p", col="darkblue",pch=21,bg=bg.col)
+
+jan.idx <- seq(1,dim(smoothed.indices)[1],by=12)
+jan.idx
+
+points(smoothed.indices$pdo[jan.idx],
+			 smoothed.indices[jan.idx,] %>% select(var.plot) %>% unlist(),
+			 type="p", col="darkblue",pch=21,bg="darkblue")
+
+
+legend(1.8,2.5,
+			 legend=c("Early","Recent","Jan"),
+			 pch=c(21,21,21),
+			 col="darkblue",
+			 pt.bg= c("white","red","darkblue"),
+			 bty="n",xpd=NA)
+
+
+dev.off()
 
 
 
 
 
-#points(smoothed.indices$pdo,smoothed.indices$npgo,pch=19,col="lightgrey", cex=0.9)
+
+}
+
+###########################################################################
+# 3 Panel Plot
+
+plot.list <- list(
+	ONI = "oni",
+	MEI = "mei",
+	NPI = "npi")
 
 
-npgo
+png(filename = paste0("OUTPUT//LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_3Panels.png"),
+		width = 480*5.5, height = 480*2.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
+
+par(mfrow=c(1,3))
+
+
+for(plot.do in names(plot.list)){
+
+	var.plot <- plot.list[plot.do] %>% unlist()
+
+	print(plot.do)
+	print(var.plot)
+
+	# Panel  Smoothed Anomalies scatter
+
+	# color fade
+	n.obs <- dim(smoothed.indices)[1]
+	n.fade <- 80
+	bg.fade <- c(rep(0,n.obs-n.fade),seq(0.025,1, length.out=n.fade))
+	bg.col <- rgb(1, 0, 0,bg.fade)
+	bg.col <- tail(bg.col,n.obs)
+
+
+	plot(smoothed.indices$pdo,
+			 smoothed.indices %>% select(var.plot) %>% unlist(),
+			 ylim=c(-2.5,2.5),xlim=c(-2.5,2.5),
+			 main=paste("PDO vs.",plot.do), col.main="darkblue",
+			 type="o", col="darkblue",pch=21,bg="white", bty="n",
+			 xlab="PDO",ylab = plot.do)
+
+	abline(h=0,col="red",lty=2)
+	abline(v=0,col="red",lty=2)
+
+
+	points(smoothed.indices$pdo,
+				 smoothed.indices %>% select(var.plot) %>% unlist(),
+				 type="o", col="darkblue",pch=21,bg="white")
+	points(smoothed.indices$pdo,
+				 smoothed.indices %>% select(var.plot) %>% unlist(),
+				 type="p", col="darkblue",pch=21,bg=bg.col)
+
+	jan.idx <- seq(1,dim(smoothed.indices)[1],by=12)
+	jan.idx
+
+	points(smoothed.indices$pdo[jan.idx],
+				 smoothed.indices[jan.idx,] %>% select(var.plot) %>% unlist(),
+				 type="p", col="darkblue",pch=21,bg="darkblue")
 
 
 
 
-tmp.values <- ccf(ts(smoothed.jan$pdo),ts(smoothed.jan$oni))
-tmp.values
+
+}
 
 
-smoothed.jan$pdo
-lag(smoothed.jan$pdo,2)
+legend(1.8,2.5,
+			 legend=c("Early","Recent","Jan"),
+			 pch=c(21,21,21),
+			 col="darkblue",
+			 pt.bg= c("white","red","darkblue"),
+			 bty="n",xpd=NA)
 
-plot(smoothed.jan$pdo,lag(smoothed.jan$npgo,3))
-plot(lag(smoothed.jan$pdo),smoothed.jan$npgo)
+title(main = paste("Loess Smoothed Monthly Anomalies",paste(range(raw.series$year),collapse="-")),
+			col.main="darkblue",
+			outer=TRUE,line=-1)
+
+	dev.off()
+
+
+###############################################################
+
+
+acf(raw.series$pdo)
+acf(meanJanToMarch.series$pdo)
+acf(smoothed.indices$pdo[jan.idx])
+
+pacf(raw.series$pdo)
+pacf(meanJanToMarch.series$pdo)
+pacf(smoothed.indices$pdo)
+pacf(smoothed.indices$pdo[jan.idx])
 
 
 

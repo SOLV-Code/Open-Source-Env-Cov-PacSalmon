@@ -23,15 +23,16 @@ Figures created from the [PACEA data set](https://github.com/SOLV-Code/Open-Sour
 ### Plots
 
 
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/OverviewOfIndicesStarting1980.png" width="500">
 
 
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/OverviewOfIndicesStarting1980.png" width="700">
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_Sequence_PDOvsMEI.png" width="600">
 
 
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_Sequence_PDOvsNPGO.png" width="600">
 
-<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/ONIvsMEI_Starting1980.png" width="500">
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_Sequence_PDOvsNPI.png" width="600">
 
-
-
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_Sequence_PDOvsONI.png" width="600">
 
 
