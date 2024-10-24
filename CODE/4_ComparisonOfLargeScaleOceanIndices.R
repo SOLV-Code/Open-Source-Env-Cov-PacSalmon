@@ -572,14 +572,188 @@ title(main = paste("Loess Smoothed Monthly Anomalies",paste(range(raw.series$yea
 ###############################################################
 
 
-acf(raw.series$pdo)
-acf(meanJanToMarch.series$pdo)
-acf(smoothed.indices$pdo[jan.idx])
 
-pacf(raw.series$pdo)
-pacf(meanJanToMarch.series$pdo)
-pacf(smoothed.indices$pdo)
-pacf(smoothed.indices$pdo[jan.idx])
+	###########################################################################
+	# 3 Panel Plot
+
+	plot.list <- list(
+		ONI = "oni",
+		MEI = "mei",
+		NPI = "npi")
+
+
+	png(filename = paste0("OUTPUT//LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_3Panels.png"),
+			width = 480*5.5, height = 480*2.5, units = "px", pointsize = 14*3.5, bg = "white",  res = NA)
+
+	par(mfrow=c(1,3))
+
+
+	for(plot.do in names(plot.list)){
+
+		var.plot <- plot.list[plot.do] %>% unlist()
+
+		print(plot.do)
+		print(var.plot)
+
+		# Panel  Smoothed Anomalies scatter
+
+		# color fade
+		n.obs <- dim(smoothed.indices)[1]
+		n.fade <- 80
+		bg.fade <- c(rep(0,n.obs-n.fade),seq(0.025,1, length.out=n.fade))
+		bg.col <- rgb(1, 0, 0,bg.fade)
+		bg.col <- tail(bg.col,n.obs)
+
+
+		plot(smoothed.indices$pdo,
+				 smoothed.indices %>% select(var.plot) %>% unlist(),
+				 ylim=c(-2.5,2.5),xlim=c(-2.5,2.5),
+				 main=paste("PDO vs.",plot.do), col.main="darkblue",
+				 type="o", col="darkblue",pch=21,bg="white", bty="n",
+				 xlab="PDO",ylab = plot.do)
+
+		abline(h=0,col="red",lty=2)
+		abline(v=0,col="red",lty=2)
+
+
+		points(smoothed.indices$pdo,
+					 smoothed.indices %>% select(var.plot) %>% unlist(),
+					 type="o", col="darkblue",pch=21,bg="white")
+		points(smoothed.indices$pdo,
+					 smoothed.indices %>% select(var.plot) %>% unlist(),
+					 type="p", col="darkblue",pch=21,bg=bg.col)
+
+		jan.idx <- seq(1,dim(smoothed.indices)[1],by=12)
+		jan.idx
+
+		points(smoothed.indices$pdo[jan.idx],
+					 smoothed.indices[jan.idx,] %>% select(var.plot) %>% unlist(),
+					 type="p", col="darkblue",pch=21,bg="darkblue")
+
+
+
+
+
+	}
+
+
+	legend(1.8,2.5,
+				 legend=c("Early","Recent","Jan"),
+				 pch=c(21,21,21),
+				 col="darkblue",
+				 pt.bg= c("white","red","darkblue"),
+				 bty="n",xpd=NA)
+
+	title(main = paste("Loess Smoothed Monthly Anomalies",paste(range(raw.series$year),collapse="-")),
+				col.main="darkblue",
+				outer=TRUE,line=-1)
+
+	dev.off()
+
+
+	###############################################################
+
+
+
+
+
+	###########################################################################
+	# 4 Panel Plot for Poster
+
+plot.list <- list(
+		NPGO = "npgo",
+		ONI = "oni",
+		MEI = "mei",
+		NPI = "npi")
+
+
+png(filename = paste0("OUTPUT//LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_4Panels_LargeFont.png"),
+			width = 480*5.5, height = 480*5.5, units = "px", pointsize = 14*5, bg = "white",  res = NA)
+
+	par(mfrow=c(2,2),mai=c(4,4,3,1))
+
+
+	for(plot.do in names(plot.list)){
+
+		var.plot <- plot.list[plot.do] %>% unlist()
+
+		print(plot.do)
+		print(var.plot)
+
+		# Panel  Smoothed Anomalies scatter
+
+		# color fade
+		n.obs <- dim(smoothed.indices)[1]
+		n.fade <- 80
+		bg.fade <- c(rep(0,n.obs-n.fade),seq(0.025,1, length.out=n.fade))
+		bg.col <- rgb(1, 0, 0,bg.fade)
+		bg.col <- tail(bg.col,n.obs)
+
+
+		plot(smoothed.indices$pdo,
+				 smoothed.indices %>% select(var.plot) %>% unlist(),
+				 ylim=c(-2.5,2.5),xlim=c(-2.5,2.5),
+				 main=paste("PDO vs.",plot.do), col.main="darkblue",
+				 cex.main=1.1,
+				 type="o", col="darkblue",pch=21,bg="white", bty="n",
+				 xlab="PDO",ylab = plot.do)
+
+		abline(h=0,col="red",lty=2)
+		abline(v=0,col="red",lty=2)
+
+
+		points(smoothed.indices$pdo,
+					 smoothed.indices %>% select(var.plot) %>% unlist(),
+					 type="o", col="darkblue",pch=21,bg="white")
+		points(smoothed.indices$pdo,
+					 smoothed.indices %>% select(var.plot) %>% unlist(),
+					 type="p", col="darkblue",pch=21,bg=bg.col)
+
+		jan.idx <- seq(1,dim(smoothed.indices)[1],by=12)
+		jan.idx
+
+		points(smoothed.indices$pdo[jan.idx],
+					 smoothed.indices[jan.idx,] %>% select(var.plot) %>% unlist(),
+					 type="p", col="darkblue",pch=21,bg="darkblue")
+
+
+		if(plot.do == names(plot.list)[1]){
+			legend(1.8,2.5,
+						 legend=c("Early","Recent","Jan"),
+						 pch=c(21,21,21),
+						 col="darkblue",
+						 pt.bg= c("white","red","darkblue"),
+						 bty="n",xpd=NA)
+		}
+
+
+
+	}
+
+
+	title(main = paste("Loess Smoothed Monthly Anomalies",paste(range(raw.series$year),collapse="-")),
+				col.main="darkblue",
+				outer=TRUE,line=-1)
+
+	dev.off()
+
+
+	###############################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

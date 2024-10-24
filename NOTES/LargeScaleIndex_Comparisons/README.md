@@ -1,4 +1,4 @@
-## Comparison of LArge-Scale Pacific Indices
+## Comparison of Large-Scale Pacific Indices
 
 *These notes are designed for collaborative editing. Just click the pencil icon above to edit directly in your browser (must be logged into GitHub).*
 

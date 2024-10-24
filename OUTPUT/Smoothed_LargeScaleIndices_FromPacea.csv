@@ -1,6 +1,6 @@
 # SMOOTHED VERSION OF MONTHLY ANOMALIES OF LARGE-SCALE OCEAN INDICES
 # Variable descriptions and source data available at https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon
-# File generated on Wed Oct 23 10:55:11 2024
+# File generated on Wed Oct 23 19:58:10 2024
 # Extracted monthly anomalies from the pacea package and then converted to time series with ts()
 # and applied loess() smoothing with f=1/35
 # Source data: https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_PACEA_Package
