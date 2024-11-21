@@ -14,6 +14,24 @@ Figures created from the [PACEA data set](https://github.com/SOLV-Code/Open-Sour
 
 ### Key Points
 
+
+**Index** | **Description**
+-- | --
+MEI | North Pacific Gyre Oscillation. Uses sea surface
+height variations as a proxy for nutrient
+fluctuations that affect primary production.
+NPGO | North Pacific Index. Captures atmospheric
+pressure variations, which in turn are linked to
+sea surface temperature.
+NPI | Oceanic Niño Index. Uses SST anomalies from
+running average (detrended) for the eastcentral
+equatorial Pacific
+ONI | Pacific Decadal Oscillation. North Pacific SST
+anomalies relative to global avg SST.
+
+
+
+
 *TBI*
 	
 	
@@ -24,6 +42,10 @@ Figures created from the [PACEA data set](https://github.com/SOLV-Code/Open-Sour
 
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/OverviewOfIndicesStarting1980.png" width="500">
+
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_4Panels_LargeFont.png" width="500">
+
+
 
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_Sequence_PDOvsMEI.png" width="600">
