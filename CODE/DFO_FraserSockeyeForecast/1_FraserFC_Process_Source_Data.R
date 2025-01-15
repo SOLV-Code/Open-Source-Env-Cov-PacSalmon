@@ -64,6 +64,16 @@ write_csv(pdo.reorg.out,"OUTPUT/PDO_Comparisons/PDO_Comparisons_Data.csv")
 #-------------------------------------------------------
 
 
+# SOURCE FOR THE RAW files**Note**:
+# https://open.canada.ca/data/en/dataset/719955f2-bf8e-44f7-bc26-6bd623e82884)
+# find "DATA - Active Sites"
+# then click on "Explore" and select "Go to Resource" from the drop-down menu. 
+# That downloads a zip folder with everything. 
+# Then extract the csv files you need and move into the 
+# RawFiles subfolder
+
+
+
 # Need to dynamically create the file list, because the extracted csv files
 # have various year ranges in the filenames, and
 

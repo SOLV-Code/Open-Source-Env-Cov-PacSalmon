@@ -47,6 +47,9 @@ The reports include plots of the environmental covariate time series (e.g., Figu
 For this repository, we are trying to replicate the data treatment steps to generate an [up-to-date downloadable covariate time series](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/DATA/DFO_FraserSockeyeForecast/GENERATED_COVARS_DFOFraserRiverForecasts.csv) directly from the publicly available source data, using [this R script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/DFO_FraserSockeyeForecast/1_FraserFC_Process_Source_Data.R). *This is still a work in progress, as we are checking the generated file against the official data set*. 
 
 
+**Note**: The raw BC lightstation data is available through at [Open Data](https://open.canada.ca/data/en/dataset/719955f2-bf8e-44f7-bc26-6bd623e82884). To get the files, find "DATA - Active Sites", then click on "Explore" and select "Go to Resource" from the drop-down menu. That downloads a zip folder with everything. Then extract the csv files you need and process them with R code like [this R script](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/CODE/DFO_FraserSockeyeForecast/1_FraserFC_Process_Source_Data.R)
+
+
 ### Open Questions 
 
 Follow the links to see the discussion thread and leave comments.
