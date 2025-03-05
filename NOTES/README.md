@@ -8,8 +8,12 @@ Notes in progress:
 
 * [Comparison of PDO covariates](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/PDO_Comparison) takes a closer look at the alternative versions used in different applications.
 
+* [Comparison of Large-scale Ocean Indices](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/LargeScaleIndex_Comparisons) compares PDO, ONI, NPGO, MEI, and NPI and shows that their signals recently started diverging.
+
+
 * [Scope of analyses](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/ScopeOfAnalyses) compares and contrasts the data sets and how they were used.
 
 * [Trends vs. Anomalies](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/TrendsVsAnomalies) looks at  how anomalies are calculated for common large-scale environmental covariates to remove underlying trends, and whether that is the appropriate data treatment for salmon models.
 
 * [Worked Examples of DAGs](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/NOTES/DAGs_WorkedExamples) has some step-by-step examples of building diagrams for causal inference.
+
