@@ -38,7 +38,7 @@ ONI | Pacific Decadal Oscillation. North Pacific SST anomalies relative to globa
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_4Panels_LargeFont.png" width="500">
 
-
+<img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/IndexComparison_Timeline_4Panels.png" width="500">
 
 
 <img src="https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/blob/main/OUTPUT/LargeScaleIndex_Comparisons/IndexComparison_Scatterplot_Sequence_PDOvsMEI.png" width="600">
