@@ -20,7 +20,7 @@ versions of the same index. For example:
 
 - The ONI monthly anomalies use a moving 30-year base period for each month, updated every 5 years in some periods and more frequently in other periods ([Plot](Plots-ONI-Trends-and-Anomalies), details in this [discussion thread](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/118))
 
-- The NPI monthly anomalies seem to use the same fixed base value (mean for 1925-1989) as the reference for all months, but month-specific base values would give a very different picture for the anomalies ([Plot](Plots-NPI-Trends-and-Anomalies), details in this [discussion thread](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/118)).
+- The NPI monthly anomalies seem to use the same fixed base value (mean for 1925-1989) as the reference for all months, but month-specific base values would give a very different picture for the anomalies ([Plot](#Plots-NPI-Trends-and-Anomalies), details in this [discussion thread](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/118)).
 
 - The PDO index [source file](http://research.jisao.washington.edu/pdo/PDO.latest) states that the underlying warming trend has been removed from the index to focus on anomalies, but still need to dig through sources to find specifics. For example, warming trend handled differently in alternative versions of the PDO the OI SST v2 vs. ER SST v5? (details in this [discussion thread](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/issues/26))
 
