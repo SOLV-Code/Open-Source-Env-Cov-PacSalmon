@@ -3,6 +3,11 @@ Sources_NoGit
 
 Reports_NoGit
 
+Presentations_NoGit
+
+WG_NoGit
+
+
 # shapefiles for 3D prints
 *.stl
 
