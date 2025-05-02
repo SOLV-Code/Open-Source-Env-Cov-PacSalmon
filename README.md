@@ -26,7 +26,9 @@ This repository currently covers 9 data sets of environmental covariates:
 
 * [DFO Salmon in Regional Ecosystems Program (SiRE-P)](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/DFO_SalmonInRegionalEcosystems)
 
-* [Chasco et al. (2021) Snake River Chinook paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk). 
+* [SFU - Skeena Sockeye Scale Archives](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/SFU_SkeenaSockeyeScales)
+
+* [Chasco et al. (2021) Snake River Chinook paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Chascoetal2021_SnakeRiverCk)
 
 * [Peterman et al. (2009) summary paper](https://github.com/SOLV-Code/Open-Source-Env-Cov-PacSalmon/tree/main/DATA/Petermanetal2009_Summary)
 
